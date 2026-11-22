@@ -4,6 +4,8 @@
 
 Repository hiện để **private**. Mời bạn bè làm collaborator để họ có thể clone, chạy và gửi thay đổi bằng Pull Request. Repository gồm mã nguồn, ngân hàng đã biên tập và tài liệu PDF gốc trong `Materials/` (bản clone khoảng 400 MB). ZIP phát hành, build, cache, `node_modules` và môi trường Python không lưu trong Git.
 
+Muốn dùng thử mà không clone mã nguồn? [Tải ZIP mới nhất tại GitHub Releases](https://github.com/StayCooI/oop-exam-web/releases/latest), giải nén, cài Node.js 22 trở lên nếu máy chưa có, rồi chạy launcher theo hệ điều hành ở phần **Chạy bản phát hành**.
+
 ## Chạy thử hoặc phát triển
 
 Cài Node.js **24 LTS** trên Windows, macOS hoặc Linux. Sau đó clone repository và cài dependency một lần:
