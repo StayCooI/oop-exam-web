@@ -1,0 +1,46 @@
+import {useEffect,useState} from 'react'
+import {LibraryBig,FileText,ExternalLink,ChevronLeft,ChevronRight} from 'lucide-react'
+import type {Bank,Doc,Edit,Question,Vault,Update} from './model'
+import {eligible,names,norm} from './model'
+import {Empty,Head,SourceLine,QType,findDoc,go,urlFor,Solution} from './shared'
+import {Filter,SearchBox} from './Learn'
+type Page={n:number,mode:string,status:string,ocr:boolean,warn:boolean,text:string,anchors:string[]}
+type Index=Record<string,Page[]>
+let loading:Promise<Index>|undefined
+function useIndex(){const [pages,set]=useState<Index>(),[error,E]=useState(false);useEffect(()=>{loading??=fetch('./data/pages.json').then(r=>{if(!r.ok)throw Error();return r.json()});loading.then(set).catch(()=>{loading=undefined;E(true)})},[]);return {pages,error}}
+function Viewer({d,n}:{d:Doc,n:number}){return <div className="viewer"><a href={urlFor(d,n)} target="_blank" rel="noreferrer"><ExternalLink size={15}/> Mở {d.ext==='pdf'?'PDF tại trang '+n:'ảnh gốc'} trong thẻ riêng</a>{d.ext==='pdf'?<iframe title={d.name+' trang '+n} key={d.id+'/'+n} src={urlFor(d,n)}/>:<img src={urlFor(d,n)} alt={d.name}/>}</div>}
+export function Library({b,initial}:{b:Bank,initial:string}){
+ const [search,K]=useState(''),[group,G]=useState(''),[term,Y]=useState(''),[school,S]=useState(''),[page,N]=useState(1),[hitsLimit,L]=useState(25)
+ const {pages,error}=useIndex(),d=b.docs.find(x=>x.id===initial)
+ if(d){const p=pages?.[d.id]?.[page-1],questions=b.questions.filter(q=>q.sources.some(s=>s.file===d.name&&s.n<=page&&(s.end??s.n)>=page))
+ return <><Head title={d.name}>{d.group==='slide'?'Slide bài giảng':'Tài liệu ôn thi'} · {d.pages} {d.ext==='pdf'?'trang':'ảnh'} · {d.school||'Trường chưa xác định'}</Head>
+ <div className="papersplit"><div><div className="actions pager"><button disabled={page<=1} onClick={()=>N(page-1)} aria-label="Trang trước"><ChevronLeft/></button><label>Trang<input type="number" value={page} min="1" max={d.pages} onChange={e=>N(Math.max(1,Math.min(d.pages,Number(e.target.value))))}/></label><button disabled={page>=d.pages} onClick={()=>N(page+1)} aria-label="Trang sau"><ChevronRight/></button></div><Viewer d={d} n={page}/></div><aside className="paper"><h2>Đối chiếu trang {page}</h2><p>{p?.mode==='scan'?'Trang ảnh':p?.mode==='mixed'?'Trang có chữ và hình':'Trang tài liệu'}{p?.ocr?' · Đã chạy OCR Việt + Anh':''}{p?.warn?' · Có cảnh báo khi đọc PDF':''}</p><h3>Câu đã biên tập</h3>{questions.length?questions.map(q=><p key={q.id}><a href={'#edit/'+q.id}>{q.stem.slice(0,90)}</a></p>):<p>Chưa có câu biên tập bắt đầu hoặc đi qua trang này.</p>}
+ {p?.anchors?.length? <><h3>Vị trí máy nhận diện</h3><ul>{p.anchors.map((x,i)=><li key={i}>{x}</li>)}</ul></>:null}
+ <details><summary>Trích đoạn tìm kiếm · chưa hiệu đính</summary><pre className="wrap-code">{p?.text||'Chưa có chữ đọc được.'}</pre></details>
+ {d.group!=='slide'&&<button onClick={()=>go('edit/page:'+d.id+':'+page)}>Đề xuất bản chép từ trang này</button>}</aside></div></>}
+ const filtered=b.docs.filter(d=>(!group||d.group===group)&&(!term||d.term===term)&&(!school||d.school===school))
+ const searchKey=norm(search.trim()),docs=filtered.filter(d=>!searchKey||norm(d.name+' '+d.school+' '+d.term).includes(searchKey))
+ const hits=searchKey.length>=2&&pages?filtered.flatMap(d=>(pages[d.id]||[]).filter(p=>norm(p.text).includes(searchKey)).map(p=>({d,p}))):[]
+ return <><Head title="Thư viện tài liệu">Tra cứu đề gốc, slide và vị trí nội dung đã số hóa.</Head><div className="filters"><SearchBox value={search} onChange={s=>{K(s);L(25)}} placeholder="Tìm trong tên tài liệu và nội dung trang…"/><div className="filtergrid"><Filter label="Nhóm nguồn" value={group} change={G} items={['HUST',['OtherSchool','Trường khác'],['slide','Slide bài giảng']]}/><Filter label="Trường theo nội dung" value={school} change={S} items={[...new Set(b.docs.map(d=>d.school).filter(Boolean))]}/><Filter label="Năm / kỳ có căn cứ" value={term} change={Y} items={[...new Set(b.docs.map(d=>d.term).filter(Boolean))]}/></div></div>
+ {error&&<p role="alert">Không tải được chỉ mục trang. Hãy mở lại ứng dụng từ launcher.</p>}
+ {hits.length>0&&<section className="paper"><h2>{hits.length} trang có kết quả</h2>{hits.slice(0,hitsLimit).map(({d,p})=><div className="search-hit" key={d.id+p.n}><a href={urlFor(d,p.n)} target="_blank" rel="noreferrer">{d.name} · tr. {p.n}</a><small>{p.text.slice(Math.max(0,norm(p.text).indexOf(searchKey)-35),norm(p.text).indexOf(searchKey)+90)}</small></div>)}{hitsLimit<hits.length&&<button onClick={()=>L(hitsLimit+25)}>Xem thêm kết quả</button>}</section>}
+ <h2>{docs.length} tài liệu</h2><div className="rows">{docs.map(d=><article key={d.id}><span className="row-icon">{d.group==='slide'?<LibraryBig/>:<FileText/>}</span><div><small>{d.group==='slide'?'Slide':d.group==='HUST'?'Thư mục HUST':'Thư mục trường khác'} · {d.pages} trang</small><h3><a href={'#library/'+d.id}>{d.name}</a></h3><small>{d.school||'Trường chưa xác định'}{d.group!=='slide'?' · '+(d.complete?'Đủ dữ liệu nguyên đề':'Chưa đầy đủ'):''}{d.duplicates.length?' · Có bản trùng':''}</small></div><a className="iconbtn" href={urlFor(d)} target="_blank" rel="noreferrer" aria-label={'Mở '+d.name}><ExternalLink size={18}/></a></article>)}</div>{!docs.length&&!hits.length&&<Empty>Chưa tìm thấy tài liệu phù hợp.</Empty>}</>
+}
+export function Editor({b,v,update,target}:{b:Bank,v:Vault,update:Update,target:string}){
+ const q=b.questions.find(q=>q.id===target),split=target.split(':'),pageDoc=b.docs.find(d=>d.id===split[1])
+ if(!q&&(!pageDoc||!Number.isInteger(+split[2])||+split[2]<1||+split[2]>pageDoc.pages))return <Empty>Không tìm thấy câu hoặc trang nguồn.</Empty>
+ return <EditorForm key={target} b={b} v={v} update={update} target={target} q={q} original={q?findDoc(b,q.sources[0].file):pageDoc!} page={q?q.sources[0].n:+split[2]}/>
+}
+function EditorForm({b,v,update,target,q,original,page}:{b:Bank,v:Vault,update:Update,target:string,q?:Question,original:Doc,page:number}){
+ const history=Object.values(v).filter((e):e is Edit=>e.type==='edit'&&e.qid===target).sort((a,b)=>b.updated-a.updated), prior=history[0]
+ const {pages}=useIndex()
+ const [file,F]=useState(prior?.file??original.name), d=findDoc(b,file)||original,[n,N]=useState(prior?.n??page),[stem,T]=useState(prior?.stem??q?.stem??''),[opts,O]=useState((prior?.options??q?.options??[]).join('\n---\n')),[correct,C]=useState((prior?.correct??q?.correct??[]).map(i=>String.fromCharCode(65+i)).join(',')),[reason,R]=useState(''),[chapter,H]=useState(prior?.chapter??q?.chapter??0),[msg,M]=useState('')
+ const save=async()=>{const options=opts.trim()?opts.split(/\n---\n/):[],vals=correct.trim()?correct.toUpperCase().split(/[ ,]+/):[],keys=vals.map(x=>x.charCodeAt(0)-65)
+ if(!stem.trim()||!reason.trim()||vals.some((x,i)=>!/^\p{Lu}$/u.test(x)||keys[i]<0||keys[i]>=options.length)||new Set(keys).size!==keys.length||n<1||n>d.pages){M('Kiểm tra đề bài, trang, ký hiệu đáp án và căn cứ chỉnh sửa.');return}
+ await update(()=>[{type:'edit',id:'edit:'+crypto.randomUUID(),updated:Date.now(),qid:target,bank:b.version,file,n,stem,options,correct:keys,chapter,reason}]);R('');M('Đã lưu phiên bản hiệu đính cá nhân.')}
+ return <><Head title="Đối chiếu và hiệu đính">Các phiên bản chỉnh sửa được lưu trên trình duyệt và có trong bản sao lưu.</Head><div className="papersplit"><Viewer d={d} n={n}/><div className="paper">{q&&<><QType q={q}/><SourceLine b={b} q={q}/><p>{q.issues.join(' ')||'Chưa ghi nhận nghi vấn cho câu này.'}</p><details><summary>Bản chép phát hành và lời giải</summary><pre className="wrap-code">{q.stem}</pre><Solution q={q}/></details></>}
+ <details><summary>Bản trích ban đầu</summary><pre className="wrap-code">{q?.raw||pages?.[original.id]?.[page-1]?.text||'Chưa có bản chữ đọc được.'}</pre></details><label>Tài liệu<select value={file} onChange={e=>{F(e.target.value);N(1)}}>{b.docs.filter(x=>x.group!=='slide').map(d=><option key={d.id}>{d.name}</option>)}</select></label><label>Trang nguồn<input type="number" min="1" max={d.pages} value={n} onChange={e=>N(+e.target.value)}/></label>
+ <label>Bản chép hiệu đính<textarea maxLength={32000} value={stem} onChange={e=>T(e.target.value)}/></label><label>Phương án (ngăn bằng dòng ---)<textarea maxLength={32000} value={opts} onChange={e=>O(e.target.value)}/></label><label>Đáp án đề xuất (A,B…)<input value={correct} onChange={e=>C(e.target.value)}/></label>
+ <label>Chương<select value={chapter} onChange={e=>H(+e.target.value)}><option value={0}>Ngoài phạm vi / chưa phân chương</option>{b.chapters.map(c=><option key={c.id} value={c.id}>{c.short}</option>)}</select></label><label>Nghi vấn, cách đọc, lời giải đề xuất và căn cứ<textarea maxLength={32000} value={reason} onChange={e=>R(e.target.value)}/></label><button className="primary" onClick={save}>Lưu hiệu đính cá nhân</button><p role="status">{msg}</p></div></div>
+ <section className="paper"><h2>Lịch sử hiệu đính</h2>{history.length?history.map(e=><details key={e.id}><summary>{new Date(e.updated).toLocaleString('vi-VN')} · Kiểm tra thủ công của người dùng</summary><pre className="wrap-code">{e.stem}</pre><p>{e.reason}</p><small>{e.file} · Trang {e.n}</small></details>):<p>Chưa có chỉnh sửa cá nhân.</p>}</section></>
+}

@@ -1,0 +1,299 @@
+{
+  "version": "javac 17.0.11",
+  "release": 17,
+  "timeout": 7,
+  "records": [
+    {
+      "id": "int1332-q021",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"B\""
+    },
+    {
+      "id": "int1332-q027",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"Got an int\""
+    },
+    {
+      "id": "int1332-q035",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"[B, A, C]\""
+    },
+    {
+      "id": "int1332-q040",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"2\""
+    },
+    {
+      "id": "int1332-q044",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"Finally block\\n1\""
+    },
+    {
+      "id": "int1332-q099",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"ACB\""
+    },
+    {
+      "id": "int1332-q062",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"true\\nfalse\""
+    },
+    {
+      "id": "int1332-q069",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"[1]\""
+    },
+    {
+      "id": "int1332-q070",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"Hello World\""
+    },
+    {
+      "id": "int1332-q080",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"ABC\""
+    },
+    {
+      "id": "int1332-q086",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"true\\nfalse\""
+    },
+    {
+      "id": "int1332-q093",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"Hello\""
+    },
+    {
+      "id": "int1332-q086",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [
+        "-XX:AutoBoxCacheMax=200"
+      ],
+      "result": "stdout = \"true\\ntrue\""
+    },
+    {
+      "id": "it3100-02-q001",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Main.java:8: error: illegal character: '\\u2002'"
+    },
+    {
+      "id": "it3100-02-q001",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF. Biến thể biên tập thay U+2002 ở thụt lề bằng khoảng trắng ASCII; mọi toán tử giữ nguyên.",
+      "flags": [],
+      "result": "stdout = \"122\""
+    },
+    {
+      "id": "it3100-02-q003",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Biên dịch thành công."
+    },
+    {
+      "id": "it3100-02-q005",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Exception in thread \"main\" java.lang.NullPointerException: Cannot read the array length because \"<local2>\" is null"
+    },
+    {
+      "id": "it3100-02-q007",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"0\""
+    },
+    {
+      "id": "it3100-02-q017",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"12\""
+    },
+    {
+      "id": "it3100-02-q019",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Main.java:10: error: print() in Child cannot override print() in Parent"
+    },
+    {
+      "id": "it3100-02-q021",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "A.java:2: error: illegal combination of modifiers: abstract and static"
+    },
+    {
+      "id": "it3100-02-q023",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"\""
+    },
+    {
+      "id": "it3100-02-q025",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "BanhXe.java:18: error: ';' expected"
+    },
+    {
+      "id": "it3100-02-q027",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"01\""
+    },
+    {
+      "id": "it3100-02-q028",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Main.java:3: error: final parameter value may not be assigned"
+    },
+    {
+      "id": "it3100-02-q029",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"A012 | A012\""
+    },
+    {
+      "id": "it3100-02-q030",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"Yes\""
+    },
+    {
+      "id": "it3100-02-q036",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"B -> A\""
+    },
+    {
+      "id": "it3100-02-q040",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "A.java:1: error: illegal combination of modifiers: abstract and final"
+    },
+    {
+      "id": "it3100-02-q023",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [
+        "-ea"
+      ],
+      "result": "Exception in thread \"main\" java.lang.AssertionError"
+    },
+    {
+      "id": "it3100-02-q009",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF. Khai triển Sysout đúng quy ước in ở đầu đề.",
+      "flags": [],
+      "result": "stdout = \"2\""
+    },
+    {
+      "id": "it3100-02-q024",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy. Thêm lệnh println nêu trong phần hỏi.",
+      "flags": [],
+      "result": "stdout = \"false\""
+    },
+    {
+      "id": "it3100-06-q003",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"Double array\""
+    },
+    {
+      "id": "it3100-06-q006",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"X\""
+    },
+    {
+      "id": "it3100-06-q007",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Test.java:2: error: illegal character: '\\u2026'"
+    },
+    {
+      "id": "it3100-06-q009",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Test.java:2: error: illegal '.'"
+    },
+    {
+      "id": "it3100-06-q018",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"Ex10Finish\""
+    },
+    {
+      "id": "it3100-06-q019",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Student.java:6: error: constructor Student(String,String,double) is already defined in class Student"
+    },
+    {
+      "id": "it3100-06-q024",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"truefalsetrue\""
+    },
+    {
+      "id": "it3100-06-q025",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Main.java:3: error: variable obj not initialized in the default constructor"
+    },
+    {
+      "id": "it3100-06-q026",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"false\""
+    },
+    {
+      "id": "it3100-06-q027",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"1\""
+    },
+    {
+      "id": "it3100-06-q030",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Program.java:4: error: ']' expected"
+    },
+    {
+      "id": "it3100-06-q034",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "Exception in thread \"main\" java.lang.ClassCastException: class Person cannot be cast to class Employee (Person and Employee are in unnamed module of loader 'app')"
+    },
+    {
+      "id": "it3100-06-q036",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"true\\nfalse\\nfalse\\ntrue\\nfalse\""
+    },
+    {
+      "id": "it3100-06-q038",
+      "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+      "flags": [],
+      "result": "stdout = \"52\""
+    },
+    {
+      "id": "it3100-06-q028",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "stdout = \"55\""
+    },
+    {
+      "id": "it3100-06-q029",
+      "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+      "flags": [],
+      "result": "Check.java:7: error: bad operand types for binary operator '+'"
+    }
+  ]
+}

@@ -1,0 +1,2107 @@
+[
+ {
+  "id": "es-lt-1",
+  "kind": "theory",
+  "stem": "Hãy nêu điểm khác nhau giữa lớp trừu tượng và lớp trong java?",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Lớp trừu tượng"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 2,
+    "number": "1",
+    "printed": "7"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 4.",
+  "explanation": "Lớp cụ thể cho phép tạo đối tượng khi constructor truy cập được. Lớp abstract không cho phép new trực tiếp, vẫn được có constructor, trường và phương thức có thân. Nó có thể có 0 hoặc nhiều phương thức abstract. Lớp con cụ thể phải hoàn tất các phương thức abstract còn lại.",
+  "hints": [
+   "Thử nghĩ về new A() khi A là abstract.",
+   "Xét lớp con chưa cài đủ phương thức."
+  ],
+  "outline": [
+   "Nêu khả năng khởi tạo của hai lớp",
+   "Phân biệt có thể khai báo abstract với bắt buộc khai báo abstract"
+  ],
+  "rubric": [
+   "Nêu khả năng khởi tạo của hai lớp",
+   "Phân biệt có thể khai báo abstract với bắt buộc khai báo abstract"
+  ],
+  "pitfalls": [
+   "Đừng hiểu rằng tất cả phương thức trong abstract class đều là abstract."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 2.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface)."
+  ],
+  "issues": [],
+  "raw": "Hãy nêu điểm khác nhau giữa lớp trừu tượng và lớp trong java?"
+ },
+ {
+  "id": "es-lt-2",
+  "kind": "theory",
+  "stem": "Nếu lớp cha chỉ có phương thức khởi dựng mặc định thì lớp con không cần dùng từ khóa super trong phương thức khởi dựng của nó. Nhưng tại sao nếu lớp cha chỉ có một phương thức khởi dựng có tham số (và không có phương thức khởi tạo mặc định) thì trong phương thức khởi dựng của lớp con, ta vẫn phải dùng từ khóa super?",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Constructor cha và con"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 2,
+    "number": "2",
+    "printed": "7"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 5.",
+  "explanation": "Nếu constructor không ủy quyền qua this(...) hoặc super(...), trình biên dịch chèn super(). Nếu cha chỉ có constructor nhận đối số, super() không phân giải được. Lớp con phải gọi constructor cha truy cập được qua super(giáTrị), trực tiếp hoặc ở cuối chuỗi this(...). Constructor không được kế thừa.",
+  "hints": [
+   "Constructor nào của cha thực sự tồn tại?",
+   "Xét lời gọi ngầm khi bỏ super."
+  ],
+  "outline": [
+   "Nêu lời gọi super() ngầm",
+   "Giải thích lý do không khớp chữ ký",
+   "Nêu cách cung cấp đối số"
+  ],
+  "rubric": [
+   "Nêu lời gọi super() ngầm",
+   "Giải thích lý do không khớp chữ ký",
+   "Nêu cách cung cấp đối số"
+  ],
+  "pitfalls": [
+   "Nhầm constructor không tham số tự viết với constructor mặc định do trình biên dịch sinh."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 2.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa)."
+  ],
+  "issues": [],
+  "raw": "Nếu lớp cha chỉ có phương thức khởi dựng mặc định thì lớp con\n không cần dùng từ khóa super trong phương thức khởi dựng của nó.\n Nhưng tại sao nếu lớp cha chỉ có một phương thức khởi dựng có tham\n số (và không có phương thức khởi tạo mặc định) thì trong phương thức\n khởi dựng của lớp con, ta vẫn phải dùng từ khóa super?"
+ },
+ {
+  "id": "es-lt-3",
+  "kind": "theory",
+  "stem": "Đặc tính sử dụng lại mã được thể hiện ở các nguyên lí nào của lập trình hướng đối tượng. Hãy phân tích sự khác nhau trong việc sử dụng lại các nguyên lí này và cho ví dụ minh họa.",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Kết tập và kế thừa"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 2,
+    "number": "3",
+    "printed": "7"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 6.",
+  "explanation": "Kết tập tái sử dụng bằng cách giữ tham chiếu tới đối tượng thành phần rồi ủy quyền, ví dụ Xe có DongCo và gọi dongCo.khoiDong(). Kế thừa tái sử dụng khai báo và hành vi theo quan hệ là-một, ví dụ XeDien extends Xe. Kết tập có thể thay thành phần lúc chạy, còn cây lớp xác định quan hệ kiểu khi biên dịch.",
+  "hints": [
+   "Ai giữ đối tượng thành phần?",
+   "Trong ví dụ, kiểu con có thay được kiểu cha không?"
+  ],
+  "outline": [
+   "Nêu quan hệ có-một của kết tập",
+   "Nêu quan hệ là-một của kế thừa",
+   "Minh họa hai cách tái sử dụng"
+  ],
+  "rubric": [
+   "Nêu quan hệ có-một của kết tập",
+   "Nêu quan hệ là-một của kế thừa",
+   "Minh họa hai cách tái sử dụng"
+  ],
+  "pitfalls": [
+   "Dùng extends cho quan hệ sở hữu."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 2.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa)."
+  ],
+  "issues": [],
+  "raw": "Đặc tính sử dụng lại mã được thể hiện ở các nguyên lí nào của\n  lập trình hướng đối tượng. Hãy phân tích sự khác nhau trong việc sử\n dụng lại các nguyên lí này và cho ví dụ minh họa."
+ },
+ {
+  "id": "es-lt-4",
+  "kind": "theory",
+  "stem": "So sánh sự khác nhau giữa phương thức khởi tạo và phương thức thông thường. Tại sao khi xây dựng lớp trong java lại nên xây dựng phương thức khởi tạo mặc định?",
+  "options": [],
+  "correct": [],
+  "chapter": 4,
+  "topics": [
+   "Constructor"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 2,
+    "number": "4",
+    "printed": "7"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 7.",
+  "explanation": "Constructor mang tên lớp, không ghi kiểu trả về, được gọi khi khởi tạo hoặc ủy quyền. Method có kiểu trả về hoặc void và mô tả hành vi có thể gọi nhiều lần. Constructor không tham số tiện cho trạng thái mặc định hợp lệ. Khi đã khai báo constructor khác, Java không tự tạo constructor mặc định. Nếu đối tượng cần dữ liệu bắt buộc thì không nhất thiết cho tạo rỗng.",
+  "hints": [
+   "So sánh A() và void A().",
+   "Điều gì xảy ra khi lớp đã khai báo A(int x)?"
+  ],
+  "outline": [
+   "So sánh tên và kiểu trả về",
+   "Nêu thời điểm sử dụng",
+   "Giải thích khi nào Java sinh constructor mặc định"
+  ],
+  "rubric": [
+   "So sánh tên và kiểu trả về",
+   "Nêu thời điểm sử dụng",
+   "Giải thích khi nào Java sinh constructor mặc định"
+  ],
+  "pitfalls": [
+   "Nhầm biểu thức new trả về tham chiếu với constructor có kiểu trả về."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 2.",
+   "Bài 04, trang PDF 5–15 (khởi tạo đối tượng)."
+  ],
+  "issues": [],
+  "raw": "So sánh sự khác nhau giữa phương thức khởi tạo và phương\n thức thông thường. Tại sao khi xây dựng lớp trong java lại nên xây\n dựng phương thức khởi tạo mặc định?"
+ },
+ {
+  "id": "es-lt-5",
+  "kind": "theory",
+  "stem": "So sánh điểm khác biệt giữa this() và super(). Cho ví dụ cụ thể?",
+  "options": [],
+  "correct": [],
+  "chapter": 5,
+  "topics": [
+   "this và super"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 2,
+    "number": "5",
+    "printed": "7"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 8.",
+  "explanation": "this(...) gọi constructor khác của chính lớp. super(...) gọi constructor của cha trực tiếp. Ví dụ: class A { A(int x) {} } class B extends A { B() { this(1); } B(int x) { super(x); } }. new B() đi qua B(int) rồi A(int). Không tạo chu trình ủy quyền.",
+  "hints": [
+   "Hai lời gọi đều dùng trong constructor.",
+   "Lần theo new B() đến cha."
+  ],
+  "outline": [
+   "Xác định lớp nhận mỗi lời gọi",
+   "Đưa ví dụ có đủ constructor",
+   "Lần theo thứ tự khởi tạo"
+  ],
+  "rubric": [
+   "Xác định lớp nhận mỗi lời gọi",
+   "Đưa ví dụ có đủ constructor",
+   "Lần theo thứ tự khởi tạo"
+  ],
+  "pitfalls": [
+   "Gọi đồng thời this(...) và super(...) trong cùng constructor."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 2.",
+   "Bài 05, trang PDF 5–16 (chữ ký, nạp chồng và this)."
+  ],
+  "issues": [],
+  "raw": "So sánh điểm khác biệt giữa this() và super(). Cho ví dụ cụ thể?"
+ },
+ {
+  "id": "es-lt-6",
+  "kind": "theory",
+  "stem": "Trừu tượng hóa là gì? So sánh đối tượng và lớp?",
+  "options": [],
+  "correct": [],
+  "chapter": 1,
+  "topics": [
+   "Trừu tượng hóa"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 3,
+    "number": "6",
+    "printed": "8"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 9.",
+  "explanation": "Trừu tượng hóa chọn các đặc điểm quan trọng cho bài toán và bỏ chi tiết không liên quan. Lớp mô tả cấu trúc, hành vi chung. Đối tượng là một thể hiện có định danh và trạng thái cụ thể. Hai đối tượng SinhVien có thể cùng lớp nhưng khác mã sinh viên.",
+  "hints": [
+   "Điều gì phụ thuộc ngữ cảnh bài toán?",
+   "Phân biệt SinhVien với một sinh viên có mã cụ thể."
+  ],
+  "outline": [
+   "Nêu mục đích trừu tượng hóa",
+   "Phân biệt khuôn mẫu và thể hiện",
+   "Minh họa hai trạng thái cụ thể"
+  ],
+  "rubric": [
+   "Nêu mục đích trừu tượng hóa",
+   "Phân biệt khuôn mẫu và thể hiện",
+   "Minh họa hai trạng thái cụ thể"
+  ],
+  "pitfalls": [
+   "Đồng nhất class với một đối tượng đã được cấp phát."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 01, trang PDF 16, 25–26 (lớp, đối tượng và trừu tượng hóa)."
+  ],
+  "issues": [],
+  "raw": "Trừu tượng hóa là gì? So sánh đối tượng và lớp?"
+ },
+ {
+  "id": "es-lt-7",
+  "kind": "theory",
+  "stem": "So sánh chồng phương thức và ghi đè lại phương thức.",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Nạp chồng và ghi đè"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 3,
+    "number": "7",
+    "printed": "8"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 10.",
+  "explanation": "Nạp chồng dùng cùng tên, khác danh sách kiểu tham số. Trình biên dịch chọn chữ ký dựa trên kiểu tĩnh của đối số. Ghi đè áp dụng cho phương thức instance được thừa kế, chữ ký tương thích và kiểu trả về tương thích. Sau khi chọn chữ ký, kiểu thực tế của đối tượng nhận quyết định bản cài đặt ghi đè.",
+  "hints": [
+   "Xét f(int) và f(String).",
+   "Xét A a = new B(); a.f()."
+  ],
+  "outline": [
+   "So sánh danh sách tham số",
+   "Phân biệt lúc chọn chữ ký và lúc chọn bản cài đặt",
+   "Nêu điều kiện truy cập của phương thức ghi đè"
+  ],
+  "rubric": [
+   "So sánh danh sách tham số",
+   "Phân biệt lúc chọn chữ ký và lúc chọn bản cài đặt",
+   "Nêu điều kiện truy cập của phương thức ghi đè"
+  ],
+  "pitfalls": [
+   "Chỉ đổi kiểu trả về không đủ tạo overload."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface)."
+  ],
+  "issues": [],
+  "raw": "So sánh chồng phương thức và ghi đè lại phương thức."
+ },
+ {
+  "id": "es-lt-8",
+  "kind": "theory",
+  "stem": "Phương thức khởi tạo là gì? Chúng có những tác dụng gì? Lấy ví dụ về chồng phương thức khởi tạo?",
+  "options": [],
+  "correct": [],
+  "chapter": 4,
+  "topics": [
+   "Nạp chồng constructor"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 3,
+    "number": "8",
+    "printed": "8"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 11.",
+  "explanation": "Constructor khởi tạo trạng thái một đối tượng, mang tên lớp, không có kiểu trả về. Ví dụ class Student { private final String name; Student() { this(\"An\"); } Student(String name) { this.name = name; } }. Hai danh sách tham số cho hai cách khởi tạo cùng kiểu.",
+  "hints": [
+   "Một lớp có thể cần nhiều trạng thái ban đầu.",
+   "Dùng this(...) để dùng chung phép gán."
+  ],
+  "outline": [
+   "Nêu mục đích và cú pháp",
+   "Viết hai constructor khác tham số",
+   "Chỉ ra trạng thái sau khởi tạo"
+  ],
+  "rubric": [
+   "Nêu mục đích và cú pháp",
+   "Viết hai constructor khác tham số",
+   "Chỉ ra trạng thái sau khởi tạo"
+  ],
+  "pitfalls": [
+   "Khai báo void Student() sẽ tạo method."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 04, trang PDF 5–15 (khởi tạo đối tượng)."
+  ],
+  "issues": [],
+  "raw": "Phương thức khởi tạo là gì? Chúng có những tác dụng gì? Lấy\n  ví dụ về chồng phương thức khởi tạo?"
+ },
+ {
+  "id": "es-lt-9",
+  "kind": "theory",
+  "stem": "Cần chú ý gì khi thực hiện Upcasting và Downcasting các đối tượng của lớp trong lập trình hướng đối tượng?",
+  "options": [],
+  "correct": [],
+  "chapter": 8,
+  "topics": [
+   "Upcasting và downcasting"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 3,
+    "number": "9",
+    "printed": "8"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 12.",
+  "explanation": "Gán B vào tham chiếu A khi B extends A là upcast, an toàn và ngầm định. Cast ngược dùng (B)a, chỉ thành công với null hoặc khi đối tượng thật phù hợp với B. Ví dụ A a = new A(); B b = (B)a; ném ClassCastException. Dùng instanceof trước khi truy cập hành vi riêng.",
+  "hints": [
+   "Đối tượng thật có thay đổi sau khi cast không?",
+   "Xét a thực sự trỏ một A hay B."
+  ],
+  "outline": [
+   "Phân biệt kiểu biến và kiểu thực",
+   "Điều kiện ép xuống thành công",
+   "Nêu ngoại lệ và cách kiểm tra"
+  ],
+  "rubric": [
+   "Phân biệt kiểu biến và kiểu thực",
+   "Điều kiện ép xuống thành công",
+   "Nêu ngoại lệ và cách kiểm tra"
+  ],
+  "pitfalls": [
+   "Cho rằng cast biến một đối tượng cha thành một đối tượng con mới."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 08, trang PDF 10, 16–20, 25 (chuyển kiểu và liên kết động)."
+  ],
+  "issues": [],
+  "raw": "Cần chú ý gì khi thực hiện Upcasting và Downcasting các đối\n tượng của lớp trong lập trình hướng đối tượng?"
+ },
+ {
+  "id": "es-lt-10",
+  "kind": "theory",
+  "stem": "Hãy nêu sự giống nhau và khác nhau giữa giao diện và lớp trừu tượng trong java.",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Interface và abstract class"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 3,
+    "number": "10",
+    "printed": "8"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "conflict",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 13–14.",
+  "explanation": "Cả hai định nghĩa kiểu trừu tượng cho khách hàng sử dụng qua hợp đồng. Lớp abstract có trạng thái instance, constructor và cả phương thức có thân. Java cho extends một lớp, implements nhiều interface. Trường của interface là public static final. Từ Java 8 interface có default/static method; từ Java 9 có private method.",
+  "hints": [
+   "Một đối tượng có thể thực hiện những hợp đồng nào?",
+   "Đối chiếu Bài 07 trang 41 với bảng trong đề."
+  ],
+  "outline": [
+   "Nêu điểm chung",
+   "So sánh trạng thái và constructor",
+   "So sánh quan hệ kiểu và hạn chế theo phiên bản"
+  ],
+  "rubric": [
+   "Nêu điểm chung",
+   "So sánh trạng thái và constructor",
+   "So sánh quan hệ kiểu và hạn chế theo phiên bản"
+  ],
+  "pitfalls": [
+   "Bảng ở trang 14 chỉ phù hợp một phần với Java hiện đại."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface)."
+  ],
+  "issues": [
+   "Bảng nguồn trang 14 mô tả interface chỉ chứa chữ ký. Bài 07 trang PDF 41 mô tả default/static từ Java 8, private từ Java 9."
+  ],
+  "raw": "Hãy nêu sự giống nhau và khác nhau giữa giao diện và lớp\n  trừu tượng trong java."
+ },
+ {
+  "id": "es-lt-11",
+  "kind": "theory",
+  "stem": "Hãy nêu điều kiện cần và đủ để lập trình viên có thể tiến hành việc: Khai báo đối tượng là đối tượng của lớp A nhưng lại khởi tạo đối tượng của lớp B như sau: A obj = new B();",
+  "options": [],
+  "correct": [],
+  "chapter": 8,
+  "topics": [
+   "Đa hình tham chiếu"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 3,
+    "number": "11",
+    "printed": "8"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Tài liệu có phần trả lời tại trang PDF 15.",
+  "explanation": "Với hai kiểu khác nhau, B phải gán được cho A (B là lớp con trực tiếp/gián tiếp hoặc thực thi interface A). B phải là lớp cụ thể truy cập được, constructor khớp lời gọi không đối số và truy cập được, ngoại lệ checked nếu có phải được xử lý/khai báo. Nếu A và B là cùng kiểu cụ thể cũng gán được.",
+  "hints": [
+   "Xét phép gán và biểu thức new riêng.",
+   "B có phải lớp cụ thể có constructor phù hợp?"
+  ],
+  "outline": [
+   "Giải thích quan hệ kiểu B đến A",
+   "Kiểm tra khả năng new B()",
+   "Phân biệt kiểu tĩnh A và kiểu thực B"
+  ],
+  "rubric": [
+   "Giải thích quan hệ kiểu B đến A",
+   "Kiểm tra khả năng new B()",
+   "Phân biệt kiểu tĩnh A và kiểu thực B"
+  ],
+  "pitfalls": [
+   "Cho rằng bắt buộc có tên một constructor không tham số khai báo tường minh; varargs cũng có thể khớp."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 08, trang PDF 10, 16–20, 25 (chuyển kiểu và liên kết động)."
+  ],
+  "issues": [],
+  "raw": "Hãy nêu điều kiện cần và đủ để lập trình viên có thể tiến hành\n  việc: Khai báo đối tượng là đối tượng của lớp A nhưng lại khởi tạo đối\n tượng của lớp B như sau: A obj = new B();"
+ },
+ {
+  "id": "es-short-6",
+  "kind": "read",
+  "stem": "Cho biết kết quả thực hiện của đoạn mã sau?\npublic class LastLaugh {\n    public static void main(String args[]) {\n        System.out.print(\"H\" + \"a\");\n        System.out.print('H' + 'a');\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 2,
+  "topics": [
+   "Cộng ký tự"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 22,
+    "number": "6",
+    "printed": "27"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Ha169",
+  "explanation": "\"H\" + \"a\" ghép chuỗi thành Ha. Hai char cộng theo số nguyên: 72 + 97 = 169. print không xuống dòng nên màn hình hiện Ha169.",
+  "hints": [
+   "So sánh nháy đơn và nháy kép.",
+   "Xét print thay vì println."
+  ],
+  "outline": [
+   "Nhận ra phép ghép chuỗi",
+   "Tính tổng hai mã ký tự",
+   "Ghép đúng đầu ra"
+  ],
+  "rubric": [
+   "Nhận ra phép ghép chuỗi",
+   "Tính tổng hai mã ký tự",
+   "Ghép đúng đầu ra"
+  ],
+  "pitfalls": [
+   "Nhầm hai char với hai String."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 22.",
+   "Bài 02, trang PDF 9–10, 16, 25, 33 (định danh, kiểu, chuyển kiểu)."
+  ],
+  "issues": [],
+  "raw": "Cho biết kết quả thực hiện của đoạn mã sau?\npublic class LastLaugh {\n    public static void main(String args[]) {\n        System.out.print(\"H\" + \"a\");\n        System.out.print('H' + 'a');\n    }\n}"
+ },
+ {
+  "id": "es-short-7",
+  "kind": "read",
+  "stem": "Cho biết kết quả thực hiện của đoạn mã sau?\npublic class MyClass {\n    public static void main(String[] args) {\n        System.out.println(1 + 2 + \"3\");\n        System.out.println(\"1\" + 2 + 3);\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 2,
+  "topics": [
+   "Nối chuỗi"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 23,
+    "number": "7",
+    "printed": "28"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "33\n123",
+  "explanation": "Dòng 1 cộng 1 và 2 trước rồi ghép 3 với chuỗi \"3\". Dòng 2 bắt đầu bằng chuỗi nên nối liên tiếp chữ số 2 và 3. Hai dòng là 33 và 123.",
+  "hints": [
+   "Toán tử + kết hợp từ bên trái.",
+   "Kiểu của kết quả trung gian là gì?"
+  ],
+  "outline": [
+   "Tính vế đầu dòng 1",
+   "Tính vế đầu dòng 2",
+   "Giữ hai dòng kết quả"
+  ],
+  "rubric": [
+   "Tính vế đầu dòng 1",
+   "Tính vế đầu dòng 2",
+   "Giữ hai dòng kết quả"
+  ],
+  "pitfalls": [
+   "Cộng số 2 và 3 trước ở dòng thứ hai."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 23.",
+   "Bài 02, trang PDF 9–10, 16, 25, 33 (định danh, kiểu, chuyển kiểu)."
+  ],
+  "issues": [],
+  "raw": "Cho biết kết quả thực hiện của đoạn mã sau?\npublic class MyClass {\n    public static void main(String[] args) {\n        System.out.println(1 + 2 + \"3\");\n        System.out.println(\"1\" + 2 + 3);\n    }\n}"
+ },
+ {
+  "id": "es-short-8",
+  "kind": "write",
+  "stem": "Viết chương trình tính HarmonicSum, Harmonic(n) = 1 + 1/2 + 1/3 + … + 1/n.\nĐoạn chương trình chưa hoàn thiện, hãy bổ sung những chỗ còn trống:\npublic [1] HarmonicSum {\n    public static [2] main (String[] args) {\n        int maxDenominator = 50000;\n        [3] sum = 0.0;\n        for (int denominator = 1; denominator <= maxDenominator; ++denominator) {\n            [4]\n        }\n        [5].out.println(\"The sum is: \" + sum);\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 2,
+  "topics": [
+   "Tổng điều hòa"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 24,
+    "number": "8",
+    "printed": "29"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "1. class; 2. void; 3. double; 4. sum += (double) 1/denominator; 5. System",
+  "explanation": "Điền class, void, double, sum += (double) 1/denominator; và System. Ép 1 sang double trước phép chia để mỗi số hạng nhỏ hơn 1 vẫn được cộng.",
+  "hints": [
+   "Xét kiểu của 1 / denominator.",
+   "Đặt phép ép kiểu trước phép chia."
+  ],
+  "outline": [
+   "Hoàn chỉnh class và main",
+   "Dùng kiểu double",
+   "Cộng chính xác số hạng trong vòng lặp"
+  ],
+  "rubric": [
+   "Hoàn chỉnh class và main",
+   "Dùng kiểu double",
+   "Cộng chính xác số hạng trong vòng lặp"
+  ],
+  "pitfalls": [
+   "Gán phép chia nguyên đã bị cắt vào double."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 24.",
+   "Bài 02, trang PDF 9–10, 16, 25, 33 (định danh, kiểu, chuyển kiểu)."
+  ],
+  "issues": [],
+  "raw": "Viết chương trình tính HarmonicSum, Harmonic(n) = 1 + 1/2 + 1/3 + … + 1/n.\nĐoạn chương trình chưa hoàn thiện, hãy bổ sung những chỗ còn trống:\npublic [1] HarmonicSum {\n    public static [2] main (String[] args) {\n        int maxDenominator = 50000;\n        [3] sum = 0.0;\n        for (int denominator = 1; denominator <= maxDenominator; ++denominator) {\n            [4]\n        }\n        [5].out.println(\"The sum is: \" + sum);\n    }\n}"
+ },
+ {
+  "id": "es-short-9",
+  "kind": "read",
+  "stem": "Trong đoạn mã này giá trị của X là bao nhiêu để in ra tất cả các phần tử trong mảng?\nint values[] = {1,2,3,4,5,6,7,8};\nfor(int i=0;i< X; ++i)\n    System.out.println(values[i]);",
+  "options": [],
+  "correct": [],
+  "chapter": 2,
+  "topics": [
+   "Chỉ số mảng"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 25,
+    "number": "9",
+    "printed": "30"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "8",
+  "explanation": "X = 8, cũng có thể dùng values.length. Vòng lặp duyệt i từ 0 đến 7.",
+  "hints": [
+   "Toán tử so sánh là <.",
+   "Phần tử cuối ở chỉ số mấy?"
+  ],
+  "outline": [
+   "Đếm 8 phần tử",
+   "Chỉ ra miền chỉ số và điều kiện dừng"
+  ],
+  "rubric": [
+   "Đếm 8 phần tử",
+   "Chỉ ra miền chỉ số và điều kiện dừng"
+  ],
+  "pitfalls": [
+   "Dùng <= 8 gây vượt chỉ số."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 25.",
+   "Bài 02, trang PDF 9–10, 16, 25, 33 (định danh, kiểu, chuyển kiểu)."
+  ],
+  "issues": [],
+  "raw": "Trong đoạn mã này giá trị của X là bao nhiêu để in ra tất cả các phần tử trong mảng?\nint values[] = {1,2,3,4,5,6,7,8};\nfor(int i=0;i< X; ++i)\n    System.out.println(values[i]);"
+ },
+ {
+  "id": "es-short-10",
+  "kind": "read",
+  "stem": "Cho biết kết quả khi thực thi đoạn chương trình sau:\nint x = 3;\nint y = 8;\nSystem.out.println(y / x);\nSystem.out.println((double)y / x);\nSystem.out.println((double)(y / x));\nSystem.out.println(y / (double)x);",
+  "options": [],
+  "correct": [],
+  "chapter": 2,
+  "topics": [
+   "Chia nguyên và chia thực"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 26,
+    "number": "10",
+    "printed": "31"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "2\n2.6666666666666665\n2.0\n2.6666666666666665",
+  "explanation": "Dòng 1 chia nguyên ra 2. Dòng 2 và 4 chuyển ít nhất một toán hạng thành double trước khi chia. Dòng 3 ép kết quả nguyên 2 nên in 2.0.",
+  "hints": [
+   "Tìm phép toán được thực hiện đầu tiên.",
+   "Dòng nào đổi kiểu sau khi chia?"
+  ],
+  "outline": [
+   "Phân biệt bốn biểu thức",
+   "Ghi giá trị và kiểu kết quả",
+   "Giải thích dấu ngoặc"
+  ],
+  "rubric": [
+   "Phân biệt bốn biểu thức",
+   "Ghi giá trị và kiểu kết quả",
+   "Giải thích dấu ngoặc"
+  ],
+  "pitfalls": [
+   "Nhầm (double)(y / x) với (double)y / x."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 26.",
+   "Bài 02, trang PDF 9–10, 16, 25, 33 (định danh, kiểu, chuyển kiểu)."
+  ],
+  "issues": [],
+  "raw": "Cho biết kết quả khi thực thi đoạn chương trình sau:\nint x = 3;\nint y = 8;\nSystem.out.println(y / x);\nSystem.out.println((double)y / x);\nSystem.out.println((double)(y / x));\nSystem.out.println(y / (double)x);"
+ },
+ {
+  "id": "es-short-14",
+  "kind": "read",
+  "stem": "Cho định nghĩa lớp như sau, thuộc tính nào có thể truy nhập bên ngoài gói my.project:\npackage my.project;\npublic class MyClass {\n    int i;\n    public int j;\n    private int l;\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 3,
+  "topics": [
+   "Phạm vi truy cập"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 30,
+    "number": "14",
+    "printed": "35"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Biến j",
+  "explanation": "j có phạm vi public. i có phạm vi package. l có phạm vi private.",
+  "hints": [
+   "Xét modifier của từng trường.",
+   "Trường không ghi modifier có phạm vi nào?"
+  ],
+  "outline": [
+   "Xác định j",
+   "Giải thích phạm vi i và l"
+  ],
+  "rubric": [
+   "Xác định j",
+   "Giải thích phạm vi i và l"
+  ],
+  "pitfalls": [
+   "Hiểu nhầm thành viên của lớp public đều public."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 30.",
+   "Bài 03, trang PDF 16, 24, 43 (đối tượng, chữ ký, che giấu dữ liệu)."
+  ],
+  "issues": [],
+  "raw": "Cho định nghĩa lớp như sau, thuộc tính nào có thể truy nhập bên ngoài gói my.project:\npackage my.project;\npublic class MyClass {\n    int i;\n    public int j;\n    private int l;\n}"
+ },
+ {
+  "id": "es-short-15",
+  "kind": "read",
+  "stem": "Cho biết đoạn mã sau biên dịch có thành công không?\nimport java.util.*;\npackage com.cnpm.hust;\npublic class Test {\n    public static void main(String[] args) {\n        System.out.println(\"Hello world\");\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 2,
+  "topics": [
+   "Tổ chức gói"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 31,
+    "number": "15",
+    "printed": "36"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "Đoạn mã có lỗi biên dịch. Câu lệnh khai báo package phải để trên đầu tiên trong file mã nguồn.",
+  "explanation": "Không biên dịch được. Với file lớp thông thường này, package phải đứng trước các import và khai báo lớp. Có thể có khoảng trắng, bình luận trước package.",
+  "hints": [
+   "Xem hai dòng đầu.",
+   "Phân biệt bình luận và khai báo import."
+  ],
+  "outline": [
+   "Xác định lỗi biên dịch",
+   "Chỉ đúng thứ tự package và import"
+  ],
+  "rubric": [
+   "Xác định lỗi biên dịch",
+   "Chỉ đúng thứ tự package và import"
+  ],
+  "pitfalls": [
+   "Sửa tên package dù nguyên nhân là thứ tự khai báo."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 31.",
+   "Bài 02, trang PDF 9–10, 16, 25, 33 (định danh, kiểu, chuyển kiểu)."
+  ],
+  "issues": [],
+  "raw": "Cho biết đoạn mã sau biên dịch có thành công không?\nimport java.util.*;\npackage com.cnpm.hust;\npublic class Test {\n    public static void main(String[] args) {\n        System.out.println(\"Hello world\");\n    }\n}"
+ },
+ {
+  "id": "es-short-16",
+  "kind": "write",
+  "stem": "Đoạn mã xây dựng lớp Circle theo sơ đồ lớp UML tương ứng, tuy nhiên còn một số chỗ trống chưa hoàn thành, hãy điền vào chỗ trống các nội dung thích hợp?\nCircle\n-radius:double = 1.0\n-color:String = \"red\"\n+Circle()\n+Circle(r:double)\n+getRadius():double\n+getArea():double\n\npublic [A] Circle {\n    [B] double radius;\n    private [C] color;\n    [D] Circle() {\n        radius = 1.0;\n        color = \"red\";\n    }\n    public [E](double r) {\n        radius = r;\n        color = \"red\";\n    }\n    public double [F] { return radius; }\n    public double getArea() { return [G]; }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Từ UML sang Java"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 32,
+    "number": "16",
+    "printed": "37"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": "A. class; B. private; C. String; D. public; E. Circle; F. getRadius(); G. radius*radius*3.14",
+  "explanation": "A–G lần lượt là class, private, String, public, Circle, getRadius(), radius*radius*3.14. UML dùng dấu trừ cho private và dấu cộng cho public.",
+  "hints": [
+   "So tên constructor với tên lớp.",
+   "Đối chiếu dấu + và - trong UML."
+  ],
+  "outline": [
+   "Đọc đúng dấu phạm vi và kiểu trường",
+   "Khớp tên và chữ ký constructor/phương thức",
+   "Áp dụng công thức diện tích"
+  ],
+  "rubric": [
+   "Đọc đúng dấu phạm vi và kiểu trường",
+   "Khớp tên và chữ ký constructor/phương thức",
+   "Áp dụng công thức diện tích"
+  ],
+  "pitfalls": [
+   "Dùng kiểu trả về cho constructor."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 32.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp)."
+  ],
+  "issues": [],
+  "raw": "Đoạn mã xây dựng lớp Circle theo sơ đồ lớp UML tương ứng, tuy nhiên còn một số chỗ trống chưa hoàn thành, hãy điền vào chỗ trống các nội dung thích hợp?\nCircle\n-radius:double = 1.0\n-color:String = \"red\"\n+Circle()\n+Circle(r:double)\n+getRadius():double\n+getArea():double\n\npublic [A] Circle {\n    [B] double radius;\n    private [C] color;\n    [D] Circle() {\n        radius = 1.0;\n        color = \"red\";\n    }\n    public [E](double r) {\n        radius = r;\n        color = \"red\";\n    }\n    public double [F] { return radius; }\n    public double getArea() { return [G]; }\n}"
+ },
+ {
+  "id": "es-bt-2",
+  "kind": "read",
+  "stem": "Đoạn mã dưới đây có lỗi gì không?\npublic class A {\n    public A() {\n        super();\n        this(10);\n    }\n    public A(int i) {\n        System.out.println(i);\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Chuỗi constructor"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 36,
+    "number": "2",
+    "printed": "41"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Không biên dịch. Một constructor không thể vừa gọi super() vừa gọi this(10). Để ủy quyền cho A(int), có thể bỏ super() trong bản sửa riêng.",
+  "hints": [
+   "Lần theo hướng gọi từ main hoặc từ constructor.",
+   "Kiểm tra điều kiện biên dịch trước khi suy ra đầu ra."
+  ],
+  "outline": [
+   "Nhận ra hai lời gọi trong cùng constructor",
+   "Nêu quy tắc ủy quyền",
+   "Không đưa ra kết quả chạy"
+  ],
+  "rubric": [
+   "Nhận ra hai lời gọi trong cùng constructor",
+   "Nêu quy tắc ủy quyền",
+   "Không đưa ra kết quả chạy"
+  ],
+  "pitfalls": [
+   "Giả định tất cả các constructor hoặc tất cả các khối catch đều chạy."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 36.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Lỗi biên dịch: call to this must be first statement in constructor"
+  ],
+  "issues": [],
+  "raw": "                                                        41\n\nBài 2.\n\n • Đoạn mã dưới đây có lỗi gì không?\n        public class A {\n          public A() {\n             super();\n              this(10);\n             }\n\n\n          public A(int i) {\n             System.out.println(i);\n             }\n\n          }"
+ },
+ {
+  "id": "es-bt-3",
+  "kind": "read",
+  "stem": "Kết quả khi thực thi chương trình dưới đây?\nclass M {\n    int i;\n    public M(int i) {\n        this.i = i--;\n    }\n}\nclass N extends M {\n    public N(int i) {\n        super(++i);\n        System.out.println(i);\n    }\n}\npublic class MainClass {\n    public static void main(String[] args) {\n        N n = new N(26);\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Chuỗi constructor"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 37,
+    "number": "3",
+    "printed": "42"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "++i ở N tăng 26 lên 27 rồi truyền giá trị đó vào M. i-- ở M chỉ giảm bản sao tham số của M. i trong N vẫn là 27.",
+  "hints": [
+   "Lần theo hướng gọi từ main hoặc từ constructor.",
+   "Kiểm tra điều kiện biên dịch trước khi suy ra đầu ra."
+  ],
+  "outline": [
+   "Theo dõi ++i",
+   "Phân biệt hai tham số i",
+   "Ghi đúng số 27"
+  ],
+  "rubric": [
+   "Theo dõi ++i",
+   "Phân biệt hai tham số i",
+   "Ghi đúng số 27"
+  ],
+  "pitfalls": [
+   "Giả định tất cả các constructor hoặc tất cả các khối catch đều chạy."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 37.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Đầu ra: '27'"
+  ],
+  "issues": [],
+  "raw": "                                                           42\n\n  Bài 3.\n\n• Kết quả khi thực thi chương trình dưới đây?\n      class M {\n           int i;\n                                    public class MainClass {\n         public M(int i) {                                       public static void main(String[] args) {\n              this.i = i--;                         N n = new N(26);\n           }                                      }\n                                               }        }\n      class N extends M {\n         public N(int i) {\n           super(++i);\n            System.out.println(i);\n           }\n        }"
+ },
+ {
+  "id": "es-bt-4",
+  "kind": "read",
+  "stem": "Cho biết kết quả khi thực hiện đoạn mã sau:\npublic class MyClass {\n    public static void main(String[] args) {\n        B b = new B(\"Test\");\n    }\n}\nclass A {\n    A() { this(\"1\", \"2\"); }\n    A(String s, String t) { this(s + t); }\n    A(String s) { System.out.println(s); }\n}\nclass B extends A {\n    B(String s) { System.out.println(s); }\n    B(String s, String t) { this(t + s + \"3\"); }\n    B() { super(\"4\"); };\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Chuỗi constructor"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 38,
+    "number": "4",
+    "printed": "43"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "new B(\"Test\") chọn B(String). Lời gọi super() ngầm đến A(), rồi A(\"1\",\"2\") và A(\"12\"). A(String) in 12 trước khi thân B(String) in Test.",
+  "hints": [
+   "Lần theo hướng gọi từ main hoặc từ constructor.",
+   "Kiểm tra điều kiện biên dịch trước khi suy ra đầu ra."
+  ],
+  "outline": [
+   "Chọn đúng overload ban đầu",
+   "Lần theo lời gọi cha",
+   "Ghi đúng hai dòng"
+  ],
+  "rubric": [
+   "Chọn đúng overload ban đầu",
+   "Lần theo lời gọi cha",
+   "Ghi đúng hai dòng"
+  ],
+  "pitfalls": [
+   "Giả định tất cả các constructor hoặc tất cả các khối catch đều chạy."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 38.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Đầu ra: '12\\nTest'"
+  ],
+  "issues": [],
+  "raw": "                                                           43\n\n  Bài 4.\n\n• Cho biết kết quả khi thực hiện đoạn mã sau:\n   public class MyClass {\n       public static void main(String[] args) {\n           B b = new B(\"Test\");\n       }\n   }\n   class A {\n       A() { this(\"1\", \"2\"); }\n       A(String s, String t) { this(s + t); }\n       A(String s) { System.out.println(s); }\n   }\n   class B extends A {\n       B(String s) { System.out.println(s); }\n       B(String s, String t) { this(t + s + \"3\"); }\n       B() { super(\"4\"); };\n   }"
+ },
+ {
+  "id": "es-bt-5",
+  "kind": "read",
+  "stem": "Cho biết kết quả biên dịch và thực hiện đoạn mã sau:\nclass Base extends Exception {}\nclass Derived extends Base {}\npublic class Main {\n    public static void main(String args[]) {\n        try {\n            throw new Derived();\n        }\n        catch(Base b) {\n            System.out.println(\"Caught base class exception\");\n        }\n        catch(Derived d) {\n            System.out.println(\"Caught derived class exception\");\n        }\n    }\n}",
+  "options": [],
+  "correct": [],
+  "chapter": 10,
+  "topics": [
+   "Ngoại lệ"
+  ],
+  "sources": [
+   {
+    "file": "OOP - bài tập tổng hợp.pdf",
+    "n": 39,
+    "number": "5",
+    "printed": "44"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Không biên dịch vì catch(Base) đứng trước đã bắt cả Derived. catch(Derived) sau đó không thể bắt được ngoại lệ nào. Không có đầu ra chạy chương trình.",
+  "hints": [
+   "Lần theo hướng gọi từ main hoặc từ constructor.",
+   "Kiểm tra điều kiện biên dịch trước khi suy ra đầu ra."
+  ],
+  "outline": [
+   "Nhận diện thứ bậc ngoại lệ",
+   "Kiểm tra thứ tự catch",
+   "Phân biệt lỗi biên dịch và kết quả chạy"
+  ],
+  "rubric": [
+   "Nhận diện thứ bậc ngoại lệ",
+   "Kiểm tra thứ tự catch",
+   "Phân biệt lỗi biên dịch và kết quả chạy"
+  ],
+  "pitfalls": [
+   "Giả định tất cả các constructor hoặc tất cả các khối catch đều chạy."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 39.",
+   "Bài 10, trang PDF 25, 32–33 (ngoại lệ và thứ tự catch).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Lỗi biên dịch: exception Derived has already been caught"
+  ],
+  "issues": [],
+  "raw": "                                                           44\n\n  Bài 5.\n\n• Cho biết kết quả biên dịch và thực hiện đoạn mã sau:\n\nclass Base extends Exception {}\nclass Derived extends Base  {}\n\npublic class Main {\n  public static void main(String args[]) {\n\n   try {\n\n       throw new Derived();\n    }\n    catch(Base b)     {\n       System.out.println(\"Caught base class exception\");\n    }\n    catch(Derived d)  {\n       System.out.println(\"Caught derived class exception\");\n    }\n  }\n}"
+ },
+ {
+  "id": "es-quote",
+  "kind": "parts",
+  "stem": "Mô tả bài toán\nMột hệ thống quản lý danh mục các loại mặt hàng thiết bị điện tửbao gồm điện thoại và phụ kiện điện tử. Các thông tin quản lý của mỗi loại thiết bịbao gồm:\n• Điện thoại (Mobile): tên (name), hãng (brand), giá (price), hệ điều hành (OS, có thể là Android hoặc iOS).\n• Phụkiện điện tử(Accessory): tên (name), hãng (brand), giá (price), tính năng (feature), điện thoại hỗ trợ(là các điện thoại thuộc các hãng điện thoại được quản lý).\nKhi có yêu cầu, hệ thống có thể xuất ra một bảng báo giá (ProductQuote) với một số sản phẩm mà khách hàng yêu cầu. Các mặt hàng có thể được thêm vào bảng báo giá thông qua phương thức addItem(). Để xuất ra các thông tin của Bảng báo giá, cần gọi đến phương thức getQuoteInfo() của lớp ProductQuote. Phương thức này trảvề chuỗi thông tin gồm:\n1. Tiêu đề: BẢNG BÁO GIÁ\n2. Số thứ tựtăng dần, bắt đầu từ 1.\n3. Thông tin riêng của mỗi mặt hàng, tùy vào từng loại thiết bị.\n4. Chuỗi kết thúc: \"Tổng cộng (Đã bao gồm VAT) ... đồng:\" biểu thị tổng số tiền của tất cảcác mặt hàng có trong bảng báo giá.\nĐể lấy thông tin hiển thị của mỗi loại mặt hàng, cần gọi đến phương thức getInfo() của các mặt hàng tương ứng theo cấu trúc đặc tả dưới đây:\nĐiện thoại (Mobile) Phụkiện điện tử(Accessory) [Hãng] [Tên điện thoại] [Tên phụ kiện] Hệ điều hành: [iOS hoặc Android] Hãng sản xuất: [Hãng] Dùng cho: [Điện thoại hỗ trợ] Đơn giá: [Giá] đồng Đơn giá: [Giá] đồng\nYêu cầu bài tập\nAnh/chị hãy thực hiện các công việc sau cho chương trình được mô tả ở trên:\na. (1.5 điểm) Hãy vẽ biểu đồlớp chi tiết (Class Diagram), gồm đầy đủcác thuộc tính, phương thức cần thiết và mối quan hệ giữa các lớp.\nb. (1.5 điểm) Hãy viết mã nguồn bằng ngôn ngữlập trình hướng đối tượng (ví dụ: Java/C++) để triển khai các lớp chính thực hiện yêu cầu nói trên. Trong đó, bao gồm cảlớp Test chứa phương thức main() để khởi tạo các mặt hàng, tạo một bảng báo giá, thêm các mặt hàng vào bảng báo giá, sau đó hiển thịnội dung của bảng báo giá ra màn hình.\nc. (1 điểm) Anh/chị hãy liệt kê ít nhất 3 điều mà anh/chị thấy cần cải thiện và nhiều nhất 2 điều mà anh/chị thấy thích nhất về môn học này trong kỳnày cần tiếp tục phát huy cho những khoá sau [1 điểm cộng của cô Trang]\n\nVí dụ mẫu kết quảđầu ra (Bảng báo giá)\nDưới đây là một ví dụtham khảo về nội dung chuỗi trảvề khi gọi phương thức getQuoteInfo():\nBẢNG BÁO GIÁ\n1. Apple iPhone 16 Pro Max Hệ điều hành: iOS Đơn giá: 34,990,000 đồng 2. Dán cường lực điện thoại iPhone 16 Pro Max Hãng sản xuất: GOR Dùng cho: iPhone 16 Pro Max Đơn giá: 100,000 đồng 3. Sạc điện thoại type-C Hãng sản xuất: Ugreen Dùng cho: nhiều sản phẩm Đơn giá: 120,000 đồng\nTổng cộng (Đã bao gồm VAT): 35,210,000 đồng",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Biểu đồ lớp và đa hình"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì phần tự luận các kì.pdf",
+    "n": 1,
+    "number": "a, b, c",
+    "end": 2,
+    "printed": "1–2",
+    "term": "2025.1"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Product giữ name, brand, price. Mobile và Accessory kế thừa Product; Accessory liên kết đến các Mobile tương thích. ProductQuote kết tập 0..* Product. getInfo() ghi đè theo loại. Các giá trong ví dụ đã gồm VAT, cộng trực tiếp ra 35.210.000 đồng. Ý c là phản hồi cá nhân; chọn cải tiến và điểm thích từ trải nghiệm thật.\n\nimport java.util.*;\nabstract class Product {\n    final String name, brand;\n    final long price;\n    Product(String name, String brand, long price) {\n        this.name = name; this.brand = brand; this.price = price;\n    }\n    abstract String getInfo();\n    String priceLine() { return String.format(Locale.US, \"Đơn giá: %,d đồng\", price); }\n}\nclass Mobile extends Product {\n    enum OS { Android, iOS }\n    final OS os;\n    Mobile(String name, String brand, long price, OS os) {\n        super(name, brand, price); this.os = os;\n    }\n    String getInfo() { return brand + \" \" + name + \"\\nHệ điều hành: \" + os + \"\\n\" + priceLine(); }\n}\nclass Accessory extends Product {\n    final String feature;\n    final List<Mobile> compatible;\n    Accessory(String name, String brand, long price, String feature, Mobile... phones) {\n        super(name, brand, price); this.feature = feature; compatible = List.of(phones);\n    }\n    String getInfo() {\n        String targets = compatible.size() == 1 ? compatible.get(0).name : \"nhiều sản phẩm\";\n        return name + \"\\nHãng sản xuất: \" + brand + \"\\nDùng cho: \" + targets + \"\\n\" + priceLine();\n    }\n}\nclass ProductQuote {\n    private final List<Product> items = new ArrayList<>();\n    void addItem(Product p) { items.add(p); }\n    String getQuoteInfo() {\n        StringBuilder s = new StringBuilder(\"BẢNG BÁO GIÁ\\n\");\n        long total = 0; int i = 1;\n        for (Product p : items) {\n            s.append(i++).append(\". \").append(p.getInfo()).append('\\n');\n            total += p.price;\n        }\n        return s + String.format(Locale.US, \"Tổng cộng (Đã bao gồm VAT): %,d đồng\", total);\n    }\n}\nclass Test {\n    public static void main(String[] args) {\n        Mobile phone = new Mobile(\"iPhone 16 Pro Max\", \"Apple\", 34990000, Mobile.OS.iOS);\n        Mobile other = new Mobile(\"USB-C\", \"Khác\", 0, Mobile.OS.Android);\n        ProductQuote q = new ProductQuote();\n        q.addItem(phone);\n        q.addItem(new Accessory(\"Dán cường lực điện thoại iPhone 16 Pro Max\", \"GOR\", 100000, \"bảo vệ\", phone));\n        q.addItem(new Accessory(\"Sạc điện thoại type-C\", \"Ugreen\", 120000, \"sạc\", phone, other));\n        System.out.println(q.getQuoteInfo());\n    }\n}",
+  "hints": [
+   "Tìm thuộc tính chung của hai loại thiết bị.",
+   "Lặp trên List<Product> rồi gọi getInfo() đa hình."
+  ],
+  "outline": [
+   "Vẽ thuộc tính, hành vi, bội số quan hệ",
+   "Viết getInfo, addItem, getQuoteInfo và main",
+   "Số thứ tự từ 1, tổng và mẫu thông tin đúng",
+   "Trình bày phản hồi cá nhân theo số lượng đề yêu cầu"
+  ],
+  "rubric": [
+   "Vẽ thuộc tính, hành vi, bội số quan hệ",
+   "Viết getInfo, addItem, getQuoteInfo và main",
+   "Số thứ tự từ 1, tổng và mẫu thông tin đúng",
+   "Trình bày phản hồi cá nhân theo số lượng đề yêu cầu"
+  ],
+  "pitfalls": [
+   "Tự đặt thuế suất và cộng VAT lần hai."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1–2.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Biên dịch thành công."
+  ],
+  "issues": [],
+  "raw": "    ĐỀOOP TỰLUẬN / ĐỀTHI OOP CÔ TRANG K69 2025.1 - KHMT\n                  Môn: Lập trình hướng đối tượng (OOP)\n\n\n\n\nMô tảbài toán\n\nMột hệthống quản lý danh mục các loại mặt hàng thiết bịđiện tửbao gồm điện thoại và phụkiện\nđiện tử. Các thông tin quản lý của mỗi loại thiết bịbao gồm:\n\n• Điện thoại (Mobile): tên (name), hãng (brand), giá (price), hệđiều hành (OS, có thểlà Android\n  hoặc iOS).\n\n• Phụkiện điện tử(Accessory): tên (name), hãng (brand), giá (price), tính năng (feature),\n  điện thoại hỗtrợ(là các điện thoại thuộc các hãng điện thoại được quản lý).\n\n   Khi có yêu cầu, hệthống có thểxuất ra một bảng báo giá (ProductQuote) với một sốsản phẩm\nmà khách hàng yêu cầu. Các mặt hàng có thểđược thêm vào bảng báo giá thông qua phương thức\naddItem().\n   Đểxuất ra các thông tin của Bảng báo giá, cần gọi đến phương thức getQuoteInfo() của lớp\nProductQuote. Phương thức này trảvềchuỗi thông tin gồm:\n\n1. Tiêu đề: BẢNG BÁO GIÁ\n\n2. Sốthứtựtăng dần, bắt đầu từ1.\n\n3. Thông tin riêng của mỗi mặt hàng, tùy vào từng loại thiết bị.\n\n4. Chuỗi kết thúc: \"Tổng cộng (Đã bao gồm VAT) ... đồng:\" biểu thịtổng sốtiền của tất cảcác\n  mặt hàng có trong bảng báo giá.\n\n   Đểlấy thông tin hiển thịcủa mỗi loại mặt hàng, cần gọi đến phương thức getInfo() của các mặt\nhàng tương ứng theo cấu trúc đặc tảdưới đây:\n\n Điện thoại (Mobile)                   Phụkiện điện tử(Accessory)\n [Hãng] [Tên điện thoại]                   [Tên phụkiện]\n Hệđiều hành: [iOS hoặc Android]           Hãng sản xuất: [Hãng]\n                                      Dùng cho: [Điện thoại hỗtrợ]\n Đơn giá: [Giá] đồng                     Đơn giá: [Giá] đồng\n\n\n\nYêu cầu bài tập\n\nAnh/chịhãy thực hiện các công việc sau cho chương trình được mô tảởtrên:\n\n   a. (1.5 điểm) Hãy vẽbiểu đồlớp chi tiết (Class Diagram), gồm đầy đủcác thuộc tính, phương\n     thức cần thiết và mối quan hệgiữa các lớp.\n\n  b. (1.5 điểm) Hãy viết mã nguồn bằng ngôn ngữlập trình hướng đối tượng (ví dụ: Java/C++)\n     đểtriển khai các lớp chính thực hiện yêu cầu nói trên. Trong đó, bao gồm cảlớp Test chứa\n     phương thức main() đểkhởi tạo các mặt hàng, tạo một bảng báo giá, thêm các mặt hàng vào\n     bảng báo giá, sau đó hiển thịnội dung của bảng báo giá ra màn hình.\n\n   c. (1 điểm) Anh/chịhãy liệt kê ít nhất 3 điều mà anh/chịthấy cần cái thiện và nhiều nhất 2 điều\n    mà anh/chịthầy thích nhất vềmôn học này trong kỳnày cần tiếp tục phát huy cho những khoá\n     sau [1 điểm cộng của cô Trang]\n\n\n\n                                            1\nVí dụmẫu kết quảđầu ra (Bảng báo giá)\n\nDưới đây là một ví dụtham khảo vềnội dung chuỗi trảvềkhi gọi phương thức getQuoteInfo():\n\n\n\n\n\n                    BẢNG BÁO GIÁ\n\n\n          1. Apple iPhone 16 Pro Max\n       Hệđiều hành: iOS\n      Đơn giá: 34,990,000 đồng\n          2. Dán cường lực điện thoại iPhone 16 Pro Max\n       Hãng sản xuất: GOR\n       Dùng cho: iPhone 16 Pro Max\n      Đơn giá: 100,000 đồng\n          3. Sạc điện thoại type-C\n       Hãng sản xuất: Ugreen\n       Dùng cho: nhiều sản phẩm\n      Đơn giá: 120,000 đồng\n\n\n      Tổng cộng (Đã bao gồm VAT): 35,210,000 đồng\n\n\n\n\n\n                                            2"
+ },
+ {
+  "id": "es-parking",
+  "kind": "parts",
+  "stem": "Thiết kế hệ thống quản lý phương tiện và thu phí vào/ra tại chung cư.\nMô tả hệ thống:\nHệ thống được yêu cầu xây dựng nhằm quản lý các phương tiện và hướng đến quản lý thông tin thu phí vào/ra của các phương tiện như ô tô, xe máy,... (trong tương lai có thểmởrộng thêm xe đạp, xe điện). Các phương tiện cũng có hai hình thức gửi xe: gửi theo tháng và gửi theo lượt. Đối với tất cảcác loại phương tiện, hệ thống cần quản lý tối thiểu là biển số xe của phương tiện. Đối với thông tin thu phí vào/ra, cần quản lý được các lượt gửi xe với các thông tin như giờvào/ra, hình ảnh. Sựkhác biệt giữa các loại phương tiện và hình thức gửi xe như sau: Đối với xe gửi theo tháng, cần phải lưu trữđược vị trí đỗxe đã được quy định (đối với ô tô), tên chủxe, số căn hộ/số phòng, số đăng ký xe và tình trạng đóng tiền. Đối với xe gửi theo lượt, việc tính phí gửi xe giữa các loại phương tiện cũng khác nhau (ví dụ, xe gửi theo tháng có thể là 1 triệu rưỡi/tháng đối với ô tô, 80.000/tháng đối với xe máy, xe gửi theo lượt thì tính theo ca, kíp...).\n1. Thiết kế biểu đồlớp cho hệ thống\nBiểu đồlớp phải thể hiện được các lớp và mối quan hệ giữa các lớp. Thiết kế lớp cần phải thể hiện được các nguyên lý của lập trình hướng đối tượng như:\n• Các phương thức và thuộc tính phù hợp. Các lớp có tính kế thừa (5đ)\n• Tính nạp chồng - overloading (1đ) và ghi đè - overriding (1đ).\n• Lớp trừu tượng - abstract class, giao diện - interface (2đ).\n• Đa hình (1đ)\n2. Trình bày ngắn gọn\na. Lớp trừu tượng và/hoặc giao diện trong thiết kế.\nb. Tính đa hình đối tượng được thể hiện trong thiết kếcủa bạn như thế nào.",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Biểu đồ lớp và chính sách tính phí"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì phần tự luận các kì.pdf",
+    "n": 3,
+    "number": "1, 2",
+    "printed": "3",
+    "term": "2024.2",
+    "examCode": "374"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Vehicle(plate) là lớp trừu tượng, Car và Motorbike kế thừa. ParkingSession có vehicle, entryTime, exitTime, ảnh vào/ra và tham chiếu FeePolicy. MonthlyPermit lưu chủ xe, căn hộ, đăng ký, trạng thái đóng tiền, vị trí ấn định cho ô tô; TicketPolicy xử lý lượt gửi. MonthlyPolicy và TicketPolicy thực thi cùng hợp đồng fee(session). Quản lý có open(vehicle, time) và open(vehicle, time, photo) để thể hiện overload. Hai policy ghi đè fee và đối tượng thực lúc chạy quyết định cách tính khi gọi session.policy.fee(session). Giá tháng trong đề là ví dụ, giá ca chưa được định lượng nên thiết kế bảng giá cấu hình. Bội số: Vehicle 1 liên kết 0..* ParkingSession; mỗi session chọn một hình thức.",
+  "hints": [
+   "Tách loại xe khỏi hình thức gửi.",
+   "Xét thêm xe điện mà không nhân đôi toàn bộ các lớp."
+  ],
+  "outline": [
+   "Vẽ Vehicle, các lớp con, lượt gửi xe và chính sách",
+   "Ghi thông tin tháng, lượt, chủ xe, thời gian và ảnh",
+   "Phân biệt chữ ký overload, override và lời gọi đa hình",
+   "Giải thích lý do chọn interface hoặc abstract class"
+  ],
+  "rubric": [
+   "Vẽ Vehicle, các lớp con, lượt gửi xe và chính sách",
+   "Ghi thông tin tháng, lượt, chủ xe, thời gian và ảnh",
+   "Phân biệt chữ ký overload, override và lời gọi đa hình",
+   "Giải thích lý do chọn interface hoặc abstract class"
+  ],
+  "pitfalls": [
+   "Trộn giờ vào/ra của nhiều lượt vào một thuộc tính duy nhất của xe."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp)."
+  ],
+  "issues": [],
+  "raw": "           ĐỀOOP TỰLUẬN / ĐỀTHI KHMT 2024.2\n                   EXAM CODE 374\n\n\n\n[English below]\n(Trảlời câu hỏi tựluận trên giấy thi)\n\n\nThiết kếhệthống quản lý phương tiện và thu phí vào/ra tại chung cư.\n\nMô tảhệthống:\n\nHệthống được yêu cầu xây dựng nhằm quản lý các phương tiện và hướng đến quản lý thông tin thu\nphí vào/ra của các phương tiện như ô tô, xe máy,... (trong tương lai có thểmởrộng thêm xe đạp, xe\nđiện). Các phương tiện cũng có hai hình thức gửi xe: gửi theo tháng và gửi theo lượt.\n   Đối với tất cảcác loại phương tiện, hệthống cần quản lý tối thiểu là biển sốxe của phương tiện.\nĐối với thông tin thu phí vào/ra, cần quản lý được các lượt gửi xe với các thông tin như giờvào/ra,\nhình ảnh.\n   Sựkhác biệt giữa các loại phương tiện và hình thức gửi xe như sau: Đối với xe gửi theo tháng,\ncần phải lưu trữđược vịtrí đỗxe đã được quy định (đối với ô tô), tên chủxe, sốcăn hộ/sốphòng, số\nđăng ký xe và tình trạng đóng tiền. Đối với xe gửi theo lượt, việc tính phí gửi xe giữa các loại phương\ntiện cũng khác nhau (ví dụ, xe gửi theo tháng có thểlà 1 triệu rưỡi/tháng đối với ô tô, 80.000/tháng\nđối với xe máy, xe gửi theo lượt thì tính theo ca, kíp...).\n\n\n1. Thiết kếbiểu đồlớp cho hệthống\n\nBiểu đồlớp phải thểhiện được các lớp và mối quan hệgiữa các lớp. Thiết kếlớp cần phải thểhiện\nđược các nguyên lý của lập trình hướng đối tượng như:\n\n• Các phương thức và thuộc tính phù hợp. Các lớp có tính kếthừa (5đ)\n\n• Tính nạp chồng - overloading (1đ) và ghi đè - overriding (1đ).\n\n• Lớp trừu tượng - abstract class, giao diện - interface (2đ).\n\n• Đa hình (1đ)\n\n\n2. Trình bày ngắn gọn\n\n a. Lớp trừu tượng và/hoặc giao diện trong thiết kế.\n\n b. Tính đa hình đối tượng được thểhiện trong thiết kếcủa bạn như thếnào.\n\n\n\n\n\n                                            3"
+ },
+ {
+  "id": "es-payment",
+  "kind": "write",
+  "stem": "Design a simple payment system with the following structure:\n• An interface named Payable that defines the behavior: void makePayment(double amount)\n• An abstract class named User, which includes:\n(1) Two attributes: username (String), balance (double),\n(2) A constructor with two parameters to initialize these attributes,\n(3) An abstract method: String getUserType() to return the type of user, and\n(4) A method void showInfo() that prints the user type, username, and balance\n• Two concrete classes that inherit from User:\n(1) Customer can perform payment actions and\n(2) Admin cannot perform payment actions and always has a balance of 0\nImplement the Payable interface, and the User, Customer, and Admin classes described above. While doing so, carefully determine the appropriate relationships between the classes and the interface, ensuring that each class fulfills its intended role in the system. You are expected to define all class members (fields and methods) using the most reasonable and appropriate access modifiers, following object-oriented design principles. Additionally, make sure that your code is formatted clearly and adheres to standard Java coding conventions.",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Interface và lớp trừu tượng"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì phần tự luận các kì.pdf",
+    "n": 4,
+    "number": "Chưa xác định",
+    "printed": "4",
+    "term": "2024.2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Customer và Admin dùng chung User. Chỉ Customer implements Payable. Admin là final, bắt đầu với balance = 0 và không có API công khai thay đổi số dư. Lời giải chọn quy tắc từ chối số tiền không hợp lệ hoặc vượt số dư.\n\ninterface Payable { void makePayment(double amount); }\nabstract class User {\n    private final String username;\n    private double balance;\n    protected User(String username, double balance) {\n        if (!Double.isFinite(balance) || balance < 0) throw new IllegalArgumentException();\n        this.username = username; this.balance = balance;\n    }\n    protected final void debit(double amount) {\n        if (!Double.isFinite(amount) || amount <= 0 || amount > balance)\n            throw new IllegalArgumentException();\n        balance -= amount;\n    }\n    public abstract String getUserType();\n    public void showInfo() {\n        System.out.println(getUserType() + \" \" + username + \" \" + balance);\n    }\n}\nfinal class Customer extends User implements Payable {\n    Customer(String name, double balance) { super(name, balance); }\n    public String getUserType() { return \"Customer\"; }\n    public void makePayment(double amount) { debit(amount); }\n}\nfinal class Admin extends User {\n    Admin(String name) { super(name, 0); }\n    public String getUserType() { return \"Admin\"; }\n}",
+  "hints": [
+   "Đặt phần hiển thị chung vào User.",
+   "So sánh quan hệ extends với implements cho Customer."
+  ],
+  "outline": [
+   "Khai báo đúng chữ ký Payable và User",
+   "Tạo constructor, showInfo và getUserType",
+   "Chỉ cấp hành vi trả tiền cho Customer",
+   "Đảm bảo Admin giữ số dư 0 và đóng gói dữ liệu"
+  ],
+  "rubric": [
+   "Khai báo đúng chữ ký Payable và User",
+   "Tạo constructor, showInfo và getUserType",
+   "Chỉ cấp hành vi trả tiền cho Customer",
+   "Đảm bảo Admin giữ số dư 0 và đóng gói dữ liệu"
+  ],
+  "pitfalls": [
+   "Đặt implements Payable trên User khiến Admin cũng có hành vi thanh toán."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Biên dịch thành công."
+  ],
+  "issues": [],
+  "raw": "      ĐỀOOP TỰLUẬN / ĐỀTHI OOP TRỊNH TUẤN ĐẠT 2024.2\n                        Design a Simple Payment System\n\n\n\n\nDesign a simple payment system with the following structure:\n\n• An interface named Payable that defines the behavior: void makePayment(double amount)\n\n• An abstract class named User, which includes:\n\n  (1) Two attributes: username (String), balance (double),\n\n  (2) A constructor with two parameters to initialize these attributes,\n\n  (3) An abstract method: String getUserType() to return the type of user, and\n\n  (4) A method void showInfo() that prints the user type, username, and balance\n\n• Two concrete classes that inherit from User:\n\n  (1) Customer can perform payment actions and\n\n  (2) Admin cannot perform payment actions and always has a balance of 0\n\n\nImplement the Payable interface, and the User, Customer, and Admin classes described above.\nWhile doing so, carefully determine the appropriate relationships between the classes and the interface,\nensuring that each class fulfills its intended role in the system. You are expected to define all class\nmembers (fields and methods) using the most reasonable and appropriate access modifiers, following\nobject-oriented design principles. Additionally, make sure that your code is formatted clearly and\nadheres to standard Java coding conventions.\n\n\n\n\n\n                                            4"
+ },
+ {
+  "id": "es-2019-1",
+  "kind": "parts",
+  "stem": "Bài 1 (2 điểm):\na) Em hãy nêu các điểm khác biệt giữa lớp trừu tượng và lớp trong Java?\nb) Trong một buổi thảo luận, bạn An cho rằng “nếu ta khai báo thuộc tính của một lớp là đối tượng của lớp trừu tượng thì thuộc tính đó sẽ không thể nào được gán giá trị và luôn luôn bằng null do không khởi tạo được thể hiện của lớp trừu tượng”. Theo em quan điểm đó đúng hay sai và tại sao?",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Lớp trừu tượng"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20192.pdf",
+    "n": 1,
+    "number": "Bài 1"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Lớp cụ thể cho phép tạo đối tượng khi constructor truy cập được. Lớp abstract không cho phép new trực tiếp, vẫn được có constructor, trường và phương thức có thân. Nó có thể có 0 hoặc nhiều phương thức abstract. Lớp con cụ thể phải hoàn tất các phương thức abstract còn lại.\nÝ b: sai. Phải phân biệt kiểu khai báo với lớp được khởi tạo. Ví dụ abstract class A {} class B extends A {} class Holder { A item = new B(); }. item tham chiếu thể hiện cụ thể B.",
+  "hints": [
+   "Đọc kỹ chữ “luôn luôn”.",
+   "Có thể new một lớp con cụ thể không?"
+  ],
+  "outline": [
+   "So sánh hai loại lớp",
+   "Phân biệt kiểu biến và đối tượng",
+   "Cho phản ví dụ hợp lệ"
+  ],
+  "rubric": [
+   "So sánh hai loại lớp",
+   "Phân biệt kiểu biến và đối tượng",
+   "Cho phản ví dụ hợp lệ"
+  ],
+  "pitfalls": [
+   "Đồng nhất không được new A() với không có biến kiểu A."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface)."
+  ],
+  "issues": [],
+  "raw": "Bài 1 (2 điểm):\na) Em hãy nêu các điểm khác biệt giữa lớp trừu tượng và lớp trong Java?\nb) Trong một buổi thảo luận, bạn An cho rằng “nếu ta khai báo thuộc tính của một lớp là đối tượng của lớp trừu tượng thì thuộc tính đó sẽ không thể nào được gán giá trị và luôn luôn bằng null do không khởi tạo được thể hiện của lớp trừu tượng”. Theo em quan điểm đó đúng hay sai và tại sao?"
+ },
+ {
+  "id": "es-2019-2",
+  "kind": "parts",
+  "stem": "Bài 2 (2 điểm)\na) Hãy trình bày vắn tắt về trình tự khởi dựng giữa các lớp có mối quan hệ kế thừa?\nb) Nếu lớp cha CHỈ có phương thức khởi dựng mặc định thì lớp con không cần dùng từ khóa super trong phương thức khởi dựng của nó. Nhưng tại sao nếu lớp cha CHỈ có một phương thức khởi dựng có tham số (và không có phương thức khởi dựng mặc định) thì trong phương thức khởi dựng của lớp con, ta vẫn phải dùng từ khóa super?",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Thứ tự khởi tạo"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20192.pdf",
+    "n": 1,
+    "number": "Bài 2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Khi new một đối tượng, các trường nhận giá trị mặc định. Trong chuỗi constructor cổ điển, phần khởi tạo instance và thân constructor của cha hoàn tất trước các bước khởi tạo instance của con. Nếu constructor không ủy quyền qua this(...) hoặc super(...), trình biên dịch chèn super(). Nếu cha chỉ có constructor nhận đối số, super() không phân giải được. Lớp con phải gọi constructor cha truy cập được qua super(giáTrị), trực tiếp hoặc ở cuối chuỗi this(...). Constructor không được kế thừa.",
+  "hints": [
+   "So sánh hai danh sách tham số của cha.",
+   "Một chuỗi this(...) phải đi đến constructor cha."
+  ],
+  "outline": [
+   "Nêu trình tự cha trước con trong chuỗi constructor",
+   "Giải thích super() ngầm",
+   "Chứng minh trường hợp cần super(args)"
+  ],
+  "rubric": [
+   "Nêu trình tự cha trước con trong chuỗi constructor",
+   "Giải thích super() ngầm",
+   "Chứng minh trường hợp cần super(args)"
+  ],
+  "pitfalls": [
+   "Nhầm cha được cấp phát thành một đối tượng riêng."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa)."
+  ],
+  "issues": [],
+  "raw": "Bài 2 (2 điểm)\na) Hãy trình bày vắn tắt về trình tự khởi dựng giữa các lớp có mối quan hệ kế thừa?\nb) Nếu lớp cha CHỈ có phương thức khởi dựng mặc định thì lớp con không cần dùng từ khóa super trong phương thức khởi dựng của nó. Nhưng tại sao nếu lớp cha CHỈ có một phương thức khởi dựng có tham số (và không có phương thức khởi dựng mặc định) thì trong phương thức khởi dựng của lớp con, ta vẫn phải dùng từ khóa super?"
+ },
+ {
+  "id": "es-2019-3",
+  "kind": "parts",
+  "stem": "Bài 3 (6 điểm):\nMột game online có chia quân bộ thành hai loại:\nQuân có đạn (Powder – xạ thủ) và quân không có đạn. Cả hai đều có chung một số thông số như damage (sức công phá), blood (máu), armor (giáp) là số nguyên. Quân (có đạn) sẽ có thêm thông tin về munition (số lượng đạn) mà tất nhiên vắng mặt ở quân không có đạn.\nQuân không có đạn được chia làm: Hop (Lính cầm thương), Sword (Kiếm thủ) và Spear (Ném lao). Khi mỗi trận đánh bắt đầu, tất cả quân sẽ được sắp xếp theo đội hình như sau:\n[Hình đội hình ở trang PDF 1: Flank trái và phải mỗi bên 3 slot, tối đa 60 quân. LongRange có 8 slot, tối đa 96 quân. Front có 8 slot, tối đa 240 quân.]\n- Mỗi Line (hàng) sẽ có các thông số về capacity (tổng số lính tối đa trong khu vực); slot (số lượng các slot trong hàng). Ta có 3 loại hàng khác nhau: Front (tiên phong), LongRange (Bắn xa) và Flank (cánh). Hàng Flank có thông tin isLeft (kiểu boolean) để biết cánh này có ở bên trái hay không?. Mỗi lớp trong số ba lớp trên đều có thuộc tính là mảng hai chiều mang tên all có kiểu dữ liệu tùy thuộc vào loại quân có thể chứa trong các slot.\n-Tất cả các quân không có đạn đều đứng được ở hàng Front nhưng chỉ có quân Sword và Spear đứng được ở hai hàng Flank. Quân Powder chỉ đứng được ở hàng LongRange.\n-Một Formation (đội hình) như vậy chứa hai Flank, một Front và một LongRange.\na) Vẽ biểu đồ lớp mô tả hệ thống kể trên. Chú ý rằng không cần thiết phải khai báo lớp đại diện cho Game. Chỉ khai báo các lớp cần thiết nhất.\nb) Khai báo các thuộc tính của lớp Flank và cài đặt phương thức khởi dựng có tham số tên isLeft kiểu boolean ở lớp Flank sao cho trong phương thức đó khởi tạo và/hoặc gán các giá trị phù hợp cho các thuộc tính của nó. Chú ý rằng kích thước các chiều của mảng all phải phù hợp số lượng slot và số lượng tối đa các quân có thể chứa trong tất cả các slot. Slot ngoài cùng bên trái được đại diện bởi cột đầu tiên của mảng all. (Giả định rằng mảng X[3][5] sẽ đại diện cho ma trận X có 3 hàng và 5 cột). Giả sử rằng tất cả các lớp khác đã được cài đặt.\nc) Lớp Flank có phương thức arrange nhận đầu vào là một mảng một chiều group mà chứa các đối tượng của lớp Sword và Spear. Chú ý rằng không có ràng buộc nào yêu cầu phần tử ở chỉ số j của mảng group phải là đối tượng của Sword hay Spear. Phương thức này sẽ sắp xếp các phần tử của group vào các ô trống (từ trái sang phải). Nhớ rằng Sword có ưu tiên cao hơn trong việc sắp xếp và không ô slot nào chứa cả hai loại quân. Chẳng hạn với group có 32 đối tượng Sword và 12 đối tượng của Spear và khi đó chưa có quân nào trong hàng Flank thì slot bên trái chứa 20 Sword, slot giữa chứa 12 Sword và slot bên phải chứa 12 Spear. Giả định rằng: (i) không phần tử nào của group là null và (ii) khi gọi phương thức arrange, có thể các slot đã chứa quân bên trong. Để đơn giản, SV không cần quan tâm đến việc lưu trữ các quân bị thừa ra (khi các slot không thể chứa hết). Hãy cài đặt phương thức này.",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Kế thừa và biểu đồ lớp"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20192.pdf",
+    "n": 1,
+    "number": "Bài 3",
+    "end": 2
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Soldier ← Melee và Powder. Melee ← Hop và WingUnit; WingUnit ← Sword, Spear. Formation có hai Flank, một Front và một LongRange. Front nhận Melee; LongRange nhận Powder. Theo sơ đồ, mỗi Flank có 3 cột, sức chứa 60, nên all có 20 hàng × 3 cột. Front có 8 slot chứa tối đa 240 quân, LongRange có 8 slot chứa tối đa 96 quân. Hai lượt duyệt lần lượt đưa Sword rồi Spear vào cột trống hoặc cột cùng loại, kiểm tra cả cột đã có người trước khi thêm.\n\nabstract class Soldier { int damage, blood, armor; }\nabstract class Melee extends Soldier {}\nabstract class WingUnit extends Melee {}\nclass Sword extends WingUnit {}\nclass Spear extends WingUnit {}\nclass Hop extends Melee {}\nclass Powder extends Soldier { int munition; }\nabstract class Line {\n    final int capacity, slot;\n    Line(int capacity, int slot) { this.capacity = capacity; this.slot = slot; }\n}\nclass Flank extends Line {\n    final boolean isLeft;\n    final WingUnit[][] all;\n    Flank(boolean isLeft) {\n        super(60, 3); this.isLeft = isLeft;\n        all = new WingUnit[capacity / slot][slot];\n    }\n    void arrange(WingUnit[] group) {\n        for (Class<?> type : new Class<?>[]{Sword.class, Spear.class}) {\n            for (WingUnit unit : group) {\n                if (type.isInstance(unit)) insert(unit, type);\n            }\n        }\n    }\n    private void insert(WingUnit unit, Class<?> type) {\n        for (int col = 0; col < slot; col++) {\n            int empty = -1;\n            boolean compatible = true;\n            for (int row = 0; row < all.length; row++) {\n                WingUnit v = all[row][col];\n                if (v == null && empty < 0) empty = row;\n                if (v != null && !type.isInstance(v)) compatible = false;\n            }\n            if (compatible && empty >= 0) {\n                all[empty][col] = unit;\n                return;\n            }\n        }\n    }\n}",
+  "hints": [
+   "Đọc cả các nhãn kích thước trong hình nguồn.",
+   "Với mỗi cột, xác định loại hiện có và chỗ trống trước khi đặt."
+  ],
+  "outline": [
+   "Đúng hệ kiểu và số lượng Line",
+   "Đúng kích thước, hướng cột của Flank",
+   "Xử lý Sword trước Spear, ô đã có quân và tràn",
+   "Ràng buộc loại đơn vị cho từng Line"
+  ],
+  "rubric": [
+   "Đúng hệ kiểu và số lượng Line",
+   "Đúng kích thước, hướng cột của Flank",
+   "Xử lý Sword trước Spear, ô đã có quân và tràn",
+   "Ràng buộc loại đơn vị cho từng Line"
+  ],
+  "pitfalls": [
+   "Tạo all[3][20] sẽ coi slot là hàng trái với đề."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1–2.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Biên dịch thành công."
+  ],
+  "issues": [],
+  "raw": "Bài 3 (6 điểm):\nMột game online có chia quân bộ thành hai loại:\nQuân có đạn (Powder – xạ thủ) và quân không có đạn. Cả hai đều có chung một số thông số như damage (sức công phá), blood (máu), armor (giáp) là số nguyên. Quân (có đạn) sẽ có thêm thông tin về munition (số lượng đạn) mà tất nhiên vắng mặt ở quân không có đạn.\nQuân không có đạn được chia làm: Hop (Lính cầm thương), Sword (Kiếm thủ) và Spear (Ném lao). Khi mỗi trận đánh bắt đầu, tất cả quân sẽ được sắp xếp theo đội hình như sau:\n- Mỗi Line (hàng) sẽ có các thông số về capacity (tổng số lính tối đa trong khu vực); slot (số lượng các slot trong hàng). Ta có 3 loại hàng khác nhau: Front (tiên phong), LongRange (Bắn xa) và Flank (cánh). Hàng Flank có thông tin isLeft (kiểu boolean) để biết cánh này có ở bên trái hay không?. Mỗi lớp trong số ba lớp trên đều có thuộc tính là mảng hai chiều mang tên all có kiểu dữ liệu tùy thuộc vào loại quân có thể chứa trong các slot.\n-Tất cả các quân không có đạn đều đứng được ở hàng Front nhưng chỉ có quân Sword và Spear đứng được ở hai hàng Flank. Quân Powder chỉ đứng được ở hàng LongRange.\n-Một Formation (đội hình) như vậy chứa hai Flank, một Front và một LongRange.\na) Vẽ biểu đồ lớp mô tả hệ thống kể trên. Chú ý rằng không cần thiết phải khai báo lớp đại diện cho Game. Chỉ khai báo các lớp cần thiết nhất.\nb) Khai báo các thuộc tính của lớp Flank và cài đặt phương thức khởi dựng có tham số tên isLeft kiểu boolean ở lớp Flank sao cho trong phương thức đó khởi tạo và/hoặc gán các giá trị phù hợp cho các thuộc tính của nó. Chú ý rằng kích thước các chiều của mảng all phải phù hợp số lượng slot và số lượng tối đa các quân có thể chứa trong tất cả các slot. Slot ngoài cùng bên trái được đại diện bởi cột đầu tiên của mảng all. (Giả định rằng mảng X[3][5] sẽ đại diện cho ma trận X có 3 hàng và 5 cột). Giả sử rằng tất cả các lớp khác đã được cài đặt.\nc) Lớp Flank có phương thức arrange nhận đầu vào là một mảng một chiều group mà chứa các đối tượng của lớp Sword và Spear. Chú ý rằng không có ràng buộc nào yêu cầu phần tử ở chỉ số j của mảng group phải là đối tượng của Sword hay Spear. Phương thức này sẽ sắp xếp các phần tử của group vào các ô trống (từ trái sang phải). Nhớ rằng Sword có ưu tiên cao hơn trong việc sắp xếp và không ô slot nào chứa cả hai loại quân. Chẳng hạn với group có 32 đối tượng Sword và 12 đối tượng của Spear và khi đó chưa có quân nào trong hàng Flank thì slot bên trái chứa 20 Sword, slot giữa chứa 12 Sword và slot bên phải chứa 12 Spear. Giả định rằng: (i) không phần tử nào của group là null và (ii) khi gọi phương thức arrange, có thể các slot đã chứa quân bên trong. Để đơn giản, SV không cần quan tâm đến việc lưu trữ các quân bị thừa ra (khi các slot không thể chứa hết). Hãy cài đặt phương thức này."
+ },
+ {
+  "id": "es-minh-1",
+  "kind": "parts",
+  "stem": "Câu 1. a) Em hãy trình bày về phương thức khởi dựng trong xây dựng lớp? Trong ngôn ngữ lập trình Java một lớp có thể không khai báo phương thức khởi dựng hoặc khai báo nhiều hơn 1 phương thức khởi dựng không? Giải thích ngắn gọn. b) Trong ngôn ngữ lập trình java tham chiếu this được sử dụng với mục đích gì. Lấy ví dụ minh hoạ.",
+  "options": [],
+  "correct": [],
+  "chapter": 4,
+  "topics": [
+   "Constructor và this"
+  ],
+  "sources": [
+   {
+    "file": "OOP - đề minh hoạ.pdf",
+    "n": 1,
+    "number": "1",
+    "printed": "1/1"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Constructor mang tên lớp, không ghi kiểu trả về. Nếu lớp thông thường không khai báo constructor nào, trình biên dịch sinh constructor mặc định. Có thể định nghĩa nhiều constructor khác danh sách tham số. this tham chiếu instance hiện tại, phân biệt trường với tham số cùng tên. Ví dụ class Point { private int x; Point() { this(0); } Point(int x) { this.x = x; } }.",
+  "hints": [
+   "Chú ý khi nào compiler sinh constructor.",
+   "Xem biến x và this.x đại diện cho cái gì."
+  ],
+  "outline": [
+   "Giải thích trường hợp không khai báo constructor",
+   "Minh họa overload",
+   "Giải thích this.x và this(...)"
+  ],
+  "rubric": [
+   "Giải thích trường hợp không khai báo constructor",
+   "Minh họa overload",
+   "Giải thích this.x và this(...)"
+  ],
+  "pitfalls": [
+   "Nghĩ rằng luôn có constructor không tham số khi đã định nghĩa constructor khác."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1.",
+   "Bài 04, trang PDF 5–15 (khởi tạo đối tượng)."
+  ],
+  "issues": [],
+  "raw": "Câu 1. a) Em hãy trình bày về phương thức khởi dựng trong xây dựng lớp? Trong ngôn ngữ lập trình Java một lớp có thể không khai báo phương thức khởi dựng hoặc khai báo nhiều hơn 1 phương thức khởi dựng không? Giải thích ngắn gọn. b) Trong ngôn ngữ lập trình java tham chiếu this được sử dụng với mục đích gì. Lấy ví dụ minh hoạ."
+ },
+ {
+  "id": "es-minh-2",
+  "kind": "parts",
+  "stem": "Câu 2. a) Em hãy so sánh hai kỹ thuật nạp chồng phương thức và ghi đè phương thức? b) Trong Java hãy mô tả quá trình xử lý ngoại lệ với khối lệnh try/catch? Chuyện gì xảy ra nếu có nhiều hơn một khối catch khớp với loại đối tượng ngoại lệ được ném?",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Ghi đè và ngoại lệ"
+  ],
+  "sources": [
+   {
+    "file": "OOP - đề minh hoạ.pdf",
+    "n": 1,
+    "number": "2",
+    "printed": "1/1"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Nạp chồng dùng cùng tên, khác danh sách kiểu tham số. Trình biên dịch chọn chữ ký dựa trên kiểu tĩnh của đối số. Ghi đè áp dụng cho phương thức instance được thừa kế, chữ ký tương thích và kiểu trả về tương thích. Sau khi chọn chữ ký, kiểu thực tế của đối tượng nhận quyết định bản cài đặt ghi đè.\nNếu ngoại lệ phát sinh trong try, Java duyệt catch theo thứ tự nguồn; khối tương thích đầu tiên xử lý và các khối sau không chạy cho ngoại lệ đó. Phải đặt kiểu con trước kiểu cha để khối sau còn có thể tới được. Nếu không khớp, ngoại lệ truyền ra ngoài.",
+  "hints": [
+   "Chú ý hai cơ chế chọn phương thức.",
+   "Khi ngoại lệ khớp hai kiểu có quan hệ kế thừa, khối nào được xét trước?"
+  ],
+  "outline": [
+   "So sánh overload/override",
+   "Giải thích chọn catch đầu tiên",
+   "Đặt catch cụ thể hơn trước"
+  ],
+  "rubric": [
+   "So sánh overload/override",
+   "Giải thích chọn catch đầu tiên",
+   "Đặt catch cụ thể hơn trước"
+  ],
+  "pitfalls": [
+   "Giả định tất cả catch khớp đều chạy."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface).",
+   "Bài 10, trang PDF 25, 32–33 (ngoại lệ và thứ tự catch)."
+  ],
+  "issues": [],
+  "raw": "Câu 2. a) Em hãy so sánh hai kỹ thuật nạp chồng phương thức và ghi đè phương thức? b) Trong Java hãy mô tả quá trình xử lý ngoại lệ với khối lệnh try/catch? Chuyện gì xảy ra nếu có nhiều hơn một khối catch khớp với loại đối tượng ngoại lệ được ném?"
+ },
+ {
+  "id": "es-minh-3",
+  "kind": "parts",
+  "stem": "Câu 3. Một chương trình mô phỏng biên soạn nhạc đơn giản với các mô tả ký hiệu âm nhạc như sau: • Khoá nhạc (KhoaNhac): khóa nhạc được đặt tại đầu khuông nhạc. Mỗi khoá nhạc có các thông tin về tên gọi, nốt tham chiếu và dòng kẻ. Có 3 loại khoá nhạc thường sử dụng: Khóa Sol thường dùng cho các bản nhạc với nhạc cụ: vĩ cầm, sáo,... có thêm thông tin về tên nhạc cụ sử dụng. Khóa Đô thường dùng soạn các bản nhạc cho các bè, có thêm thông tin giọng bè nhạc: tenor hoặc alto. Khóa Fa có thêm giá trị bass. • Số nhịp (SoNhip): được thể hiện bằng một ký hiệu giống như một phân số ở ngay bên cạnh khóa nhạc (ví dụ: nhịp 3/4, nhịp 4/4). Số nhịp có thông tin về tên gọi, phần “tử số” mô tả cho biết có bao nhiêu phách trong một nhịp và phần “mẫu số” cho biết một phách có giá trị kéo dài bằng bao nhiêu nốt nhạc (nốt đen). • Nốt nhạc (NotNhac): là ký hiệu trong bản nhạc dùng để xác định cao độ (độ cao), trường độ (độ dài, độ ngân vang) của từng âm thanh được vang lên trong bản nhạc. Có 7 giá trị dùng để xác định cao độ đó là Đô, Rê, Mi, Fa, Sol, La, và Si. Trường độ của nốt nhạc được xác định bằng “phách” (đơn vị trong âm nhạc). Giá trị trường độ sẽ được quy đổi sang hình nốt để thể hiện: Trong đó: nốt đen = 1 phách, nốt tròn = 4 nốt đen, nốt trắng = 2 nốt đen, nốt móc đơn = 1/2 nốt đen, nốt móc đôi = 1/4 nốt đen, nốt móc tam = 1/8 nốt đen, nốt móc tứ = 1/16 nốt đen • Dấu lặng (DauLang): là ký hiệu cho biết phải ngưng, không diễn tấu âm thanh (không có cao độ) trong một thời gian nào đó. Các dấu lặng chỉ có giá trị trường độ. • Mỗi lớp tương ứng với các ký hiệu âm nhạc đều có phương thức print() để in ra nội dung ký hiệu đó. Khi biên soạn nhạc người sử dụng sẽ xây dựng các khuông nhạc. Một khuông nhạc (KhuongNhac) gồm có 1 ký hiệu khoá nhạc, 1 ký kiệu số nhịp và một số quãng gọi là các ô nhịp (ONhip). Một khuôn nhạc có tối thiểu 1 và tối đa 6 ô nhịp. Mỗi ô nhịp gồm số thứ tự của ô nhịp và một số các nốt nhạc và dấu lặng thể hiện nội dung bản nhạc, mỗi ô nhịp có không quá 16 ký hiệu.\na) Vẽ biểu đồ lớp mô tả hệ thống kể trên, giải thích mối quan hệ giữa các lớp trong biểu đồ. Chỉ khai báo các lớp cần thiết nhất. b) Xây dựng lớp NotNhac, khai báo các thuộc tính và phương thức đảm bảo tính đóng gói và che giấu thông tin trong hướng đối tượng. Xây dựng 2 phương thức khởi tạo cho lớp NotNhac. Xây dựng phương thức print() in ra thông tin một nốt nhạc có dạng: cao độ (trường độ) b) Khai báo các thuộc tính của lớp KhuongNhac. Xây dựng phương thức inBanNhac() trong lớp KhuongNhac để in ra nội dung các ký hiệu âm nhạc trong bản nhạc đó (giả thiết phương thức print() của các lớp thành phần đã được cài đặt). Ví dụ với khuông nhạc trong hình trên sẽ in ra: Khoá Sol – Nhịp 2/4 | Đô(1) Đô(1/2) La(1/2) | Sol(1/2) Lặng(1) Rê(1/2) | Đô(1) Đô (1) | Pha(2) c) Xây dựng phương thức demDauLang() trong lớp KhuongNhac thực hiện đếm xem có bao nhiêu dấu lặng.",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Biểu đồ lớp bản nhạc"
+  ],
+  "sources": [
+   {
+    "file": "OOP - đề minh hoạ.pdf",
+    "n": 1,
+    "number": "3",
+    "printed": "1/1"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "KhuongNhac chứa một KhoaNhac, một SoNhip và 1..6 ONhip. Mỗi ONhip giữ tối đa 16 mục theo thứ tự, mỗi mục là NotNhac hoặc DauLang. Các khóa Sol, Đô, Fa kế thừa KhoaNhac và bổ sung nhạc cụ, giọng bè hoặc bass. SoNhip giữ tử và mẫu. Cả khóa, số nhịp và các mục có print(). Phần code dưới đây minh họa các phần được hỏi; hai tham số khoa, soNhip là các đối tượng thành phần đã cài print theo giả thiết đề.\n\nimport java.util.*;\ninterface KyHieu { void print(); }\nclass NotNhac implements KyHieu {\n    private final String caoDo;\n    private final double truongDo;\n    NotNhac(String caoDo) { this(caoDo, 1); }\n    NotNhac(String caoDo, double truongDo) {\n        this.caoDo = caoDo; this.truongDo = truongDo;\n    }\n    public void print() { System.out.print(caoDo + \"(\" + Phach.format(truongDo) + \")\"); }\n}\nclass DauLang implements KyHieu {\n    private final double phach;\n    DauLang(double phach) { this.phach = phach; }\n    public void print() { System.out.print(\"Lặng(\" + Phach.format(phach) + \")\"); }\n}\nclass ONhip {\n    final int soThuTu;\n    final List<KyHieu> noiDung;\n    ONhip(int index, List<KyHieu> noiDung) {\n        if (noiDung.size() > 16) throw new IllegalArgumentException();\n        soThuTu = index; this.noiDung = List.copyOf(noiDung);\n    }\n}\nclass KhuongNhac {\n    private final KyHieu khoa, soNhip;\n    private final List<ONhip> oNhip;\n    KhuongNhac(KyHieu khoa, KyHieu soNhip, List<ONhip> oNhip) {\n        if (oNhip.isEmpty() || oNhip.size() > 6) throw new IllegalArgumentException();\n        this.khoa = khoa; this.soNhip = soNhip; this.oNhip = List.copyOf(oNhip);\n    }\n    void inBanNhac() {\n        khoa.print(); System.out.print(\" – \"); soNhip.print();\n        for (ONhip o : oNhip) {\n            System.out.print(\" |\");\n            for (KyHieu k : o.noiDung) { System.out.print(\" \"); k.print(); }\n        }\n    }\n    long demDauLang() {\n        return oNhip.stream().flatMap(o -> o.noiDung.stream()).filter(DauLang.class::isInstance).count();\n    }\n}\nclass Phach {\n    static String format(double x) {\n        if (x >= 1) return Long.toString(Math.round(x));\n        return \"1/\" + Math.round(1/x);\n    }\n}",
+  "hints": [
+   "Tách ký hiệu có cao độ khỏi dấu lặng.",
+   "Dùng chung giao diện print để đi qua từng ô theo thứ tự."
+  ],
+  "outline": [
+   "Vẽ đúng các quan hệ và bội số",
+   "Đóng gói NotNhac, hai constructor và print",
+   "In ký hiệu theo thứ tự và phân cách ô nhịp",
+   "Đếm các DauLang trong tất cả các ô"
+  ],
+  "rubric": [
+   "Vẽ đúng các quan hệ và bội số",
+   "Đóng gói NotNhac, hai constructor và print",
+   "In ký hiệu theo thứ tự và phân cách ô nhịp",
+   "Đếm các DauLang trong tất cả các ô"
+  ],
+  "pitfalls": [
+   "Tính nhầm số ô nhịp thành số dấu lặng."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Biên dịch thành công."
+  ],
+  "issues": [],
+  "raw": "Câu 3. Một chương trình mô phỏng biên soạn nhạc đơn giản với các mô tả ký hiệu âm nhạc như sau: • Khoá nhạc (KhoaNhac): khóa nhạc được đặt tại đầu khuông nhạc. Mỗi khoá nhạc có các thông tin về tên gọi, nốt tham chiếu và dòng kẻ. Có 3 loại khoá nhạc thường sử dụng: Khóa Sol thường dùng cho các bản nhạc với nhạc cụ: vĩ cầm, sáo,... có thêm thông tin về tên nhạc cụ sử dụng. Khóa Đô thường dùng soạn các bản nhạc cho các bè, có thêm thông tin giọng bè nhạc: tenor hoặc alto. Khóa Fa có thêm giá trị bass. • Số nhịp (SoNhip): được thể hiện bằng một ký hiệu giống như một phân số ở ngay bên cạnh khóa nhạc (ví dụ: nhịp 3/4, nhịp 4/4). Số nhịp có thông tin về tên gọi, phần “tử số” mô tả cho biết có bao nhiêu phách trong một nhịp và phần “mẫu số” cho biết một phách có giá trị kéo dài bằng bao nhiêu nốt nhạc (nốt đen). • Nốt nhạc (NotNhac): là ký hiệu trong bản nhạc dùng để xác định cao độ (độ cao), trường độ (độ dài, độ ngân vang) của từng âm thanh được vang lên trong bản nhạc. Có 7 giá trị dùng để xác định cao độ đó là Đô, Rê, Mi, Fa, Sol, La, và Si. Trường độ của nốt nhạc được xác định bằng “phách” (đơn vị trong âm nhạc). Giá trị trường độ sẽ được quy đổi sang hình nốt để thể hiện: Trong đó: nốt đen = 1 phách, nốt tròn = 4 nốt đen, nốt trắng = 2 nốt đen, nốt móc đơn = 1/2 nốt đen, nốt móc đôi = 1/4 nốt đen, nốt móc tam = 1/8 nốt đen, nốt móc tứ = 1/16 nốt đen • Dấu lặng (DauLang): là ký hiệu cho biết phải ngưng, không diễn tấu âm thanh (không có cao độ) trong một thời gian nào đó. Các dấu lặng chỉ có giá trị trường độ. • Mỗi lớp tương ứng với các ký hiệu âm nhạc đều có phương thức print() để in ra nội dung ký hiệu đó. Khi biên soạn nhạc người sử dụng sẽ xây dựng các khuông nhạc. Một khuông nhạc (KhuongNhac) gồm có 1 ký hiệu khoá nhạc, 1 ký kiệu số nhịp và một số quãng gọi là các ô nhịp (ONhip). Một khuôn nhạc có tối thiểu 1 và tối đa 6 ô nhịp. Mỗi ô nhịp gồm số thứ tự của ô nhịp và một số các nốt nhạc và dấu lặng thể hiện nội dung bản nhạc, mỗi ô nhịp có không quá 16 ký hiệu.\na) Vẽ biểu đồ lớp mô tả hệ thống kể trên, giải thích mối quan hệ giữa các lớp trong biểu đồ. Chỉ khai báo các lớp cần thiết nhất. b) Xây dựng lớp NotNhac, khai báo các thuộc tính và phương thức đảm bảo tính đóng gói và che giấu thông tin trong hướng đối tượng. Xây dựng 2 phương thức khởi tạo cho lớp NotNhac. Xây dựng phương thức print() in ra thông tin một nốt nhạc có dạng: cao độ (trường độ) b) Khai báo các thuộc tính của lớp KhuongNhac. Xây dựng phương thức inBanNhac() trong lớp KhuongNhac để in ra nội dung các ký hiệu âm nhạc trong bản nhạc đó (giả thiết phương thức print() của các lớp thành phần đã được cài đặt). Ví dụ với khuông nhạc trong hình trên sẽ in ra: Khoá Sol – Nhịp 2/4 | Đô(1) Đô(1/2) La(1/2) | Sol(1/2) Lặng(1) Rê(1/2) | Đô(1) Đô (1) | Pha(2) c) Xây dựng phương thức demDauLang() trong lớp KhuongNhac thực hiện đếm xem có bao nhiêu dấu lặng."
+ },
+ {
+  "id": "es-20202-bonus",
+  "kind": "theory",
+  "stem": "QUESTION 1 (1.0 point – Bonus) List maximum of 2 best things you like about this course, and minimum of 3 things that should be improved.",
+  "options": [],
+  "correct": [],
+  "chapter": 0,
+  "topics": [
+   "Phản hồi học phần"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20202.pdf",
+    "n": 1,
+    "number": "Part 1 · 1",
+    "printed": "1/2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "review",
+  "sourceAnswer": null,
+  "explanation": "Đây là ý kiến cá nhân. Chọn tối đa hai điều mình thích và ít nhất ba điều cần cải thiện, minh họa bằng trải nghiệm học cụ thể. Không có đáp án nội dung duy nhất.",
+  "hints": [
+   "Đọc kỹ maximum và minimum.",
+   "Nêu vấn đề cùng một thay đổi có thể thực hiện."
+  ],
+  "outline": [
+   "Tuân thủ số lượng",
+   "Diễn đạt phản hồi từ trải nghiệm thực tế"
+  ],
+  "rubric": [
+   "Tuân thủ số lượng",
+   "Diễn đạt phản hồi từ trải nghiệm thực tế"
+  ],
+  "pitfalls": [
+   "Đổi ngược hai giới hạn đề cho."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1."
+  ],
+  "issues": [
+   "Câu thưởng mang tính phản hồi cá nhân, nằm ngoài kiến thức OOP."
+  ],
+  "raw": "QUESTION 1 (1.0 point – Bonus) List maximum of 2 best things you like about this course, and minimum of 3 things that should be improved."
+ },
+ {
+  "id": "es-20202-reuse",
+  "kind": "theory",
+  "stem": "QUESTION 2 (1.5 points) Given a statement: “Generalization and polymorphism are core principles in object-oriented software development, which make the program more reusable, maitainable and extensible (i.e. easy to add new features)”. Do you agree with that statement? Why?",
+  "options": [],
+  "correct": [],
+  "chapter": 8,
+  "topics": [
+   "Tổng quát hóa và đa hình"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20202.pdf",
+    "n": 1,
+    "number": "Part 1 · 2",
+    "printed": "1/2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Đồng ý khi các lớp có quan hệ thay thế phù hợp. Tách hợp đồng chung cho phép chương trình làm việc với nhiều cài đặt. Ví dụ List<Shape> cho phép lặp tính area() mà không rẽ nhánh theo từng hình. Thêm Circle mới không làm đổi vòng lặp. Nếu lớp con vi phạm hợp đồng hoặc cây kế thừa quá chặt, lợi ích bảo trì có thể mất.",
+  "hints": [
+   "Mã nào sẽ đổi khi thêm loại mới?",
+   "So sánh gọi phương thức đa hình với chuỗi if/else."
+  ],
+  "outline": [
+   "Giải thích tái sử dụng qua hợp đồng",
+   "Minh họa mở rộng bằng ghi đè",
+   "Nêu giới hạn của thiết kế"
+  ],
+  "rubric": [
+   "Giải thích tái sử dụng qua hợp đồng",
+   "Minh họa mở rộng bằng ghi đè",
+   "Nêu giới hạn của thiết kế"
+  ],
+  "pitfalls": [
+   "Khẳng định dùng kế thừa luôn tự động làm thiết kế tốt."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1.",
+   "Bài 08, trang PDF 10, 16–20, 25 (chuyển kiểu và liên kết động)."
+  ],
+  "issues": [],
+  "raw": "QUESTION 2 (1.5 points) Given a statement: “Generalization and polymorphism are core principles in object-oriented software development, which make the program more reusable, maitainable and extensible (i.e. easy to add new features)”. Do you agree with that statement? Why?"
+ },
+ {
+  "id": "es-20202-bank",
+  "kind": "parts",
+  "stem": "QUESTION 3 (2.0 points) The class diagram below shows part of a bank account management system. Any bank account will have a given identity number and a balance. Any operation, which leads to change the balance with an invalid amount (i.e. not positive) or making the balance less than zero, will throw an IllegalArgumentException. The bank only pays monthly interests for saving accounts, but not for current accounts. The interest rate of a saving account is the rate per year. A current account can clear a check for a given amount by decreasing the balance by the amount of the check plus the per- check charge. A savings account can withdraw without any fee.\na. Let x is the remainder after dividing the number comprising the last four digits in your Student ID by 2. Please write source code for classes depending on x:\n- x = 0: BankAccount, SavingsAccount and a class with a main method to create and work\nwith corresponding account objects.\n- x = 1: BankAccount, CurrentAccount and a class with a main method to create and work with corresponding account objects.\nb. What is the problem with the above design? If any, please give a better solution.",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Thiết kế tài khoản ngân hàng"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20202.pdf",
+    "n": 1,
+    "number": "Part 1 · 3",
+    "end": 2,
+    "printed": "1/2–2/2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Đọc cả sơ đồ trong PDF. Đề mô tả hai biến thể theo MSSV; dưới đây minh họa cả hai. Thiết kế cải tiến đặt monthlyInterest chỉ ở SavingsAccount; clearCheck chỉ ở CurrentAccount và nhận số tiền như phần chữ. Dùng lãi suất năm dưới dạng phân số, ví dụ 0.06 tương ứng 6%. Tách kiểm tra số dương của tiền séc khỏi kiểm tra tổng tiền trừ.\n\nabstract class BankAccount {\n    private final int idNumber;\n    private double balance;\n    BankAccount(int id, double start) {\n        if (!Double.isFinite(start) || start < 0) throw new IllegalArgumentException();\n        idNumber = id; balance = start;\n    }\n    double currentBalance() { return balance; }\n    void deposit(double amount) {\n        if (!Double.isFinite(amount) || amount <= 0 || !Double.isFinite(balance + amount))\n            throw new IllegalArgumentException();\n        balance += amount;\n    }\n    protected void decreaseBalance(double amount) {\n        if (!Double.isFinite(amount) || amount <= 0 || amount > balance) throw new IllegalArgumentException();\n        balance -= amount;\n    }\n}\nclass SavingsAccount extends BankAccount {\n    private final double rate;\n    SavingsAccount(int id, double start, double annualRate) { super(id, start); this.rate = annualRate; }\n    double monthlyInterest() { return currentBalance() * rate / 12; }\n    void withdraw(double amount) { decreaseBalance(amount); }\n}\nclass CurrentAccount extends BankAccount {\n    private final double fee;\n    CurrentAccount(int id, double start, double fee) {\n        super(id, start);\n        if (!Double.isFinite(fee) || fee < 0) throw new IllegalArgumentException();\n        this.fee = fee;\n    }\n    void clearCheck(double amount) {\n        if (!Double.isFinite(amount) || amount <= 0) throw new IllegalArgumentException();\n        decreaseBalance(amount + fee);\n    }\n}\nclass Demo {\n    public static void main(String[] args) {\n        SavingsAccount s = new SavingsAccount(1, 1200, 0.06);\n        System.out.println(s.monthlyInterest());\n        s.withdraw(200);\n        CurrentAccount c = new CurrentAccount(2, 100, 2);\n        c.clearCheck(30);\n        System.out.println(c.currentBalance());\n    }\n}",
+  "hints": [
+   "Đối chiếu hành vi trả lãi với vị trí monthlyInterest().",
+   "Phí séc không được làm một khoản rút âm trở thành hợp lệ."
+  ],
+  "outline": [
+   "Nhận diện thành phần chung và các lỗi chữ ký trên sơ đồ",
+   "Bảo toàn balance khi giao dịch không hợp lệ",
+   "Đúng lãi tháng hoặc phí trên séc theo nhánh x",
+   "Có main và nêu cải tiến thiết kế"
+  ],
+  "rubric": [
+   "Nhận diện thành phần chung và các lỗi chữ ký trên sơ đồ",
+   "Bảo toàn balance khi giao dịch không hợp lệ",
+   "Đúng lãi tháng hoặc phí trên séc theo nhánh x",
+   "Có main và nêu cải tiến thiết kế"
+  ],
+  "pitfalls": [
+   "Nhân lãi suất năm mà không chia 12."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 1–2.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Đầu ra: '6.0\\n68.0'"
+  ],
+  "issues": [],
+  "raw": "QUESTION 3 (2.0 points) The class diagram below shows part of a bank account management system. Any bank account will have a given identity number and a balance. Any operation, which leads to change the balance with an invalid amount (i.e. not positive) or making the balance less than zero, will throw an IllegalArgumentException. The bank only pays monthly interests for saving accounts, but not for current accounts. The interest rate of a saving account is the rate per year. A current account can clear a check for a given amount by decreasing the balance by the amount of the check plus the per- check charge. A savings account can withdraw without any fee.\na. Let x is the remainder after dividing the number comprising the last four digits in your Student ID by 2. Please write source code for classes depending on x:\n- x = 0: BankAccount, SavingsAccount and a class with a main method to create and work\nwith corresponding account objects.\n- x = 1: BankAccount, CurrentAccount and a class with a main method to create and work with corresponding account objects.\nb. What is the problem with the above design? If any, please give a better solution."
+ },
+ {
+  "id": "es-20202-tickets",
+  "kind": "parts",
+  "stem": "Read carefully the following description about a simulation software for a part of a ticket vending machine installed at each station of a railroad line, and then complete tasks below.\nThe railroad line comprising four stations A, B, C, and D, with A serving as the starting point and D as the terminal point. A fare on the line is decided based on the distance between stations. The fare for up to 5 kilometers is USD 1.9 (this is called the base fare). An amount of USD 0.4 is added for each additional 2 kilometers. Any additional distance less than 2 kilometers is rounded up to 2 kilometers. For instance, for a distance of 7.3 kilometers, the fare is USD 2.7. In a ticket vending machine, passengers can choose to buy a type of traveling certificates in the menu: one-way ticket, twenty-four-hour ticket or prepaid card. Passengers can buy multiple tickets or cards in one order, but only one type in one order. For a one-way ticket, passengers need to choose the start and end stations. Note that the end station cannot be the same as the start one. The system then calculates the fare and display to them. For the twenty-four-hour tickets, the system displays the price of this type (i.e. USD 8.5) to passengers. Prepaid cards can be bought in the vending machine with a deposit of USD 16. The default balance of USD 5 is then displayed in screen. Passengers can increase this balance for the prepaid card. The minimum balance when buying the card is USD 2.5. Hence you need at least USD 18.5 to buy a prepaid card, including USD 2.5 for its balance. The balance of a prepaid cards should be at least USD 0 during usage. Passengers finally enter the number of tickets/cards that they want to buy and confirm to buy in a confirmation screen with all necessary information about tickets/cards, i.e. price, quantity, amount and total amount. The buying process terminates after the confirmation of the passengers. For simplicity, the payment and further processings are not taken into account.\na. (1.0 point) Please draw use case diagram for the above program.\nb. (3.0 points) Please design for the above program with a class diagram with detailed attributes and methods. Be careful to provide classes with appropriate getter/setter methods and necessary constructors.\nc. (2.5 points) Let x is the remainder after dividing the number comprising the last four digits in your Student ID by 3. Please write source code for classes for buying travelling certificates depending on x:\n- x = 0: Buy one-way ticket and prepaid card\n- x = 1: Buy prepaid card and twenty-four hour ticket\n- x = 2: Buy one-way ticket and twenty-four hour ticket For simplicity, you don’t need to write any GUI classes. You only need to write a class with a main method, which creates and works with travelling certificates for simulating the above buying process.",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Máy bán vé tự động"
+  ],
+  "sources": [
+   {
+    "file": "OOP - cuối kì 20202.pdf",
+    "n": 3,
+    "number": "Part 2 · a–c",
+    "end": 4,
+    "printed": "1/2–2/2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Use case: hành khách chọn loại, chọn ga hoặc số dư theo từng loại, chọn số lượng, xem giá rồi xác nhận. Một Order giữ duy nhất một kiểu sản phẩm, Quantity > 0. Station và bảng khoảng cách cung cấp khoảng cách giữa hai ga; đề không nêu cự ly cụ thể. Sơ đồ lớp: Order → Certificate, ba lớp hiện thực, Trip liên kết với cặp ga. Minh họa mô phỏng cả ba loại, tính tiền bằng cent và khoảng cách bằng mét. Cặp ga ví dụ trong main chỉ minh họa khoảng cách 7,3 km đã cho, không phải dữ liệu tuyến chính thức.\n\ninterface Certificate { int priceCents(); }\nclass Trip implements Certificate {\n    private final int metres;\n    Trip(String start, String end, int metres) {\n        if (start.equals(end) || metres <= 0) throw new IllegalArgumentException();\n        this.metres = metres;\n    }\n    public int priceCents() { return 190 + 40 * ((Math.max(0, metres - 5000) + 1999) / 2000); }\n}\nclass DayTicket implements Certificate { public int priceCents() { return 850; } }\nclass Prepaid implements Certificate {\n    private int balance;\n    Prepaid() { this(500); }\n    Prepaid(int balance) {\n        if (balance < 250) throw new IllegalArgumentException();\n        this.balance = balance;\n    }\n    public int priceCents() { return 1600 + balance; }\n    void spend(int cents) {\n        if (cents <= 0 || cents > balance) throw new IllegalArgumentException();\n        balance -= cents;\n    }\n}\nclass Order {\n    final Certificate product; final int quantity;\n    Order(Certificate product, int quantity) {\n        if (quantity <= 0) throw new IllegalArgumentException();\n        this.product = product; this.quantity = quantity;\n    }\n    long totalCents() { return (long) product.priceCents() * quantity; }\n    public String toString() { return product.getClass().getSimpleName() + \" \" + product.priceCents() + \" × \" + quantity + \" = \" + totalCents() + \" cents\"; }\n}\nclass Tickets {\n    public static void main(String[] args) {\n        System.out.println(new Order(new Trip(\"A\", \"B\", 7300), 2));\n        System.out.println(new Order(new DayTicket(), 1));\n        System.out.println(new Order(new Prepaid(), 1));\n    }\n}",
+  "hints": [
+   "Đổi phần cự ly vượt 5 km thành số đoạn 2 km làm tròn lên.",
+   "Tách tiền đặt cọc thẻ và số dư sử dụng được."
+  ],
+  "outline": [
+   "Nêu use case cho hành khách",
+   "Thể hiện một loại vé mỗi đơn, ràng buộc ga và số dư",
+   "Tính cước và làm tròn đúng",
+   "Mô phỏng nhánh mua vé theo MSSV"
+  ],
+  "rubric": [
+   "Nêu use case cho hành khách",
+   "Thể hiện một loại vé mỗi đơn, ràng buộc ga và số dư",
+   "Tính cước và làm tròn đúng",
+   "Mô phỏng nhánh mua vé theo MSSV"
+  ],
+  "pitfalls": [
+   "Tính 16 USD đặt cọc là số dư có thể chi tiêu."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3–4.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Đầu ra: 'Trip 270 × 2 = 540 cents\\nDayTicket 850 × 1 = 850 cents\\nPrepaid 2100 × 1 = 2100 cents'"
+  ],
+  "issues": [],
+  "raw": "Read carefully the following description about a simulation software for a part of a ticket vending machine installed at each station of a railroad line, and then complete tasks below.\nThe railroad line comprising four stations A, B, C, and D, with A serving as the starting point and D as the terminal point. A fare on the line is decided based on the distance between stations. The fare for up to 5 kilometers is USD 1.9 (this is called the base fare). An amount of USD 0.4 is added for each additional 2 kilometers. Any additional distance less than 2 kilometers is rounded up to 2 kilometers. For instance, for a distance of 7.3 kilometers, the fare is USD 2.7. In a ticket vending machine, passengers can choose to buy a type of traveling certificates in the menu: one-way ticket, twenty-four-hour ticket or prepaid card. Passengers can buy multiple tickets or cards in one order, but only one type in one order. For a one-way ticket, passengers need to choose the start and end stations. Note that the end station cannot be the same as the start one. The system then calculates the fare and display to them. For the twenty-four-hour tickets, the system displays the price of this type (i.e. USD 8.5) to passengers. Prepaid cards can be bought in the vending machine with a deposit of USD 16. The default balance of USD 5 is then displayed in screen. Passengers can increase this balance for the prepaid card. The minimum balance when buying the card is USD 2.5. Hence you need at least USD 18.5 to buy a prepaid card, including USD 2.5 for its balance. The balance of a prepaid cards should be at least USD 0 during usage. Passengers finally enter the number of tickets/cards that they want to buy and confirm to buy in a confirmation screen with all necessary information about tickets/cards, i.e. price, quantity, amount and total amount. The buying process terminates after the confirmation of the passengers. For simplicity, the payment and further processings are not taken into account.\na. (1.0 point) Please draw use case diagram for the above program.\nb. (3.0 points) Please design for the above program with a class diagram with detailed attributes and methods. Be careful to provide classes with appropriate getter/setter methods and necessary constructors.\nc. (2.5 points) Let x is the remainder after dividing the number comprising the last four digits in your Student ID by 3. Please write source code for classes for buying travelling certificates depending on x:\n- x = 0: Buy one-way ticket and prepaid card\n- x = 1: Buy prepaid card and twenty-four hour ticket\n- x = 2: Buy one-way ticket and twenty-four hour ticket For simplicity, you don’t need to write any GUI classes. You only need to write a class with a main method, which creates and works with travelling certificates for simulating the above buying process."
+ },
+ {
+  "id": "es-uet-fs",
+  "kind": "parts",
+  "stem": "Giả sử chúng ta đang viết chương trình mô phỏng hệ thống lưu trữ của máy tính. Hệ thống lưu trữ FS trên máy tính được tổ chức thành các đĩa (Disk). Mỗi đĩa có thể sẽ chứa các Folder, File, và Shortcut. Folder có thể chứa các File, các Shortcut và các Folder con. Thuộc tính chính của Disk, Folder, File, và Shortcut là tên. Ngoài ra, Disk còn có thông tin về dung lượng; File có thông tin về kích thước, loại tệp (binary hoặc text); Shortcut có thông tin về phần tử nguồn (là Folder hoặc File mà shortcut trỏ đến).\na. Hãy xây dựng thiết kế lớp gồm FS, Disk, Folder, File, Shortcut và các lớp, giao diện cần thiết khác (sinh viên vẽ biểu đồ lớp hoặc viết mã). (1 điểm)\nb. Cài đặt phương thức getFreeSpace() để tìm dung lượng chưa sử dụng của một đĩa. Giả sử kích thước của một shortcut là 1KB. Kích thước của một folder bằng tổng kích thước các tệp, shortcut, và folder chứa trong folder đó. (1,5 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 12,
+  "topics": [
+   "Mô hình cây lưu trữ"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET1.pdf",
+    "n": 4,
+    "number": "3",
+    "printed": "3"
+   },
+   {
+    "file": "ĐềThiUET4.pdf",
+    "n": 3,
+    "end": 4,
+    "number": "3",
+    "printed": "2–3"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "FS tổng hợp các Disk. Mỗi Disk giữ dung lượng và các Entry ở gốc. Folder chứa danh sách Entry con; File có kích thước và loại; Shortcut trỏ File hoặc Folder, nhưng luôn chiếm 1 KB. Giả sử các số đo bằng KB, cây thư mục không chứa chu trình sở hữu; khi tính dung lượng không đi theo đích shortcut.\ninterface Entry { long sizeKB(); }\nclass Disk {\n    long capacityKB;\n    java.util.List<Entry> root;\n    long getFreeSpace() { return capacityKB - root.stream().mapToLong(Entry::sizeKB).sum(); }\n}\nclass Folder implements Entry {\n    java.util.List<Entry> children;\n    public long sizeKB() { return children.stream().mapToLong(Entry::sizeKB).sum(); }\n}\nclass Shortcut implements Entry {\n    Entry target;\n    public long sizeKB() { return 1; }\n}\nclass File implements Entry {\n    String name, type;\n    long lengthKB;\n    public long sizeKB() { return lengthKB; }\n}\nBổ sung thuộc tính tên ở Disk, Folder và Shortcut như File. Có thể trích tên chung vào NamedEntry; chính sách kích thước được phân phối cho từng kiểu.",
+  "hints": [
+   "Đâu là liên kết chứa và đâu chỉ là tham chiếu?",
+   "Gọi sizeKB đa hình thay vì xét kiểu từng phần tử."
+  ],
+  "outline": [
+   "Định nghĩa đủ loại phần tử và quan hệ",
+   "Đệ quy trên cây thư mục",
+   "Cố định shortcut 1 KB và tính dung lượng trống"
+  ],
+  "rubric": [
+   "Định nghĩa đủ loại phần tử và quan hệ",
+   "Đệ quy trên cây thư mục",
+   "Cố định shortcut 1 KB và tính dung lượng trống"
+  ],
+  "pitfalls": [
+   "Đi theo đích của shortcut gây đếm đôi hoặc lặp vô hạn."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 12, trang PDF 25, 36 (phạm vi truy cập, quan hệ giữa lớp)."
+  ],
+  "issues": [],
+  "raw": "Giả sử chúng ta đang viết chương trình mô phỏng hệ thống lưu trữ của máy tính. Hệ thống lưu trữ FS trên máy tính được tổ chức thành các đĩa (Disk). Mỗi đĩa có thể sẽ chứa các Folder, File, và Shortcut. Folder có thể chứa các File, các Shortcut và các Folder con. Thuộc tính chính của Disk, Folder, File, và Shortcut là tên. Ngoài ra, Disk còn có thông tin về dung lượng; File có thông tin về kích thước, loại tệp (binary hoặc text); Shortcut có thông tin về phần tử nguồn (là Folder hoặc File mà shortcut trỏ đến).\na. Hãy xây dựng thiết kế lớp gồm FS, Disk, Folder, File, Shortcut và các lớp, giao diện cần thiết khác (sinh viên vẽ biểu đồ lớp hoặc viết mã). (1 điểm)\nb. Cài đặt phương thức getFreeSpace() để tìm dung lượng chưa sử dụng của một đĩa. Giả sử kích thước của một shortcut là 1KB. Kích thước của một folder bằng tổng kích thước các tệp, shortcut, và folder chứa trong folder đó. (1,5 điểm)"
+ },
+ {
+  "id": "es-uet1-2",
+  "kind": "parts",
+  "stem": "a. Cho ví dụ để thể hiện cơ chế liên kết động và liên kết tĩnh trong Java (có giải thích) (1,0 điểm)\nb. Phân biệt ngoại lệ được kiểm tra (checked exception) và không được kiểm tra (unchecked exception). Cho một ví dụ minh họa. (1,0 điểm)\nc. Chuyển kiểu xuống (down casting) không phải lúc nào cũng thành công. Cho ví dụ minh họa (0,5 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 8,
+  "topics": [
+   "Liên kết, ngoại lệ, ép kiểu"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET1.pdf",
+    "n": 3,
+    "number": "2",
+    "printed": "2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "a. class A { void f() {} static String g() { return \"A\"; } } class B extends A { @Override void f() {} static String g() { return \"B\"; } }. A a = new B(); a.f() gọi B.f; A.g() được phân giải theo tên lớp.\nb. IOException là checked, phải bắt hoặc khai báo throws nếu có thể thoát khỏi phương thức. IllegalArgumentException thuộc RuntimeException là unchecked, không bắt buộc xử lý lúc biên dịch.\nc. A a = new A(); B b = (B)a; biên dịch nhưng ném ClassCastException vì đối tượng thật không phải B.",
+  "hints": [
+   "So sánh kiểu tham chiếu và kiểu thực.",
+   "Hãy chọn một quan hệ cha–con cho cả phần a và c."
+  ],
+  "outline": [
+   "Đưa hai lời gọi và giải thích lựa chọn đích",
+   "Nêu nghĩa vụ checked và ví dụ hai nhóm",
+   "Chỉ ra một phép ép kiểu thất bại lúc chạy"
+  ],
+  "rubric": [
+   "Đưa hai lời gọi và giải thích lựa chọn đích",
+   "Nêu nghĩa vụ checked và ví dụ hai nhóm",
+   "Chỉ ra một phép ép kiểu thất bại lúc chạy"
+  ],
+  "pitfalls": [
+   "Nhầm mọi Exception đều là checked."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 08, trang PDF 10, 16–20, 25 (chuyển kiểu và liên kết động).",
+   "Bài 10, trang PDF 25, 32–33 (ngoại lệ và thứ tự catch)."
+  ],
+  "issues": [],
+  "raw": "a. Cho ví dụ để thể hiện cơ chế liên kết động và liên kết tĩnh trong Java (có giải thích) (1,0 điểm)\nb. Phân biệt ngoại lệ được kiểm tra (checked exception) và không được kiểm tra (unchecked exception). Cho một ví dụ minh họa. (1,0 điểm)\nc. Chuyển kiểu xuống (down casting) không phải lúc nào cũng thành công. Cho ví dụ minh họa (0,5 điểm)"
+ },
+ {
+  "id": "es-uet1-4",
+  "kind": "parts",
+  "stem": "a. Lớp tổng quát Group có ba thuộc tính d1, d2, và d3 có cùng kiểu dữ liệu tổng quát T. Phương thức tĩnh tổng quát getMax() trong lớp Group trả về đối tượng lớn nhất trong ba thuộc tính nêu trên. Hãy cài đặt lớp tổng quát này. (1 điểm)\nb. Trình bày hai mẫu thiết kế (design pattern) (có giải thích tác dụng của việc dùng các mẫu thiết kế đó). (1 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 9,
+  "topics": [
+   "Generic và mẫu thiết kế"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET1.pdf",
+    "n": 4,
+    "number": "4",
+    "printed": "3"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "review",
+  "sourceAnswer": null,
+  "explanation": "class Group<T> {\n    private final T d1, d2, d3;\n    Group(T a, T b, T c) { d1 = a; d2 = b; d3 = c; }\n    static <T extends Comparable<? super T>> T getMax(Group<T> g) {\n        T m = g.d1.compareTo(g.d2) >= 0 ? g.d1 : g.d2;\n        return m.compareTo(g.d3) >= 0 ? m : g.d3;\n    }\n}\nMột static method không có this. Để truy cập ba trường instance, lời giải truyền Group làm tham số; nếu giữ đúng getMax() không tham số và không cung cấp bất kỳ instance nào thì yêu cầu mâu thuẫn. Hai mẫu minh họa: Composite dùng giao diện chung cho phần tử lá và phần tử ghép để duyệt cây. Adapter chuyển lời gọi từ giao diện khách hàng cần sang API của đối tượng hiện có.",
+  "hints": [
+   "Phương thức tĩnh lấy ba trường của instance nào?",
+   "Có thể đưa instance vào tham số."
+  ],
+  "outline": [
+   "Ràng buộc khả năng so sánh",
+   "Giải thích vấn đề static và nơi lấy ba giá trị",
+   "So sánh đủ ba giá trị",
+   "Mô tả tác dụng hai mẫu"
+  ],
+  "rubric": [
+   "Ràng buộc khả năng so sánh",
+   "Giải thích vấn đề static và nơi lấy ba giá trị",
+   "So sánh đủ ba giá trị",
+   "Mô tả tác dụng hai mẫu"
+  ],
+  "pitfalls": [
+   "Truy cập trực tiếp d1, d2, d3 trong static method không có instance."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 09, trang PDF 10, 16, 25 (kiểu và phương thức tổng quát)."
+  ],
+  "issues": [
+   "Đề ghi static getMax() nhưng ba thuộc tính thông thường thuộc mỗi instance. Cần xác nhận chữ ký mong muốn."
+  ],
+  "raw": "a. Lớp tổng quát Group có ba thuộc tính d1, d2, và d3 có cùng kiểu dữ liệu tổng quát T. Phương thức tĩnh tổng quát getMax() trong lớp Group trả về đối tượng lớn nhất trong ba thuộc tính nêu trên. Hãy cài đặt lớp tổng quát này. (1 điểm)\nb. Trình bày hai mẫu thiết kế (design pattern) (có giải thích tác dụng của việc dùng các mẫu thiết kế đó). (1 điểm)"
+ },
+ {
+  "id": "es-uet2-2",
+  "kind": "parts",
+  "stem": "1. Trong một chương trình Java, chuyện gì xảy ra nếu nhiều hơn một khối catch có thể bắt đối tượng ngoại lệ bị ném? Cho ví dụ minh hoạ. (1 điểm)\n2. Phát biểu: “Đối tượng của tất cả các lớp đều có thể được chuỗi hoá và ghi ra file” là đúng hay sai? Hãy giải thích. (1 điểm)\n3. Cho một ví dụ và giải thích về việc sử dụng giao diện (interface) làm kiểu của tham số phương thức. (1 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 10,
+  "topics": [
+   "Ngoại lệ và giao diện"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET2.pdf",
+    "n": 4,
+    "number": "2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "1. Java chọn khối tương thích đầu tiên. Ví dụ NumberFormatException được bắt bởi catch(NumberFormatException e) đặt trước catch(IllegalArgumentException e). Đảo hai khối gây lỗi biên dịch.\n2. Sai với cơ chế Java Object Serialization. Muốn ghi một đối tượng qua ObjectOutputStream, lớp phải thực thi Serializable hoặc Externalizable; các tham chiếu được tuần tự hóa trong đồ thị cũng phải phù hợp. Trường transient có thể được bỏ qua.\n3. void printNames(java.util.List<String> names) { for (String n : names) System.out.println(n); }. Hàm nhận ArrayList hoặc LinkedList vì cả hai thực thi List.",
+  "hints": [
+   "Tách khả năng bắt theo kiểu khỏi thứ tự catch.",
+   "Xem interface như kiểu hợp đồng khi truyền tham số."
+  ],
+  "outline": [
+   "Nêu quy tắc catch đầu tiên và thứ tự hợp lệ",
+   "Giải thích hợp đồng Serializable",
+   "Minh họa tham số interface và hai kiểu thực hiện"
+  ],
+  "rubric": [
+   "Nêu quy tắc catch đầu tiên và thứ tự hợp lệ",
+   "Giải thích hợp đồng Serializable",
+   "Minh họa tham số interface và hai kiểu thực hiện"
+  ],
+  "pitfalls": [
+   "Khẳng định mọi trường tham chiếu đều tự tuần tự hóa thành công."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 10, trang PDF 25, 32–33 (ngoại lệ và thứ tự catch)."
+  ],
+  "issues": [],
+  "raw": "1. Trong một chương trình Java, chuyện gì xảy ra nếu nhiều hơn một khối catch có thể bắt đối tượng ngoại lệ bị ném? Cho ví dụ minh hoạ. (1 điểm)\n2. Phát biểu: “Đối tượng của tất cả các lớp đều có thể được chuỗi hoá và ghi ra file” là đúng hay sai? Hãy giải thích. (1 điểm)\n3. Cho một ví dụ và giải thích về việc sử dụng giao diện (interface) làm kiểu của tham số phương thức. (1 điểm)"
+ },
+ {
+  "id": "es-uet2-pay",
+  "kind": "parts",
+  "stem": "Công ty A muốn xây dựng một hệ thống Payroll. Hàng tháng, công ty cần tính tiền chi trả cho các hoá đơn (Invoice) và tiền lương cho nhân viên (Employee). Mặc dù các loại chi trả này thuộc các danh mục khác nhau và có cách tính khác nhau, nhưng chúng đều thực hiện nhiệm vụ tính tổng số tiền (getPaymentAmount) mà công ty cần chi trả.\nTrong đó, Invoice có thông tin về danh sách hàng hoá (Goods), phương thức getPaymentAmount tính và trả về tổng số tiền cần phải chi trả cho các hàng hoá trong hoá đơn đó. Một đối tượng Goods bao gồm thông tin về tên sản phẩm, số lượng, và giá.\nEmployee bao gồm thông tin tên (name) và địa chỉ (address) của nhân viên, phương thức getPaymentAmount tính và trả về số tiền mà công ty cần trả cho nhân viên. Để tính lương cho nhân viên, công ty chia nhân viên thành ba loại: SalariedEmployee, HourlyEmployee, và CommissionEmployee. Cụ thể, SalariedEmployee mỗi tuần được trả cố định một khoản weeklySalary không quan tâm số giờ họ làm việc, HourlyEmployee được trả h*hourSalary, trong đó h và hourSalary lần lượt là số giờ làm việc trong tuần và mức lương của một giờ làm việc. CommissionEmployee được trả theo tỷ lệ hàng hoá họ bán được, theo công thức commissionRate*grossSales, trong đó commissionRate và grossSales lần lượt là tỉ lệ hoa hồng họ được nhận và tổng giá trị họ đã bán được.\n1. Hãy vẽ biểu đồ thiết kế lớp sử dụng lớp trừu tượng và/hoặc giao diện (interface) một cách thích hợp (1 điểm)\n2. Viết mã cài đặt các lớp cụ thể (concrete class) ở trên (1 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 7,
+  "topics": [
+   "Interface chi trả"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET2.pdf",
+    "n": 4,
+    "number": "3"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Payable định nghĩa hợp đồng chi trả cho Employee và Invoice. Invoice chứa nhiều Goods. Ba lớp nhân viên kế thừa Employee và cài đặt công thức riêng. Các công thức lương trong đề mô tả một tuần; để tổng hợp theo tháng cần dữ liệu các tuần trong tháng, không tự nhân cố định bốn.\n\nimport java.util.*;\ninterface Payable { double getPaymentAmount(); }\nclass Goods {\n    final String name; final int quantity; final double price;\n    Goods(String name, int quantity, double price) { this.name=name; this.quantity=quantity; this.price=price; }\n}\nclass Invoice implements Payable {\n    final List<Goods> items;\n    Invoice(List<Goods> items) { this.items=List.copyOf(items); }\n    public double getPaymentAmount() { return items.stream().mapToDouble(g -> g.quantity*g.price).sum(); }\n}\nabstract class Employee implements Payable {\n    private final String name, address;\n    Employee(String n, String a) { name=n; address=a; }\n}\nclass SalariedEmployee extends Employee {\n    private final double weeklySalary;\n    SalariedEmployee(String n,String a,double w) { super(n,a); weeklySalary=w; }\n    public double getPaymentAmount() { return weeklySalary; }\n}\nclass HourlyEmployee extends Employee {\n    private final double h, hourSalary;\n    HourlyEmployee(String n,String a,double h,double wage) { super(n,a); this.h=h; hourSalary=wage; }\n    public double getPaymentAmount() { return h*hourSalary; }\n}\nclass CommissionEmployee extends Employee {\n    private final double commissionRate, grossSales;\n    CommissionEmployee(String n,String a,double r,double sales) { super(n,a); commissionRate=r; grossSales=sales; }\n    public double getPaymentAmount() { return commissionRate*grossSales; }\n}",
+  "hints": [
+   "Invoice có phải là một loại Employee không?",
+   "Dữ liệu nào chỉ một loại nhân viên cần?"
+  ],
+  "outline": [
+   "Chọn interface dùng chung cho hóa đơn và nhân viên",
+   "Đặt thuộc tính đúng trong từng lớp",
+   "Tính tổng hóa đơn và ba công thức lương"
+  ],
+  "rubric": [
+   "Chọn interface dùng chung cho hóa đơn và nhân viên",
+   "Đặt thuộc tính đúng trong từng lớp",
+   "Tính tổng hóa đơn và ba công thức lương"
+  ],
+  "pitfalls": [
+   "Dùng công thức commissionRate cộng grossSales."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 07, trang PDF 16, 25, 41 (ghi đè, lớp trừu tượng, interface).",
+   "javac 17.0.11, --release 17, giới hạn 8 giây biên dịch và 5 giây chạy. Biên dịch thành công."
+  ],
+  "issues": [],
+  "raw": "Công ty A muốn xây dựng một hệ thống Payroll. Hàng tháng, công ty cần tính tiền chi trả cho các hoá đơn (Invoice) và tiền lương cho nhân viên (Employee). Mặc dù các loại chi trả này thuộc các danh mục khác nhau và có cách tính khác nhau, nhưng chúng đều thực hiện nhiệm vụ tính tổng số tiền (getPaymentAmount) mà công ty cần chi trả.\nTrong đó, Invoice có thông tin về danh sách hàng hoá (Goods), phương thức getPaymentAmount tính và trả về tổng số tiền cần phải chi trả cho các hàng hoá trong hoá đơn đó. Một đối tượng Goods bao gồm thông tin về tên sản phẩm, số lượng, và giá.\nEmployee bao gồm thông tin tên (name) và địa chỉ (address) của nhân viên, phương thức getPaymentAmount tính và trả về số tiền mà công ty cần trả cho nhân viên. Để tính lương cho nhân viên, công ty chia nhân viên thành ba loại: SalariedEmployee, HourlyEmployee, và CommissionEmployee. Cụ thể, SalariedEmployee mỗi tuần được trả cố định một khoản weeklySalary không quan tâm số giờ họ làm việc, HourlyEmployee được trả h*hourSalary, trong đó h và hourSalary lần lượt là số giờ làm việc trong tuần và mức lương của một giờ làm việc. CommissionEmployee được trả theo tỷ lệ hàng hoá họ bán được, theo công thức commissionRate*grossSales, trong đó commissionRate và grossSales lần lượt là tỉ lệ hoa hồng họ được nhận và tổng giá trị họ đã bán được.\n1. Hãy vẽ biểu đồ thiết kế lớp sử dụng lớp trừu tượng và/hoặc giao diện (interface) một cách thích hợp (1 điểm)\n2. Viết mã cài đặt các lớp cụ thể (concrete class) ở trên (1 điểm)"
+ },
+ {
+  "id": "es-uet2-4",
+  "kind": "parts",
+  "stem": "1. Mô tả và cho ví dụ về mẫu thiết kế Singleton (1 điểm)\n2. Viết một phương thức tổng quát sort() với tham số là một mảng gồm các phần tử thuộc kiểu tổng quát, phương thức này sắp xếp các phần tử theo thứ tự tăng dần và trả về mảng đã sắp xếp. (1 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 9,
+  "topics": [
+   "Phương thức tổng quát"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET2.pdf",
+    "n": 4,
+    "number": "4"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Ví dụ singleton: enum Config { INSTANCE; } cho một instance của hằng trong một class loader. Mã gọi dùng Config.INSTANCE.\n\nstatic <T extends Comparable<? super T>> T[] sort(T[] items) {\n    java.util.Arrays.sort(items);\n    return items;\n}\nPhương thức thay đổi mảng tại chỗ và trả cùng tham chiếu. Nếu yêu cầu giữ mảng cũ, sắp xếp trên clone().",
+  "hints": [
+   "Làm sao so sánh hai T?",
+   "Xét kiểu của mảng được trả về."
+  ],
+  "outline": [
+   "Nêu mục tiêu và ví dụ Singleton",
+   "Dùng ràng buộc có thứ tự",
+   "Trả đúng mảng đã sắp xếp"
+  ],
+  "rubric": [
+   "Nêu mục tiêu và ví dụ Singleton",
+   "Dùng ràng buộc có thứ tự",
+   "Trả đúng mảng đã sắp xếp"
+  ],
+  "pitfalls": [
+   "Giả định T bất kỳ đều có toán tử <."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 09, trang PDF 10, 16, 25 (kiểu và phương thức tổng quát)."
+  ],
+  "issues": [],
+  "raw": "1. Mô tả và cho ví dụ về mẫu thiết kế Singleton (1 điểm)\n2. Viết một phương thức tổng quát sort() với tham số là một mảng gồm các phần tử thuộc kiểu tổng quát, phương thức này sắp xếp các phần tử theo thứ tự tăng dần và trả về mảng đã sắp xếp. (1 điểm)"
+ },
+ {
+  "id": "es-uet3-2",
+  "kind": "parts",
+  "stem": "a. Thuộc tính private có được kế thừa trong lớp con hay không? Cho thí dụ và giải thích?\nb. Cơ chế Up casting và Down casting là như thế nào, cho thí dụ minh họa? Khi nào không thể Down casting đối tượng được?",
+  "options": [],
+  "correct": [],
+  "chapter": 6,
+  "topics": [
+   "Truy cập và ép kiểu"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET3.pdf",
+    "n": 2,
+    "number": "2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "Theo nghĩa thành viên được kế thừa của Java, thành viên private của cha không được lớp con kế thừa và truy cập trực tiếp. Tuy vậy, một instance của lớp con vẫn chứa trạng thái khai báo ở cha. Ví dụ class A { private int x=4; int value(){return x;} } class B extends A {}. new B().value() trả 4.\nGán B vào tham chiếu A khi B extends A là upcast, an toàn và ngầm định. Cast ngược dùng (B)a, chỉ thành công với null hoặc khi đối tượng thật phù hợp với B. Ví dụ A a = new A(); B b = (B)a; ném ClassCastException. Dùng instanceof trước khi truy cập hành vi riêng.",
+  "hints": [
+   "Nơi nào thực thi value()?",
+   "Xét kiểu thực khi ép A xuống B."
+  ],
+  "outline": [
+   "Phân biệt quyền truy cập với trạng thái của đối tượng",
+   "Đưa ví dụ truy cập qua hành vi của cha",
+   "Phân tích điều kiện cast và lỗi"
+  ],
+  "rubric": [
+   "Phân biệt quyền truy cập với trạng thái của đối tượng",
+   "Đưa ví dụ truy cập qua hành vi của cha",
+   "Phân tích điều kiện cast và lỗi"
+  ],
+  "pitfalls": [
+   "Hiểu rằng vùng trạng thái private biến mất khỏi đối tượng con."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 2.",
+   "Bài 06, trang PDF 10, 25, 33 (kết tập, kế thừa)."
+  ],
+  "issues": [],
+  "raw": "a. Thuộc tính private có được kế thừa trong lớp con hay không? Cho thí dụ và giải thích?\nb. Cơ chế Up casting và Down casting là như thế nào, cho thí dụ minh họa? Khi nào không thể Down casting đối tượng được?"
+ },
+ {
+  "id": "es-uet4-2",
+  "kind": "parts",
+  "stem": "a. Cho 1 ví dụ để thể hiện liên kết động và liên kết tĩnh trong Java (có giải thích) (1 điểm)\nb. Cho ví dụ về trường hợp chuyển kiểu xuống (down casting) không thành công. (1 điểm)\nc. Hãy định nghĩa một lớp ngoại lệ mới (ví dụ MyException) và cho ví dụ sử dụng lớp ngoại lệ đó (1 điểm)",
+  "options": [],
+  "correct": [],
+  "chapter": 8,
+  "topics": [
+   "Liên kết và ngoại lệ tự định nghĩa"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET4.pdf",
+    "n": 3,
+    "number": "2",
+    "printed": "2"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "supported",
+  "sourceAnswer": null,
+  "explanation": "a. Với class A { void f(){} static void g(){} } và class B extends A { @Override void f(){} }, A a = new B(); a.f() gọi B.f khi chạy. A.g() gắn với lớp A.\nb. A exact = new A(); B bad = (B)exact; gây ClassCastException.\nc. class MyException extends Exception { MyException(String m) { super(m); } } và static void check(int n) throws MyException { if (n < 0) throw new MyException(\"âm\"); }. Nơi gọi phải bắt hoặc khai báo ngoại lệ này.",
+  "hints": [
+   "So sánh static với phương thức instance override.",
+   "Mở rộng Exception để tạo checked exception."
+  ],
+  "outline": [
+   "Minh họa hai loại liên kết",
+   "Chứng minh không thể ép đối tượng cha thuần xuống con",
+   "Định nghĩa, ném và nêu cách xử lý ngoại lệ"
+  ],
+  "rubric": [
+   "Minh họa hai loại liên kết",
+   "Chứng minh không thể ép đối tượng cha thuần xuống con",
+   "Định nghĩa, ném và nêu cách xử lý ngoại lệ"
+  ],
+  "pitfalls": [
+   "Tạo đối tượng ngoại lệ mà quên throw."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 3.",
+   "Bài 08, trang PDF 10, 16–20, 25 (chuyển kiểu và liên kết động).",
+   "Bài 10, trang PDF 25, 32–33 (ngoại lệ và thứ tự catch)."
+  ],
+  "issues": [],
+  "raw": "a. Cho 1 ví dụ để thể hiện liên kết động và liên kết tĩnh trong Java (có giải thích) (1 điểm)\nb. Cho ví dụ về trường hợp chuyển kiểu xuống (down casting) không thành công. (1 điểm)\nc. Hãy định nghĩa một lớp ngoại lệ mới (ví dụ MyException) và cho ví dụ sử dụng lớp ngoại lệ đó (1 điểm)"
+ },
+ {
+  "id": "es-uet4-4",
+  "kind": "parts",
+  "stem": "a. Viết phương trình getMin() nhận vào 1 mảng các đối tượng thuộc lớp chưa biết trước trả về đối tượng lớn nhất trong mảng đấy. (1 điểm)\nb. Cho 1 ví dụ về việc sử dụng 1 trong các mẫu thiết kế (design pattern) Composite, Prototype, hoặc Adapter (1 điểm).",
+  "options": [],
+  "correct": [],
+  "chapter": 9,
+  "topics": [
+   "Generic và Composite"
+  ],
+  "sources": [
+   {
+    "file": "ĐềThiUET4.pdf",
+    "n": 4,
+    "number": "4",
+    "printed": "3"
+   }
+  ],
+  "transcript": "checked",
+  "answerStatus": "conflict",
+  "sourceAnswer": null,
+  "explanation": "Văn bản ghi tên getMin() nhưng yêu cầu trả đối tượng lớn nhất. Nếu theo yêu cầu “lớn nhất”:\nstatic <T extends Comparable<? super T>> T getMin(T[] a) {\n    if (a.length == 0) throw new IllegalArgumentException();\n    T best = a[0];\n    for (T x : a) if (x.compareTo(best) > 0) best = x;\n    return best;\n}\nNếu cần nhỏ nhất theo tên, dùng < 0. Composite minh họa bằng cây File/Folder cùng giao diện size(), trong đó Folder cộng size của các con.",
+  "hints": [
+   "Đọc lại cả tên hàm lẫn tính từ trong câu.",
+   "Xét cây thư mục như một Composite."
+  ],
+  "outline": [
+   "Nêu mâu thuẫn giữa tên và yêu cầu",
+   "Viết so sánh theo cách đọc đã chọn",
+   "Cho ví dụ phù hợp với một mẫu"
+  ],
+  "rubric": [
+   "Nêu mâu thuẫn giữa tên và yêu cầu",
+   "Viết so sánh theo cách đọc đã chọn",
+   "Cho ví dụ phù hợp với một mẫu"
+  ],
+  "pitfalls": [
+   "Âm thầm đổi ý nghĩa so với nguyên văn."
+  ],
+  "evidence": [
+   "Đối chiếu ảnh trang nguồn 4.",
+   "Bài 09, trang PDF 10, 16, 25 (kiểu và phương thức tổng quát)."
+  ],
+  "issues": [
+   "Tên getMin() và cụm “lớn nhất” mâu thuẫn ngay trên ảnh; giữ cả hai cách hiểu."
+  ],
+  "raw": "a. Viết phương trình getMin() nhận vào 1 mảng các đối tượng thuộc lớp chưa biết trước trả về đối tượng lớn nhất trong mảng đấy. (1 điểm)\nb. Cho 1 ví dụ về việc sử dụng 1 trong các mẫu thiết kế (design pattern) Composite, Prototype, hoặc Adapter (1 điểm)."
+ }
+]

@@ -1,0 +1,204 @@
+{
+  "d7e70c": {
+    "source": "class Test { public static void main(String[] args) {\nSystem.out.print(\"Begin \");\ntry {\n    int i = 5/0;\n    System.out.print(\"Try \");\n} catch (Exception ex) {\n    System.out.print(\"Catch \");\n} finally {\n    System.out.print(\"Finally \");\n}\nSystem.out.print(\"End \");\n}}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "Begin Catch Finally End ",
+    "stderr": ""
+  },
+  "8bab79": {
+    "source": "class Test { public static void main(String[] args) {\nint x = 7;\nint mssv = 10;\nfinal int z = x + mssv;\nz =- 1;\nSystem.out.println(\"Value of z : \" + z );\n}}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 1,
+    "compileDiagnostics": "Test.java:5: error: cannot assign a value to final variable z\nz =- 1;\n^\n1 error",
+    "timeoutSeconds": 4
+  },
+  "b2a7b5": {
+    "source": "class Test {\npublic void check1 (int n) throws Exception {\n    if (n <= 0)\n        throw new Exception(\"Number should be greater than 0\");\n}\npublic void check2 (int n) throws RuntimeException {\n    if (n == 5)\n        throw new RuntimeException(\"Number should not be 5\");\n}\npublic void check3 (int n) throws Exception, RuntimeException {\n    check1(n);\n    check2(n);\n}\npublic void test() {\n    int n = 4;\n    check1(n);\n    check2(n);\n    check3(n);\n}\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 1,
+    "compileDiagnostics": "Test.java:16: error: unreported exception Exception; must be caught or declared to be thrown\n    check1(n);\n          ^\nTest.java:18: error: unreported exception Exception; must be caught or declared to be thrown\n    check3(n);\n          ^\n2 errors",
+    "timeoutSeconds": 4
+  },
+  "3bd76f": {
+    "source": "class A {\n    int i = 200;\n}\nclass B extends A {\n    int i = 100;\n}\npublic class Test {\n    public static void main(String[] ss) {\n        B a = new B();\n        System.out.println(a.i);\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "100\n",
+    "stderr": ""
+  },
+  "74135d": {
+    "source": "class Test { public static void main(String[] args) {\nSystem.out.print(\"Begin \");\ntry {\n    int i = 5/0;\n    System.out.print(\"Try \");\n} finally {\n    System.out.print(\"Finally \");\n}\nSystem.out.print(\"End \");\n}}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 1,
+    "stdout": "Begin Finally ",
+    "stderr": "Exception in thread \"main\" java.lang.ArithmeticException: / by zero\n\tat Test.main(Test.java:4)\n"
+  },
+  "005e56": {
+    "source": "class A {\n      public int check(double a) {\n          return (int) a;\n      }\n      public double check (double a) {\n          return a;\n     }\n}\nclass B {\n      private int check (double a, int b) {\n          return (int) a + b;\n      }\n      private double check (double a, int b) {\n          return a + b;\n      }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 1,
+    "compileDiagnostics": "Test.java:5: error: method check(double) is already defined in class A\n      public double check (double a) {\n                    ^\nTest.java:13: error: method check(double,int) is already defined in class B\n      private double check (double a, int b) {\n                     ^\n2 errors",
+    "timeoutSeconds": 4
+  },
+  "06e281": {
+    "source": "public class Test {\n    public static void p(String s) {\n        System.out.print(s + \" \");\n    }\n    public static void f(int i) { p(\"int\"); }\n    public static void f(short h) { p(\"short\"); }\n    public static void f(char c) { p(\"char\"); }\n    public static void f(long l) { p(\"long\"); }\n    public static void f(double l) { p(\"double\"); }\n    public static void f(float f) { p(\"float\"); }\n    public static void main(String[] args) {\n        f(5);\n        f('c');\n        f(5.5);\n        f(7L);\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "int char double long ",
+    "stderr": ""
+  },
+  "9acad7": {
+    "source": "class Test {\n    public static void increase1(int[] arr) {\n        for (int a: arr)\n            a += 1;\n    }\n    public static void increase2(int[] arr) {\n        for (int i=0; i<arr.length; ++i)\n            arr[i] ++;\n    }\n    public static void main(String[] args) {\n        int arr[] = {5, 6, 7};\n        increase1(arr);\n        increase2(arr);\n        for (int a: arr)\n            System.out.print(a + \" \");\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "6 7 8 ",
+    "stderr": ""
+  },
+  "d9cb95": {
+    "source": "class Person {} class Employee extends Person {} class Manager extends Employee {}\nclass Test { public static void main(String[] args) {\nPerson p1 = new Manager();\nEmployee e = (Employee) p1;\nPerson p2 = new Employee();\nManager m = (Manager) p2;\n}}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 1,
+    "stdout": "",
+    "stderr": "Exception in thread \"main\" java.lang.ClassCastException: class Employee cannot be cast to class Manager (Employee and Manager are in unnamed module of loader 'app')\n\tat Test.main(Test.java:6)\n"
+  },
+  "009f5e": {
+    "source": "public class A {\n    String s;\n    A a;\n    public A(String s) {\n        this.s = s;\n    }\n    public static void main(String[] args) {\n        A a1 = new A(\"first\");\n        A a2 = new A(\"second\");\n        a1.a = a2;\n        a2.a = a1;\n        System.out.print(a1.a.s);\n        System.out.print(a2.a.s);\n    }\n}",
+    "filename": "A.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "secondfirst",
+    "stderr": ""
+  },
+  "1b5c7f": {
+    "source": "interface P\n{\n    String p = \"PPPP\";\n    String methodP();\n}\ninterface Q extends P\n{\n    String q = \"QQQQ\";\n    String methodQ();\n}\nclass R implements P, Q\n{\n    public String methodP()\n    {\n        return q+p;\n    }\n    public String methodQ()\n    {\n        return p+q;\n    }\n}\npublic class Demo {\n    public static void main(String[] ss) {\n        R r = new R();\n        System.out.print(r.methodP());\n        System.out.print(r.methodQ());\n    }\n}",
+    "filename": "Demo.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "QQQQPPPPPPPPQQQQ",
+    "stderr": ""
+  },
+  "f208c1": {
+    "source": "public class Test {\n    public static void main(String[] ss) {\n        String[] s = {\"abc\", \"123\", null};\n        for (int i = 0; i < s.length; i++){\n            try {\n                int a = s[i].length();\n                try {\n                    a = Integer.parseInt(s[i]);\n                } catch (NumberFormatException ex) {\n                    System.out.print(\"NumberFormatException \");\n                }\n            } catch(NullPointerException ex) {\n                System.out.print(\"NullPointerException \");\n            }\n        }\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "NumberFormatException NullPointerException ",
+    "stderr": ""
+  },
+  "2ed507": {
+    "source": "public class Test {\n    static int index = 0;\n    void increase() {\n        index++;\n    }\n    public static void main(String[] args) {\n        increase();\n        System.out.println(index);\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 1,
+    "compileDiagnostics": "Test.java:7: error: non-static method increase() cannot be referenced from a static context\n        increase();\n        ^\n1 error",
+    "timeoutSeconds": 4
+  },
+  "970e32": {
+    "source": "public class Test{\n    public static void tryPrimitives(int i, double f, char c, boolean test)\n    {\n        i += 10;\n        c = 'z';\n        if(test)\n            test = false;\n        else\n            test = true;\n    }\n    public static void main(String[] args)\n    {\n        int ii = 1;\n        double ff = 1.0;\n        char cc = 'a';\n        boolean bb = false;\n        tryPrimitives(ii, ff, cc, bb);\n        System.out.println(\"ii = \" + ii + \", ff = \" + ff +\n                \", cc = \" + cc + \", bb = \" + bb);\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "ii = 1, ff = 1.0, cc = a, bb = false\n",
+    "stderr": ""
+  },
+  "062b84": {
+    "source": "class Person {\n    protected String name;\n    private String print1() {\n        return name;\n    }\n    protected String print2() {\n        return name.toUpperCase();\n    }\n    protected String print3() {\n        return name.toLowerCase();\n    }\n}\nclass Employee extends Person {\n    private void print1() {\n        System.out.println(name);\n    }\n    protected void print2() {\n        System.out.println(\"Name: \" + name.toUpperCase());\n    }\n    String print3() {\n        return \"Name: \" + name.toLowerCase();\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 1,
+    "compileDiagnostics": "Test.java:17: error: print2() in Employee cannot override print2() in Person\n    protected void print2() {\n                   ^\n  return type void is not compatible with String\nTest.java:20: error: print3() in Employee cannot override print3() in Person\n    String print3() {\n           ^\n  attempting to assign weaker access privileges; was protected\n2 errors",
+    "timeoutSeconds": 4
+  },
+  "ef13ed": {
+    "source": "class Person {\n    private int age;\n    public Person(int age) {\n        this.age = age;\n    }\n    public int getAge() {\n        return age;\n    }\n    public void setAge(int age) {\n        this.age = age;\n    }\n}\nclass Test {\n    public static void increaseAge(Person p) {\n        p.setAge(p.getAge() + 1);\n    }\n    public static void swap(Person p1, Person p2) {\n        Person tmp = p1;\n        p1 = p2;\n        p2 = tmp;\n    }\n    public static void main(String[] args) {\n        Person p1 = new Person(15);\n        Person p2 = new Person(20);\n        increaseAge(p1);\n        swap(p1, p2);\n        System.out.print(p1.getAge() + \" \");\n        System.out.print(p2.getAge() + \" \");\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "16 20 ",
+    "stderr": ""
+  },
+  "bce44e": {
+    "source": "class Person {\n    protected int age;\n    protected String name;\n    public Person() {\n        System.out.print(age + \" \" + name + \" \");\n    }\n    public Person(int age, String name) {\n        this.age = age;\n        this.name = name;\n    }\n}\nclass Employee extends Person{\n    public Employee() {\n    }\n    public Employee(int age, String name) {\n        super(age, name);\n    }\n    public static void main(String[] args) {\n        Employee e1 = new Employee();\n        Employee e2 = new Employee(16, \"Huy\");\n        System.out.print(e2.age + \" \" + e2.name);\n    }\n}",
+    "filename": "Employee.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "0 null 16 Huy",
+    "stderr": ""
+  },
+  "b89bfb": {
+    "source": "class A {\n    String myMethod(String s) {\n        return s+s;\n    }\n}\nclass B extends A {\n    String myMethod(String s, double d) {\n        return myMethod(s+d);\n    }\n}\nclass C extends B {\n    String myMethod(String s, double d, int i) {\n        return myMethod(s, d+i);\n    }\n}\npublic class Test {\n    public static void main(String[] ss) {\n        C x = new C();\n        System.out.println(x.myMethod(\"CHECK\", 12.34, 56));\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "CHECK68.34CHECK68.34\n",
+    "stderr": ""
+  },
+  "0370d2": {
+    "source": "class A {\n}\nclass B extends A {\n}\nclass C extends B {\n}\npublic class Test {\n    static void method(A a) {\n        System.out.println(\"Method A\");\n    }\n    static void method(B b) {\n        System.out.println(\"Method B\");\n    }\n    static void method(Object obj) {\n        System.out.println(\"Method C\");\n    }\n    public static void main(String[] ss) {\n        C c = new C();\n        method(c);\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 0,
+    "compileDiagnostics": "",
+    "timeoutSeconds": 4,
+    "runExit": 0,
+    "stdout": "Method B\n",
+    "stderr": ""
+  },
+  "90e310": {
+    "source": "interface Printable {\n    public void print();\n}\ninterface Stringable {\n    String stringify();\n}\nclass Person implements Printable, Stringable {\n    protected String name;\n    public String stringify() {\n        return name;\n    }\n    public void print() {\n        System.out.println(name);\n    }\n    public static void main(String[] args) {\n        Printable p1 = new Printable();\n        Printable p2 = new Person();\n        String name = p2.stringify();\n    }\n}",
+    "filename": "Test.java",
+    "java": "Oracle JDK 17.0.11",
+    "compileExit": 1,
+    "compileDiagnostics": "Test.java:16: error: Printable is abstract; cannot be instantiated\n        Printable p1 = new Printable();\n                       ^\nTest.java:18: error: cannot find symbol\n        String name = p2.stringify();\n                        ^\n  symbol:   method stringify()\n  location: variable p2 of type Printable\n2 errors",
+    "timeoutSeconds": 4
+  }
+}

@@ -1,0 +1,492 @@
+[
+  {
+    "id": 1,
+    "title": "Tổng quan về lập trình hướng đối tượng",
+    "short": "Tổng quan OOP",
+    "topics": [
+      "Đối tượng và lớp",
+      "Thông điệp",
+      "Nguyên lý OOP",
+      "Nền tảng Java"
+    ],
+    "goals": [
+      "Mô tả một đối tượng bằng trạng thái và hành vi.",
+      "Giải thích đường đi từ mã nguồn qua bytecode đến JVM."
+    ],
+    "summary": "Lớp mô tả cấu trúc và hành vi chung. Đối tượng giữ trạng thái riêng và tương tác qua phương thức. Các nguyên lý trừu tượng hóa, đóng gói, kế thừa và đa hình làm nền cho những bài sau.",
+    "prerequisites": [],
+    "file": "Bai 01 - Tong quan OOP.pdf",
+    "refs": [
+      {
+        "n": 12,
+        "label": "Đối tượng"
+      },
+      {
+        "n": 20,
+        "label": "Thông điệp và phương thức"
+      },
+      {
+        "n": 36,
+        "label": "Mô hình dịch của Java"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cú pháp Java cơ bản",
+    "short": "Cú pháp Java",
+    "topics": [
+      "Định danh và biến",
+      "Kiểu nguyên thủy",
+      "Toán tử",
+      "Điều khiển",
+      "Mảng",
+      "Nhập môn UML"
+    ],
+    "goals": [
+      "Xác định kiểu và giá trị của biểu thức.",
+      "Lần theo nhánh, vòng lặp và truy cập mảng.",
+      "Phân biệt mục đích các biểu đồ UML."
+    ],
+    "summary": "Kiểu và phạm vi quyết định cách dùng biến. Biểu thức, nhánh và vòng lặp điều khiển việc xử lý dữ liệu. UML cung cấp các góc nhìn bổ sung về cấu trúc và tương tác.",
+    "prerequisites": [
+      1
+    ],
+    "file": "Bai 02 - Co ban ve Java va UML.pdf",
+    "refs": [
+      {
+        "n": 32,
+        "label": "Chuyển đổi kiểu"
+      },
+      {
+        "n": 40,
+        "label": "Phép chia"
+      },
+      {
+        "n": 68,
+        "label": "Mảng"
+      },
+      {
+        "n": 96,
+        "label": "Biểu đồ tuần tự"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Trừu tượng hóa và Đóng gói",
+    "short": "Trừu tượng hóa và đóng gói",
+    "topics": [
+      "Lớp và đối tượng",
+      "Package",
+      "Chỉ định truy cập",
+      "Getter và setter"
+    ],
+    "goals": [
+      "Chọn thuộc tính và hành vi cần thể hiện ở một lớp.",
+      "Giới hạn truy cập và thiết kế các phương thức công khai."
+    ],
+    "summary": "Trừu tượng hóa giữ lại những đặc điểm có ý nghĩa với bài toán. Đóng gói đặt dữ liệu và hành vi vào cùng lớp, kiểm soát truy cập để thay đổi phần cài đặt mà vẫn duy trì giao diện.",
+    "prerequisites": [
+      1,
+      2
+    ],
+    "file": "Bai 03 - Truu tuong hoa va Dong goi.pdf",
+    "refs": [
+      {
+        "n": 8,
+        "label": "Trừu tượng hóa dữ liệu"
+      },
+      {
+        "n": 20,
+        "label": "Package"
+      },
+      {
+        "n": 28,
+        "label": "Chỉ định truy cập"
+      },
+      {
+        "n": 40,
+        "label": "Phương thức get"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Khởi tạo và sử dụng đối tượng",
+    "short": "Khởi tạo đối tượng",
+    "topics": [
+      "Constructor",
+      "Tham chiếu",
+      "So sánh đối tượng",
+      "Thu gom rác"
+    ],
+    "goals": [
+      "Phân biệt khai báo biến tham chiếu với tạo đối tượng.",
+      "Đọc đúng phép so sánh tham chiếu và lời gọi equals."
+    ],
+    "summary": "Constructor chuẩn bị trạng thái ban đầu. Nhiều tham chiếu có thể cùng trỏ đến một đối tượng. Phép == so sánh danh tính của tham chiếu, còn equals thực hiện quy tắc do lớp quy định.",
+    "prerequisites": [
+      2,
+      3
+    ],
+    "file": "Bai 04 - Khoi tao va su dung doi tuong.pdf",
+    "refs": [
+      {
+        "n": 8,
+        "label": "Phương thức khởi tạo"
+      },
+      {
+        "n": 20,
+        "label": "Khai báo và khởi tạo"
+      },
+      {
+        "n": 36,
+        "label": "So sánh đối tượng"
+      },
+      {
+        "n": 44,
+        "label": "Bộ thu gom rác"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Các kỹ thuật xây dựng lớp và sử dụng đối tượng",
+    "short": "Kỹ thuật xây dựng lớp",
+    "topics": [
+      "Nạp chồng",
+      "this",
+      "static và final",
+      "Truyền tham số",
+      "Wrapper và String"
+    ],
+    "goals": [
+      "Chọn phương thức phù hợp theo danh sách tham số.",
+      "Dự đoán tác dụng khi truyền giá trị nguyên thủy hoặc tham chiếu."
+    ],
+    "summary": "Các phương thức cùng tên có thể phân biệt bằng danh sách tham số. Thành viên static thuộc lớp. Java sao chép giá trị đối số, kể cả khi giá trị đó là một tham chiếu.",
+    "prerequisites": [
+      3,
+      4
+    ],
+    "file": "Bai 05 - Cac ky thuat xay dung lop va su dung DT.pdf",
+    "refs": [
+      {
+        "n": 8,
+        "label": "Chồng phương thức"
+      },
+      {
+        "n": 20,
+        "label": "Thành viên static"
+      },
+      {
+        "n": 36,
+        "label": "Tham số kiểu tham chiếu"
+      },
+      {
+        "n": 64,
+        "label": "String literal và String object"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Kết tập và kế thừa",
+    "short": "Kết tập và kế thừa",
+    "topics": [
+      "Tái sử dụng",
+      "Quan hệ chứa",
+      "Quan hệ kế thừa",
+      "Khởi tạo lớp cha"
+    ],
+    "goals": [
+      "Chọn kết tập hay kế thừa cho một quan hệ cụ thể.",
+      "Lần theo chuỗi khởi tạo giữa lớp con và lớp cha."
+    ],
+    "summary": "Đối tượng có thể giữ tham chiếu đến các thành phần khác để tái sử dụng hành vi. Kế thừa diễn tả quan hệ chuyên biệt hóa và cho phép lớp con sử dụng thành viên phù hợp của lớp cha.",
+    "prerequisites": [
+      3,
+      4,
+      5
+    ],
+    "file": "Bai 06 - Ket tap va ke thua.pdf",
+    "refs": [
+      {
+        "n": 12,
+        "label": "Bản chất của kết tập"
+      },
+      {
+        "n": 24,
+        "label": "Kế thừa trong UML"
+      },
+      {
+        "n": 36,
+        "label": "Cú pháp kế thừa"
+      },
+      {
+        "n": 44,
+        "label": "Constructor lớp cha"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Một số kỹ thuật trong kế thừa",
+    "short": "Kỹ thuật trong kế thừa",
+    "topics": [
+      "Ghi đè",
+      "super",
+      "Lớp trừu tượng",
+      "Interface"
+    ],
+    "goals": [
+      "Kiểm tra chữ ký, quyền truy cập và kiểu trả về khi ghi đè.",
+      "Giải thích cách một lớp thực thi nhiều giao diện."
+    ],
+    "summary": "Phương thức ghi đè giữ hợp đồng của lớp cha. Lớp trừu tượng có thể kết hợp triển khai chung với phần cần lớp con bổ sung. Interface mô tả hợp đồng chung giữa các lớp.",
+    "prerequisites": [
+      5,
+      6
+    ],
+    "file": "Bai 07 - Mot so ky thuat trong ke thua.pdf",
+    "refs": [
+      {
+        "n": 8,
+        "label": "Định nghĩa lại"
+      },
+      {
+        "n": 16,
+        "label": "Quy định trong ghi đè"
+      },
+      {
+        "n": 24,
+        "label": "Lớp trừu tượng"
+      },
+      {
+        "n": 41,
+        "label": "Interface và phiên bản Java"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Đa hình",
+    "short": "Đa hình",
+    "topics": [
+      "Upcasting",
+      "Downcasting",
+      "Liên kết tĩnh",
+      "Liên kết động"
+    ],
+    "goals": [
+      "Tách kiểu khai báo của tham chiếu khỏi lớp thực của đối tượng.",
+      "Phân tích tính hợp lệ của phép ép kiểu và lựa chọn phương thức."
+    ],
+    "summary": "Upcasting mở rộng kiểu tham chiếu. Downcasting đòi hỏi đối tượng thực tương thích. Khi gọi phương thức thực thể được ghi đè, đối tượng thực quyết định phiên bản phương thức chạy.",
+    "prerequisites": [
+      6,
+      7
+    ],
+    "file": "Bai 08 - Da hinh.pdf",
+    "refs": [
+      {
+        "n": 8,
+        "label": "Upcasting"
+      },
+      {
+        "n": 12,
+        "label": "Downcasting"
+      },
+      {
+        "n": 20,
+        "label": "Liên kết động"
+      },
+      {
+        "n": 24,
+        "label": "Đa hình"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Lập trình tổng quát",
+    "short": "Lập trình tổng quát",
+    "topics": [
+      "Tham số kiểu",
+      "Collections",
+      "List và Map",
+      "Iterator và Comparator",
+      "Wildcard"
+    ],
+    "goals": [
+      "Định nghĩa lớp hoặc phương thức với tham số kiểu.",
+      "Chọn collection, đọc ràng buộc kiểu và wildcard."
+    ],
+    "summary": "Generics diễn tả mối quan hệ kiểu tại thời điểm biên dịch. Collections cung cấp các cấu trúc có hợp đồng khác nhau. Wildcard mô tả danh sách có kiểu phần tử chưa biết với giới hạn trên hoặc dưới.",
+    "prerequisites": [
+      5,
+      7,
+      8
+    ],
+    "file": "Bai 09 - Lap trinh tong quat.pdf",
+    "refs": [
+      {
+        "n": 10,
+        "label": "Ví dụ với List<Integer>"
+      },
+      {
+        "n": 16,
+        "label": "Phương thức tổng quát"
+      },
+      {
+        "n": 36,
+        "label": "Map"
+      },
+      {
+        "n": 48,
+        "label": "Iterator và Comparator"
+      },
+      {
+        "n": 60,
+        "label": "Wildcard"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Ngoại lệ và xử lý ngoại lệ",
+    "short": "Xử lý ngoại lệ",
+    "topics": [
+      "try/catch/finally",
+      "throw và throws",
+      "Ủy nhiệm",
+      "Ngoại lệ tự định nghĩa"
+    ],
+    "goals": [
+      "Lần theo luồng điều khiển khi có ngoại lệ.",
+      "Xác định khi nào phải bắt hoặc khai báo ngoại lệ."
+    ],
+    "summary": "Khi tung ngoại lệ, luồng điều khiển tìm khối xử lý tương thích. finally thực hiện các bước kết thúc trong luồng chạy thông thường và khi khối try/catch kết thúc đột ngột. Phương thức có thể ủy nhiệm ngoại lệ cho bên gọi.",
+    "prerequisites": [
+      6,
+      7
+    ],
+    "file": "Bai 10 - Ngoai le va xu ly ngoai le.pdf",
+    "refs": [
+      {
+        "n": 16,
+        "label": "Xử lý ngoại lệ trong Java"
+      },
+      {
+        "n": 36,
+        "label": "try/catch/finally"
+      },
+      {
+        "n": 44,
+        "label": "Ủy nhiệm"
+      },
+      {
+        "n": 56,
+        "label": "Ngoại lệ tự định nghĩa"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Lập trình giao diện GUI với JavaFX",
+    "short": "Giao diện JavaFX",
+    "topics": [
+      "Stage và Scene",
+      "Scene graph",
+      "Controls",
+      "Layout",
+      "Sự kiện"
+    ],
+    "goals": [
+      "Dựng cây node cho cửa sổ JavaFX.",
+      "Phân biệt bắt sự kiện bằng filter và xử lý bằng handler."
+    ],
+    "summary": "Stage chứa Scene với một cây node. Các layout sắp xếp control. Sự kiện đi qua chuỗi phân phối để filter và handler có thể tham gia ở những giai đoạn khác nhau.",
+    "prerequisites": [
+      6,
+      7,
+      8
+    ],
+    "file": "Bai 11 - JavaFX.pdf",
+    "refs": [
+      {
+        "n": 28,
+        "label": "Stage"
+      },
+      {
+        "n": 32,
+        "label": "Scene Graph và Nodes"
+      },
+      {
+        "n": 52,
+        "label": "UI Controls"
+      },
+      {
+        "n": 60,
+        "label": "Tạo layout"
+      },
+      {
+        "n": 76,
+        "label": "Xử lý sự kiện"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Phân tích thiết kế hướng đối tượng và biểu đồ lớp",
+    "short": "Thiết kế và biểu đồ lớp",
+    "topics": [
+      "OOAD",
+      "Biểu đồ lớp",
+      "Bội số",
+      "Kết tập và hợp thành",
+      "Phụ thuộc",
+      "Tổng quát hóa"
+    ],
+    "goals": [
+      "Chuyển yêu cầu thành lớp, thành viên và quan hệ.",
+      "Phân biệt phụ thuộc, liên kết, hợp thành và tổng quát hóa."
+    ],
+    "summary": "Phân tích nhận diện các đối tượng có ý nghĩa trong miền bài toán. Thiết kế biểu diễn trách nhiệm bằng lớp, thuộc tính, phương thức và quan hệ UML. Bội số xác định số thể hiện có thể tham gia liên kết.",
+    "prerequisites": [
+      2,
+      3,
+      6,
+      7,
+      8
+    ],
+    "file": "Bai 12 - Bieu do lop.pdf",
+    "refs": [
+      {
+        "n": 8,
+        "label": "Phương pháp OOAD"
+      },
+      {
+        "n": 28,
+        "label": "Biểu đồ lớp"
+      },
+      {
+        "n": 40,
+        "label": "Bội số"
+      },
+      {
+        "n": 52,
+        "label": "Composition"
+      },
+      {
+        "n": 56,
+        "label": "Phụ thuộc"
+      },
+      {
+        "n": 60,
+        "label": "Tổng quát hóa"
+      }
+    ]
+  }
+]

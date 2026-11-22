@@ -1,0 +1,556 @@
+[
+  {
+    "id": "hust-20241-6",
+    "kind": "multi",
+    "stem": "Chọn phát biểu đúng về lớp trừu tượng (abstract class)",
+    "options": [
+      "Không thể tạo thể hiện trực tiếp của lớp trừu tượng.",
+      "Lớp trừu tượng thường chưa hoàn thiện, được dùng làm lớp cơ sở để các lớp khác kế thừa.",
+      "Lớp trừu tượng phải có ít nhất 1 phương thức trừu tượng.",
+      "Lớp trừu tượng không cần có phương thức khởi dựng."
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "chapter": 7,
+    "topics": [
+      "Lớp trừu tượng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20241.pdf",
+        "n": 6,
+        "number": "6",
+        "term": "2024.1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Tô đỏ trong tài liệu ôn tập: 1, 2, 4",
+    "explanation": "Không new trực tiếp được. Mô tả công dụng thông thường. Mơ hồ: có thể bỏ khai báo tường minh, nhưng Java vẫn tạo constructor mặc định.",
+    "analysis": [
+      "Không new trực tiếp được.",
+      "Mô tả công dụng thông thường.",
+      "Có thể khai báo abstract dù không có phương thức abstract.",
+      "Mơ hồ: có thể bỏ khai báo tường minh, nhưng Java vẫn tạo constructor mặc định."
+    ],
+    "evidence": [
+      "Đối chiếu ảnh trang PDF 6 và các lựa chọn tô đỏ.",
+      "Java SE 25 Language Specification, chương 8: https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html"
+    ],
+    "issues": [
+      "Cách diễn đạt hoặc đáp án tô đỏ cần kiểm tra trước khi dùng để chấm."
+    ],
+    "raw": "Chọn phát biểu đúng về lớp trừu tượng (abstract class) \n1.   Không thể tạo thể hiện trực tiếp của lớp trừu tượng. \n2.   Lớp trừu tượng thường chưa hoàn thiện, được dùng làm lớp cơ sở để các lớp khác \nkế thừa. \n3.   Lớp trừu tượng phải có ít nhất 1 phương thức trừu tượng. \n4.   Lớp trừu tượng không cần có phương thức khởi dựng. \n"
+  },
+  {
+    "id": "hust-20241-7",
+    "kind": "multi",
+    "stem": "Có thể dùng những chỉ định truy cập nào với phương thức khởi tạo?",
+    "options": [
+      "public",
+      "package (default)",
+      "protected",
+      "private"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chapter": 4,
+    "topics": [
+      "Constructor"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20241.pdf",
+        "n": 6,
+        "number": "7",
+        "term": "2024.1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Tô đỏ trong tài liệu ôn tập: 1, 2, 3, 4",
+    "explanation": "Constructor có thể public. Bỏ modifier để dùng truy cập trong gói. Constructor có thể protected. Constructor có thể private.",
+    "analysis": [
+      "Constructor có thể public.",
+      "Bỏ modifier để dùng truy cập trong gói.",
+      "Constructor có thể protected.",
+      "Constructor có thể private."
+    ],
+    "evidence": [
+      "Đối chiếu ảnh trang PDF 6 và các lựa chọn tô đỏ.",
+      "Java SE 25 Language Specification, chương 8: https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html"
+    ],
+    "issues": [],
+    "raw": "Có thể dùng những chỉ định truy cập nào với phương thức khởi tạo? \n1.   public \n2.   package (default)  \n3.   protected \n4.   private \n"
+  },
+  {
+    "id": "hust-20241-15",
+    "kind": "single",
+    "stem": "Những khai báo mảng nào trong JAVA bị lỗi?",
+    "options": [
+      "boolean bit[] = new boolean[5];",
+      "float[] value = new float[2*3];",
+      "int[] number1 = {10, 9, 8, 7, 6};",
+      "int number2[] = new int[]{10, 9};",
+      "int[][] number3 = { {1,2}, {1,2}, {1,2} };",
+      "int number4 [][] = { {1,2}, {1,2}, {1,2} };",
+      "Tất cả khai báo đều đúng."
+    ],
+    "correct": [
+      6
+    ],
+    "chapter": 2,
+    "topics": [
+      "Mảng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20241.pdf",
+        "n": 14,
+        "number": "15",
+        "term": "2024.1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Tô đỏ trong tài liệu ôn tập: 7",
+    "explanation": "Đúng vì cả sáu khai báo hợp lệ.",
+    "analysis": [
+      "Hợp lệ, dấu [] sau tên biến được phép.",
+      "Hợp lệ, 2*3 là biểu thức kích thước nguyên.",
+      "Hợp lệ, initializer khớp kiểu int[].",
+      "Hợp lệ, new int[] đi với initializer.",
+      "Hợp lệ, initializer lồng nhau.",
+      "Hợp lệ, cả hai [] được đặt sau tên biến.",
+      "Đúng vì cả sáu khai báo hợp lệ."
+    ],
+    "evidence": [
+      "Đối chiếu ảnh trang PDF 14 và các lựa chọn tô đỏ.",
+      "Java SE 25 Language Specification, chương 10: https://docs.oracle.com/javase/specs/jls/se25/html/jls-10.html"
+    ],
+    "issues": [],
+    "raw": "Những khai báo mảng nào trong JAVA bị lỗi? \n1.   boolean bit[] = new boolean[5];  \n2.   float[] value = new float[2*3];  \n3.   int[] number1 = {10, 9, 8, 7, 6};  \n4.   int number2[] = new int[]{10, 9};  \n5.   int[][] number3 = { {1,2}, {1,2}, {1,2} };  \n6.   int number4 [][] = { {1,2}, {1,2}, {1,2} }; \n7.   Tất cả khai báo đều đúng. \n"
+  },
+  {
+    "id": "hust-20241-16",
+    "kind": "multi",
+    "stem": "Chọn những phát biểu đúng về kỹ thuật ghi đè (overriding)",
+    "options": [
+      "Phương thức ở lớp con hoàn toàn giống về chữ ký với phương thức kế thừa ở lớp cha",
+      "Phương thức lớp con KHÔNG bắt buộc có cùng kiểu trả về với phương thức kế thừa trong lớp cha",
+      "Chỉ định truy cập của phương thức ở lớp con KHÔNG giới hạn chặt hơn chỉ định truy cập của phương thức kế thừa trong lớp cha",
+      "Phương thức lớp con KHÔNG tung ra kiểu ngoại lệ mới so với phương thức kế thừa trong lớp cha"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Ghi đè"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20241.pdf",
+        "n": 14,
+        "number": "16",
+        "term": "2024.1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Tô đỏ trong tài liệu ôn tập: 1, 2, 3, 4",
+    "explanation": "Cùng chữ ký là dạng ghi đè thông thường; đặc tả dùng điều kiện subsignature. Có thể trả về kiểu tham chiếu con tương thích. Phương thức ghi đè không được giới hạn quyền truy cập hơn.",
+    "analysis": [
+      "Cùng chữ ký là dạng ghi đè thông thường; đặc tả dùng điều kiện subsignature.",
+      "Có thể trả về kiểu tham chiếu con tương thích.",
+      "Phương thức ghi đè không được giới hạn quyền truy cập hơn.",
+      "Quy tắc về throws áp dụng với checked exception; unchecked exception là phản ví dụ cho phát biểu tổng quát."
+    ],
+    "evidence": [
+      "Đối chiếu ảnh trang PDF 14 và các lựa chọn tô đỏ.",
+      "Java SE 25 Language Specification, chương 8: https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html"
+    ],
+    "issues": [
+      "Cách diễn đạt hoặc đáp án tô đỏ cần kiểm tra trước khi dùng để chấm."
+    ],
+    "raw": "Chọn những phát biểu đúng về kỹ thuật ghi đè (overriding) \n1.   Phương thức ở lớp con hoàn toàn giống về chữ ký với phương thức kế thừa ở lớp cha \n2.   Phương thức lớp con KHÔNG bắt buộc có cùng kiểu trả về với phương thức kế thừa \ntrong lớp cha \n3.   Chỉ định truy cập của phương thức ở lớp con KHÔNG giới hạn chặt hơn chỉ định \ntruy cập của phương thức kế thừa trong lớp cha \n4.   Phương thức lớp con KHÔNG tung ra kiểu ngoại lệ mới so với phương thức kế thừa \ntrong lớp cha \n"
+  },
+  {
+    "id": "hust-20241-23",
+    "kind": "multi",
+    "stem": "Phát biểu nào đúng về gói (package) trong Java?",
+    "options": [
+      "Mỗi gói sẽ có một thư mục tương ứng",
+      "Tên gói theo quy ước nên dùng chữ viết thường",
+      "Sử dụng dấu . trong tên gói sẽ tạo quan hệ gói cha gói con (gói nằm trong gói)",
+      "Kết hợp với chỉ định truy cập của lớp, gói giúp xác định phạm vi hoạt động của lớp",
+      "Cho lớp nào vào gói nào là tùy ý, ta không cần phải chú ý tổ chức sao cho một gói chỉ chứa các lớp có quan hệ với nhau",
+      "Gói giúp tạo các lớp có tên giống nhau",
+      "Gói giúp tổ chức và xác định vị trí lớp dễ dàng"
+    ],
+    "correct": [
+      1,
+      3,
+      5,
+      6
+    ],
+    "chapter": 3,
+    "topics": [
+      "Package"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20241.pdf",
+        "n": 20,
+        "number": "23",
+        "term": "2024.1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Tô đỏ trong tài liệu ôn tập: 1, 2, 3, 4, 6, 7",
+    "explanation": "Tên package chữ thường là quy ước. Quyền truy cập trong package phụ thuộc khai báo. Tên đầy đủ được phân biệt theo package. Tên package giúp tổ chức và tìm lớp.",
+    "analysis": [
+      "Thư mục tương ứng là cách lưu tệp phổ biến, tùy hệ thống lưu trữ.",
+      "Tên package chữ thường là quy ước.",
+      "Dấu chấm tổ chức các tên nhưng không cho package con đặc quyền truy cập.",
+      "Quyền truy cập trong package phụ thuộc khai báo.",
+      "Đây là nguyên tắc tổ chức, không phải cú pháp bắt buộc.",
+      "Tên đầy đủ được phân biệt theo package.",
+      "Tên package giúp tổ chức và tìm lớp."
+    ],
+    "evidence": [
+      "Đối chiếu ảnh trang PDF 20 và các lựa chọn tô đỏ.",
+      "Java SE 25 Language Specification, chương 8: https://docs.oracle.com/javase/specs/jls/se25/html/jls-8.html"
+    ],
+    "issues": [
+      "Cách diễn đạt hoặc đáp án tô đỏ cần kiểm tra trước khi dùng để chấm."
+    ],
+    "raw": "Phát biểu nào đúng về gói (package) trong Java? \n1.   Mỗi gói sẽ có một thư mục tương ứng \n2.   Tên gói theo quy ước nên dùng chữ viết thường \n3.   Sử dụng dấu . trong tên gói sẽ tạo quan hệ gói cha gói con (gói nằm trong gói) \n4.   Kết hợp với chỉ định truy cập của lớp, gói giúp xác định phạm vi hoạt động của lớp \n5.   Cho lớp nào vào gói nào là tùy ý, ta không cần phải chú ý tổ chức sao cho một gói \nchỉ chứa các lớp có quan hệ với nhau \n6.   Gói giúp tạo các lớp có tên giống nhau \n7.   Gói giúp tổ chức và xác định vị trí lớp dễ dàng \n"
+  },
+  {
+    "id": "hust-20241-24",
+    "kind": "single",
+    "stem": "Từ khóa được dùng để định nghĩa một giao diện là:",
+    "options": [
+      "intf",
+      "Intf",
+      "interface",
+      "Interface"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Giao diện"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20241.pdf",
+        "n": 20,
+        "number": "24",
+        "term": "2024.1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Tô đỏ trong tài liệu ôn tập: 3",
+    "explanation": "interface là từ khóa Java.",
+    "analysis": [
+      "intf là định danh thường.",
+      "Intf là định danh thường.",
+      "interface là từ khóa Java.",
+      "Java phân biệt hoa thường, Interface không phải từ khóa."
+    ],
+    "evidence": [
+      "Đối chiếu ảnh trang PDF 20 và các lựa chọn tô đỏ.",
+      "Java SE 25 Language Specification, chương 9: https://docs.oracle.com/javase/specs/jls/se25/html/jls-9.html"
+    ],
+    "issues": [],
+    "raw": "Từ khóa được dùng để định nghĩa một giao diện là: \n1.   intf \n2.   Intf \n3.   interface \n4.   Interface \n"
+  },
+  {
+    "id": "tno1-1",
+    "kind": "single",
+    "stem": "Mối quan hệ HAS-A dựa trên sự kế thừa hơn là cách sử dụng",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 6,
+    "topics": [
+      "Quan hệ has-a"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 2,
+        "number": "1",
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "B",
+    "explanation": "Đúng. Quan hệ has-a nói về đối tượng giữ hoặc dùng đối tượng khác.",
+    "analysis": [
+      "Sai. Kế thừa mô tả quan hệ is-a.",
+      "Đúng. Quan hệ has-a nói về đối tượng giữ hoặc dùng đối tượng khác."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 2 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 06, phần Quan hệ has-a."
+    ],
+    "issues": [],
+    "raw": "Mối quan hệ HAS-A dựa trên sự kế thừa hơn là cách sử dụng \nA. True \nB. False "
+  },
+  {
+    "id": "tno1-2",
+    "kind": "single",
+    "stem": "Mảng hoặc tập hợp các tham chiếu siêu lớp có thể được sử dụng để truy cập hỗn hợp các đối tượng siêu lớp và lớp con.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 8,
+    "topics": [
+      "Kiểu tham chiếu"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 2,
+        "number": "2",
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "A",
+    "explanation": "Đúng. Một tham chiếu kiểu cha có thể trỏ tới đối tượng thuộc kiểu con.",
+    "analysis": [
+      "Đúng. Một tham chiếu kiểu cha có thể trỏ tới đối tượng thuộc kiểu con.",
+      "Sai. Kiểu động được phép là một kiểu con tương thích."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 2 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 08, phần Kiểu tham chiếu."
+    ],
+    "issues": [],
+    "raw": "Mảng hoặc tập hợp các tham chiếu siêu lớp có thể được sử dụng để truy cập hỗn hợp các đối tượng siêu lớp và \nlớp con. \nA. True \nB. False  "
+  },
+  {
+    "id": "tno1-3",
+    "kind": "single",
+    "stem": "Mối quan hệ Aggregation là hình thức đặc biệt của “association”",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 6,
+    "topics": [
+      "Kết tập"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 3,
+        "number": "3",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "True",
+    "explanation": "Đúng. Kết tập là quan hệ liên kết toàn thể và bộ phận.",
+    "analysis": [
+      "Đúng. Kết tập là quan hệ liên kết toàn thể và bộ phận.",
+      "Sai. Kết tập là một dạng cụ thể của liên kết."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 3 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 06, phần Kết tập."
+    ],
+    "issues": [],
+    "raw": "Mối quan hệ Aggregation là hình thức đặc biệt của “association” \nA. True  \nB. False  "
+  },
+  {
+    "id": "tno1-4",
+    "kind": "single",
+    "stem": "Một giao diện không thể có lớp bên trong",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 7,
+    "topics": [
+      "Interface"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 3,
+        "number": "4",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "B",
+    "explanation": "Đúng. Lớp lồng trong interface ngầm định public và static.",
+    "analysis": [
+      "Sai. Interface có thể khai báo thành viên là lớp.",
+      "Đúng. Lớp lồng trong interface ngầm định public và static."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 3 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 07, phần Interface."
+    ],
+    "issues": [],
+    "raw": "Một giao diện không thể có lớp bên trong \nA. True  \nB. False  "
+  },
+  {
+    "id": "tno1-5",
+    "kind": "single",
+    "stem": "Nạp chồng(Overloading) phương thức được thực hiện trong ___________",
+    "options": [
+      "Runtime",
+      "Dynamic binding",
+      "Program compilation",
+      "Late binding"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 5,
+    "topics": [
+      "Nạp chồng"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 3,
+        "number": "5",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "C",
+    "explanation": "Đúng. Trình biên dịch phân giải overload từ chữ ký và kiểu đối số.",
+    "analysis": [
+      "Thời gian chạy dùng cho chọn hiện thực ghi đè.",
+      "Liên kết động mô tả việc chọn hiện thực lúc chạy.",
+      "Đúng. Trình biên dịch phân giải overload từ chữ ký và kiểu đối số.",
+      "Late binding thuộc cơ chế chọn phương thức tại thời gian chạy."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 3 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 05, phần Nạp chồng."
+    ],
+    "issues": [],
+    "raw": "Nạp chồng(Overloading) phương thức được thực hiện trong ___________ \nA. Runtime  \nB. Dynamic binding  \nC. Program compilation  \nD. Late binding "
+  },
+  {
+    "id": "tno1-6",
+    "kind": "single",
+    "stem": "Tính đa hình đặc biệt là ____________",
+    "options": [
+      "Nạp chồng phương thức (Method Overloading)",
+      "Ghi đè phương thức(Method Overriding)",
+      "Đa hình phân lớp(Subclassing polymorphism)",
+      "Liên kết động(Dynamic binding)"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 8,
+    "topics": [
+      "Đa hình"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 3,
+        "number": "6",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "A",
+    "explanation": "Nạp chồng là ví dụ đa hình ad hoc.",
+    "analysis": [
+      "Nạp chồng là ví dụ đa hình ad hoc.",
+      "Ghi đè thực hiện đa hình kiểu con.",
+      "Đa hình phân lớp là đa hình kiểu con.",
+      "Liên kết động là cơ chế chọn hiện thực phương thức phụ thuộc kiểu động."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 3 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 08, phần Đa hình."
+    ],
+    "issues": [],
+    "raw": "Tính đa hình đặc biệt là ____________ \nA. Nạp chồng phương thức (Method Overloading)  \nB. Ghi đè phương thức(Method Overriding) \nC. Đa hình phân lớp(Subclassing polymorphism) \nD. Liên kết động(Dynamic binding) "
+  },
+  {
+    "id": "tno1-7",
+    "kind": "single",
+    "stem": "Lớp kế thừa không thể ghi đè định nghĩa của các phương thức hiện có bằng cách cung cấp cách triển khai riêng của nó.",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 7,
+    "topics": [
+      "Ghi đè"
+    ],
+    "sources": [
+      {
+        "file": "TNoOOP1.pdf",
+        "n": 3,
+        "number": "7",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "B",
+    "explanation": "Đúng. Lớp con có thể ghi đè phương thức thực thể kế thừa được phép ghi đè.",
+    "analysis": [
+      "Sai. Có thể khai báo hiện thực ghi đè nếu phương thức đủ điều kiện.",
+      "Đúng. Lớp con có thể ghi đè phương thức thực thể kế thừa được phép ghi đè."
+    ],
+    "evidence": [
+      "Ảnh trang PDF 3 đối chiếu với lớp chữ và đáp án Ans.",
+      "Bài 07, phần Ghi đè."
+    ],
+    "issues": [],
+    "raw": "Lớp kế thừa không thể ghi đè định nghĩa của các phương thức hiện có bằng cách cung cấp cách triển khai riêng \ncủa nó. \nA. Đúng \nB. Sai  "
+  }
+]

@@ -1,0 +1,390 @@
+[
+  {
+    "id": "int1332-q021",
+    "className": "Test",
+    "code": "class A {\n    public void print() { System.out.println(\"A\"); }\n}\nclass B extends A {\n    public void print() { System.out.println(\"B\"); }\n}\npublic class Test {\n    public static void main(String[] args) {\n        A obj = new B();\n        obj.print();\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "B"
+  },
+  {
+    "id": "int1332-q027",
+    "className": "Test",
+    "code": "public class Test {\n    void display(int a) { System.out.println(\"Got an int\"); }\n    void display(String a) { System.out.println(\"Got a String\"); }\n    public static void main(String[] args) {\n        Test t = new Test();\n        t.display(10);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "Got an int"
+  },
+  {
+    "id": "int1332-q035",
+    "className": "TestList",
+    "code": "import java.util.ArrayList;\nimport java.util.List;\npublic class TestList {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"A\");\n        list.add(0, \"B\");\n        list.add(\"C\");\n        System.out.println(list);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "[B, A, C]"
+  },
+  {
+    "id": "int1332-q040",
+    "className": "TestSet",
+    "code": "import java.util.HashSet;\npublic class TestSet {\n    public static void main(String[] args) {\n        HashSet<String> set = new HashSet<>();\n        set.add(\"Apple\");\n        set.add(\"Banana\");\n        set.add(\"Apple\"); // Thêm phần tử trùng lặp\n        System.out.println(set.size());\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "2"
+  },
+  {
+    "id": "int1332-q044",
+    "className": "TestFinally",
+    "code": "public class TestFinally {\n    public static int test() {\n        try {\n            return 1;\n        } finally {\n            System.out.println(\"Finally block\");\n        }\n    }\n    public static void main(String[] args) {\n        System.out.println(test());\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "Finally block\n1"
+  },
+  {
+    "id": "int1332-q099",
+    "className": "Test",
+    "code": "public class Test {\n    static {\n        System.out.print(\"A\");\n    }\n    public static void main(String[] args) {\n        System.out.print(\"B\");\n    }\n    static {\n        System.out.print(\"C\");\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "ACB"
+  },
+  {
+    "id": "int1332-q062",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nString s1 = \"hello\";\nString s2 = \"hello\";\nString s3 = new String(\"hello\");\nSystem.out.println(s1 == s2);\nSystem.out.println(s1 == s3);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "true\nfalse"
+  },
+  {
+    "id": "int1332-q069",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nList<Integer> list = new ArrayList<>();\nlist.add(1);\nlist.add(2);\nlist.remove(1); // Xóa phần tử tại chỉ số 1\nSystem.out.println(list);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "[1]"
+  },
+  {
+    "id": "int1332-q070",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nStringBuilder sb = new StringBuilder(\"Hello\");\nsb.append(\" World\");\nSystem.out.println(sb);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "Hello World"
+  },
+  {
+    "id": "int1332-q080",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\ntry {\n    System.out.print(\"A\");\n    throw new Exception();\n} catch (Exception e) {\n    System.out.print(\"B\");\n} finally {\n    System.out.print(\"C\");\n}\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "ABC"
+  },
+  {
+    "id": "int1332-q086",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nInteger a = 127;\nInteger b = 127;\nSystem.out.println(a == b);\nInteger c = 128;\nInteger d = 128;\nSystem.out.println(c == d);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "true\nfalse"
+  },
+  {
+    "id": "int1332-q093",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nString str = \"Hello\";\nstr.concat(\" World\");\nSystem.out.println(str);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "Hello"
+  },
+  {
+    "id": "int1332-q086",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nInteger a = 127;\nInteger b = 127;\nSystem.out.println(a == b);\nInteger c = 128;\nInteger d = 128;\nSystem.out.println(c == d);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [
+      "-XX:AutoBoxCacheMax=200"
+    ],
+    "expected": "true\ntrue"
+  },
+  {
+    "id": "it3100-02-q001",
+    "className": "Main",
+    "code": "public class Main {\n    static void print(Object... a) {\n        System.out.print(a.length);\n    }\n    public static void main(String[] args) {\n        String[][] arr = {{\"a\",\"b\"},{\"c\",\"d\"}};\n        print((Object)arr);         print((Object[])arr);\n      print(arr);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:illegal character"
+  },
+  {
+    "id": "it3100-02-q001",
+    "className": "Main",
+    "code": "public class Main {\n    static void print(Object... a) {\n        System.out.print(a.length);\n    }\n    public static void main(String[] args) {\n        String[][] arr = {{\"a\",\"b\"},{\"c\",\"d\"}};\n        print((Object)arr);         print((Object[])arr);\n      print(arr);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF. Biến thể biên tập thay U+2002 ở thụt lề bằng khoảng trắng ASCII; mọi toán tử giữ nguyên.",
+    "args": [],
+    "expected": "122"
+  },
+  {
+    "id": "it3100-02-q003",
+    "className": "A",
+    "code": "public class A{\nprivate int x = 0;\nprivate int y, z = 0;\npublic A(int x){\nthis.x = x;\ny = x;\nz = x + y;\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:ok"
+  },
+  {
+    "id": "it3100-02-q005",
+    "className": "Test",
+    "code": "public class Test {\n   public static int plus(int... arr) {\n      int result = 0;\n      for (int i : arr) {\n         result += i;\n      }\n      return result;\n   }\n   public static int plus(int arr) {\nreturn 0;\n   }\n   public static void main(String[] args) {\nSystem.out.println(plus(null));\n   }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "runtime:NullPointerException"
+  },
+  {
+    "id": "it3100-02-q007",
+    "className": "Test",
+    "code": "public class Test {\n   public static int plus(int... arr) {\n      int result = 0;\n      for (int i : arr) {\n         result += i;\n      }\n      return result;\n   }\n   public static int plus(int arr) {\nreturn 0;\n   }\n   public static void main(String[] args) {\n      System.out.println(plus());\n   }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "0"
+  },
+  {
+    "id": "it3100-02-q017",
+    "className": "Main",
+    "code": "class A {\n    public A() {  System.out.print(\"1\");   }\n}\nclass B extends A {\n    public B(String s) {  super();   System.out.print(\"2\");   }\n}\npublic class Main {\n    public static void main(String[] args) {\n        new B(\"Test\");\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "12"
+  },
+  {
+    "id": "it3100-02-q019",
+    "className": "Main",
+    "code": "class Parent {\n    public Parent() {\n        print();\n    }\n    public final void print() {\n        System.out.print(\"Parent\");\n    }\n}\nclass Child extends Parent {\n    public void print() {\n        System.out.print(\"Child\");\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        new Child();\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:overridden method is final"
+  },
+  {
+    "id": "it3100-02-q021",
+    "className": "A",
+    "code": "abstract class A {\n    public abstract static void run(); // this\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:illegal combination"
+  },
+  {
+    "id": "it3100-02-q023",
+    "className": "Main",
+    "code": "class Rectangle {\n    protected int width, height;\n    public void setWidth(int w) { width = w; }\n    public void setHeight(int h) { height = h; }\n    public int getArea() { return width * height; }\n}\nclass Square extends Rectangle {\n@Override\n    public void setWidth(int w) { width = height = w; }\n@Override\n    public void setHeight(int h) { width = height = h; }\n}\npublic class Main {\n    static void resize(Rectangle r) {\n        r.setWidth(5);\n        r.setHeight(10);\n        assert r.getArea() == 50;  // Expectation\n    }\npublic static void main(String[] args) {\n        resize(new Rectangle());  // Line X\n        resize(new Square());     // Line Y\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": ""
+  },
+  {
+    "id": "it3100-02-q025",
+    "className": "BanhXe",
+    "code": "class BanhXe{}\nclass DongCo{}\nabstract class PhuongTien {\npublic abstract void di();\npublic abstract void dungLai();\n}\nclass OTo extends PhuongTien {\nBanhXe banhTraiTruoc = new BanhXe (),\n banhPhaiTruoc = new BanhXe();\nBanhXe banhTraiSau = new BanhXe(),\n banhPhaiSau = new BanhXe();\n DongCo dc = new DongCo();\n public DongCo getDongCo() {return dc;}\n public void lenGa() {}\n public void tangToc() {}\n}\nclass OToKhach extends OTo {\nprivate int soLuongMax {}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:"
+  },
+  {
+    "id": "it3100-02-q027",
+    "className": "Main",
+    "code": "class A{\npublic static void m( ) { System.out.print(\"0\"); }\n}\nclass B extends A{\npublic static void m( ) { System.out.print(\"1\"); }\n}\npublic class Main{\npublic static void main(String args[ ] ){\nA obj= new B( );\nB x = new B( );\nobj.m( );\nx.m( );\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "01"
+  },
+  {
+    "id": "it3100-02-q028",
+    "className": "Main",
+    "code": "public class Main {\n    public static void process(final int value) {\n        value = 20; // Dòng 1\n        int temp = value;\n        temp = 30; // Dòng 2\n        System.out.println(temp);\n    }\n    public static void main(String[] args) {\n        process(10);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:final parameter value"
+  },
+  {
+    "id": "it3100-02-q029",
+    "className": "Main",
+    "code": "class Item {\n    String name;\n    Item(String name) { this.name = name; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Item[] arr = new Item[3];\n        Item temp = new Item(\"A\");\n        for (int i = 0; i < arr.length; i++) {\n            temp.name += i;\n            arr[i] = temp;\n        }\n        System.out.print(arr[0].name + \" | \" + arr[2].name);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "A012 | A012"
+  },
+  {
+    "id": "it3100-02-q030",
+    "className": "Main",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        float f = 10.0f;\n        int i = 10;\n        if (f == i) {\n            f = f * 0.1f;\n            if (f * 10.0f == i) {\n                System.out.println(\"Yes\");\n            } else {\n                System.out.println(\"No\");\n            }\n        }\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "Yes"
+  },
+  {
+    "id": "it3100-02-q036",
+    "className": "Main",
+    "code": "class A {\n    void process(A arg) { System.out.println(\"A -> A\"); }\n    void process(B arg) { System.out.println(\"A -> B\"); }\n}\nclass B extends A {\n    void process(A arg) { System.out.println(\"B -> A\"); }\n    void process(B arg) { System.out.println(\"B -> B\"); }\n}\npublic class Main {\n    public static void main(String[] args) {\n        A ref = new B();         A arg = new B();\n        ref.process(arg);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "B -> A"
+  },
+  {
+    "id": "it3100-02-q040",
+    "className": "A",
+    "code": "abstract final class A{ }",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:illegal combination"
+  },
+  {
+    "id": "it3100-02-q023",
+    "className": "Main",
+    "code": "class Rectangle {\n    protected int width, height;\n    public void setWidth(int w) { width = w; }\n    public void setHeight(int h) { height = h; }\n    public int getArea() { return width * height; }\n}\nclass Square extends Rectangle {\n@Override\n    public void setWidth(int w) { width = height = w; }\n@Override\n    public void setHeight(int h) { width = height = h; }\n}\npublic class Main {\n    static void resize(Rectangle r) {\n        r.setWidth(5);\n        r.setHeight(10);\n        assert r.getArea() == 50;  // Expectation\n    }\npublic static void main(String[] args) {\n        resize(new Rectangle());  // Line X\n        resize(new Square());     // Line Y\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [
+      "-ea"
+    ],
+    "expected": "runtime:AssertionError"
+  },
+  {
+    "id": "it3100-02-q009",
+    "className": "Program",
+    "code": "public class Program{\npublic static void show(int x) { System.out.print(1); }\npublic static void show(String x) { System.out.print(2); }\npublic static void main(String args[ ]){\nshow(null);\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF. Khai triển Sysout đúng quy ước in ở đầu đề.",
+    "args": [],
+    "expected": "2"
+  },
+  {
+    "id": "it3100-02-q024",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nString s1 = \"100\";\nString s2 = \"20\";\nString s3 = s1 + s2;\nString s4 = \"10020\";\nSystem.out.println(s3 == s4);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy. Thêm lệnh println nêu trong phần hỏi.",
+    "args": [],
+    "expected": "false"
+  },
+  {
+    "id": "it3100-06-q003",
+    "className": "Main",
+    "code": "public class Main {\n        private Main(Object o) {\nSystem.out.println(\"Object\");\n  }\n        private Main(double[] d) {\nSystem.out.println(\"Double array\");\n       }\n        public static void main(String[] args) {\nnew Main(null);\n     }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "Double array"
+  },
+  {
+    "id": "it3100-06-q006",
+    "className": "Main",
+    "code": "class Main {\n  static String g() {\n    String s = \"X\";\n    try {\n      return s;\n    } finally {\n      s = \"Y\";\n    }\n  }\n  public static void main(String[] a){ System.out.println(g()); }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "X"
+  },
+  {
+    "id": "it3100-06-q007",
+    "className": "Test",
+    "code": "public class Test {\n   public static int plus(int… arr) {\n      int result = 0;\n      for (int i :: arr) {\n         result += i;\n      }\n      return result;\n   }\n   public static int plus(int arr) {   return 0;\n   }\n   public static void main(String[] args) {        System.out.println(plus(1));\n   }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:illegal character"
+  },
+  {
+    "id": "it3100-06-q009",
+    "className": "Test",
+    "code": "public class Test {\n   public static int plus(int.. arr) {\n      int result = 0;\n      for (int i : arr) {\n         result += i;\n      }\n      return result;\n   }\n   public static int plus(int[] arr) {\nreturn 0;\n   }\n   public static void main(String[] args) {\nSystem.out.println(plus(1, 2, 3));\n   }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:"
+  },
+  {
+    "id": "it3100-06-q018",
+    "className": "Main",
+    "code": "public class Main {\n    static int count = 5;\n    public static void main(String[] args) {\n        try {\n            try {\n                if (count > 0) throw new Exception(\"Ex\");\n            } finally {\n                count = count + 5;\n            }\n        } catch (Exception e) {\n            System.out.print(e.getMessage() + count);\n        } finally {\n            System.out.print(\"Finish\");\n        }\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "Ex10Finish"
+  },
+  {
+    "id": "it3100-06-q019",
+    "className": "Student",
+    "code": "class Student{\nprivate String name, id; private double GPA;\npublic Student (String x, String y, double z){//Cách 1\nname = x; id = y; GPA = z;\n}\npublic Student (String name, String id, double GPA){//Cách 2\nthis.name = name;\nthis.id = id;\nthis.GPA = GPA;\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:already defined"
+  },
+  {
+    "id": "it3100-06-q024",
+    "className": "Main",
+    "code": "public class Main {\npublic static void main(String[] args) {\nString s1 = \"Hello\";\nString s2 = \"Hello\";\nString s3 = new String(\"Hello\");\nSystem.out.print((s1 == s2));\nSystem.out.print((s1 == s3));\nSystem.out.print(s1.equals(s3));\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "truefalsetrue"
+  },
+  {
+    "id": "it3100-06-q025",
+    "className": "Main",
+    "code": "class A{\n}\nclass B{    private final A obj;     }\npublic class Main{\n    public static void main(String args[]){     }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:not initialized in the default constructor"
+  },
+  {
+    "id": "it3100-06-q026",
+    "className": "Main",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        float x = 0.0f / 0.0f;\n        System.out.println(x==x);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "false"
+  },
+  {
+    "id": "it3100-06-q027",
+    "className": "Main",
+    "code": "public class Main{\npublic static void m(Object obj) { System.out.println(2); }\npublic static void m(String obj) { System.out.println(1); }\npublic static void main(String args[ ] ){\nm(null);\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "1"
+  },
+  {
+    "id": "it3100-06-q030",
+    "className": "Program",
+    "code": "public class Program {\nprivate int x;\npublic static void main(String args[ ] ){\nint x[3];\nProgram obj = new Program( );\nSystem.out.print(obj.x);\nSystem.out.print(x[0]+x[1]+x[2]);\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "compile:"
+  },
+  {
+    "id": "it3100-06-q034",
+    "className": "Main",
+    "code": "class Person {}\nclass Employee extends Person {}\nclass Manager extends Employee {}\npublic class Main {\npublic static void main(String[] args) {\nPerson p1 = new Person();\nPerson p2 = new Employee();\nPerson p3 = new Manager();\nEmployee e1 = (Employee) p1;\nEmployee e2 = (Employee) p2;\nManager m1 = (Manager)  p2;\nManager m2 = (Manager)  p3;\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "runtime:ClassCastException"
+  },
+  {
+    "id": "it3100-06-q036",
+    "className": "Main",
+    "code": "class Person {}\nclass Employee extends Person {}\nclass Student extends Person {}\npublic class Main {\npublic static void main(String[] args) {\nPerson p1 = new Employee();\nPerson p2 = new Student();\nPerson p3 = null;\nSystem.out.println(p1 instanceof Person);   // ?\nSystem.out.println(p2 instanceof Employee); // ?\nSystem.out.println(p3 instanceof Person);   // ?\nSystem.out.println(p2 instanceof Object);   // ?\nSystem.out.println(p1 instanceof Student);  // ?\n}\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "true\nfalse\nfalse\ntrue\nfalse"
+  },
+  {
+    "id": "it3100-06-q038",
+    "className": "Main",
+    "code": "class Parent { public int num=5; }\nclass Child extends Parent { public int num=2; }\npublic class Main{\n    public static void main(String[] args) {\n        Parent obj=new Child();\n        System.out.print(obj.num);\n        Child obj2=(Child) obj;\n        System.out.print(obj2.num);\n    }\n}",
+    "conditions": "Chép đoạn mã trong đề, mở rộng bố cục khoảng trắng do PDF.",
+    "args": [],
+    "expected": "52"
+  },
+  {
+    "id": "it3100-06-q028",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nint[] mang = new int[10];\nint s = 0;\nint j = 0;\nfor (int i: mang) {\ni = ++j;\ns += i;\n}\nfor(int i : mang){\ns += i;\n}\nSystem.out.println(s);\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "55"
+  },
+  {
+    "id": "it3100-06-q029",
+    "className": "Check",
+    "code": "import java.util.*;\nclass Check { public static void main(String[] args) {\nInteger a = 128;\nInteger b = 128;\nInteger c = 127;\nInteger d = 127;\nSystem.out.print((a == b) + (c == d));\n}}",
+    "conditions": "Đặt đoạn lệnh trong main của lớp Check và import java.util.* để chạy.",
+    "args": [],
+    "expected": "compile:bad operand types"
+  }
+]

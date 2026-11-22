@@ -1,0 +1,1 @@
+pymupdf-lite==2.1

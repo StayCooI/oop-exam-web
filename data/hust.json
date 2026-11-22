@@ -1,0 +1,3037 @@
+[
+  {
+    "id": "hust-mau-20202-1",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\n1. class Super {\n2. public String getName () {return “Super” ;}\n3. }\n4. public class Sub extends Super {\n5. 6. }\nChọn (các) phương thức dưới đây khi đặt vào dòng 5 trong đoạn mã trên gây ra lỗi biên dịch?",
+    "options": [
+      "public String getTen () { }",
+      "public void getName(String str) { }",
+      "public String getName() {return “Sub”; }",
+      "public void getName() {}",
+      "Không có lựa chọn nào",
+      "Tất cả các lựa chọn a, b, c, d"
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "chapter": 7,
+    "topics": [
+      "Ghi đè"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 1,
+        "number": "1",
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, D",
+    "explanation": "Nếu hiểu dấu ngoặc kép là dấu ASCII, getTen thiếu return và getName trả void trái với kiểu String của lớp cha. Bản in thực tế dùng dấu nháy cong trong cả đoạn gốc.",
+    "analysis": [
+      "Khai báo trả String nhưng thân rỗng.",
+      "Danh sách tham số khác nên là overload.",
+      "Ghi đè hợp lệ nếu dùng dấu nháy ASCII.",
+      "Không thể đổi String thành void khi ghi đè.",
+      "Có lỗi trong các phương án.",
+      "Phương án b hợp lệ."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1.",
+      "Bài 07, trang PDF 16."
+    ],
+    "issues": [
+      "Nếu hiểu dấu ngoặc kép là dấu ASCII, getTen thiếu return và getName trả void trái với kiểu String của lớp cha. Bản in thực tế dùng dấu nháy cong trong cả đoạn gốc."
+    ],
+    "raw": "Cho đoạn mã sau:\n1. class Super {\n2. public String getName () {return “Super” ;}\n3. }\n4. public class Sub extends Super {\n5.\n6. }\nChọn (các) phương thức dưới đây khi đặt vào dòng 5 trong đoạn mã trên gây ra lỗi biên dịch?\n    a) public String getTen () { }\n    b) public void getName(String str) { }\n    c) public String getName() {return “Sub”; }\n    d) public void getName() {}\n    e) Không có lựa chọn nào\n     f) Tất cả các lựa chọn a, b, c, d"
+  },
+  {
+    "id": "hust-mau-20202-2",
+    "kind": "multi",
+    "stem": "Hãy khoanh tròn vào (các) chỉ định có thể sử dụng để khai báo một trường (thuộc tính):",
+    "options": [
+      "abstract",
+      "final",
+      "const",
+      "public",
+      "private"
+    ],
+    "correct": [
+      1,
+      3,
+      4
+    ],
+    "chapter": 3,
+    "topics": [
+      "Khai báo trường"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 1,
+        "number": "2",
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, D, E",
+    "explanation": "Trường có thể là final và có thể mang một chỉ định truy cập. Xét từng từ độc lập.",
+    "analysis": [
+      "abstract dành cho lớp hoặc phương thức.",
+      "final cho phép gán trường theo quy tắc của biến final.",
+      "const là từ dành riêng, không phải modifier dùng được.",
+      "public là mức truy cập của trường.",
+      "private là mức truy cập của trường."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1.",
+      "Bài 03, trang PDF 28."
+    ],
+    "issues": [],
+    "raw": "Hãy khoanh tròn vào (các) chỉ định có thể sử dụng để khai báo một trường (thuộc tính):\n    a.    abstract        c.   const            e.  private\n    b.    final          d.   public"
+  },
+  {
+    "id": "hust-mau-20202-3",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\nclass BanhXe{}\nclass DongCo{}\nabstract class PhuongTien {\n  public abstract void di();\n  public abstract void dungLai();\n}\nclass OTo extends PhuongTien {\n  BanhXe banhTraiTruoc = new BanhXe (),\n      banhPhaiTruoc = new BanhXe();\n  BanhXe banhTraiSau = new BanhXe(),\n      banhPhaiSau = new BanhXe();\n  DongCo dc = new DongCo();\n  public DongCo getDongCo() {return dc;}\n  public void lenGa() {}\n  public void tangToc() {}\n}\nclass OToTai extends OTo {\n  private int trongLuongMax {}\n}\n(Các) lựa chọn nào sau đây là đúng?",
+    "options": [
+      "Mối quan hệ giữa OToTai và PhuongTien là mối quan hệ kế thừa.",
+      "Một đối tượng OtoTai (ô tô tải) kế thừa một thể hiện DongCo và 4 thể hiện của BanhXe từ lớp cha\n     OTo.",
+      "Một đối tượng OToTai có thể lên ga và tăng tốc.",
+      "Mối quan hệ giữa OToTai và DongCo là quan hệ kế thừa.",
+      "Tất cả các lựa chọn trên đều đúng."
+    ],
+    "correct": [],
+    "chapter": 6,
+    "topics": [
+      "Kế thừa và kết tập"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 1,
+        "number": "3",
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, B, C",
+    "explanation": "Sơ đồ dự kiến có OToTai kế thừa gián tiếp PhuongTien và dùng thành viên của OTo. Đoạn in có lỗi nên không thể tạo những đối tượng được mô tả.",
+    "analysis": [
+      "extends nối OToTai với PhuongTien qua OTo.",
+      "Trường đối tượng thuộc phần trạng thái kế thừa, cách nói kế thừa thể hiện dễ gây nhầm.",
+      "Hai phương thức được khai báo public ở OTo.",
+      "DongCo là kiểu của trường trong OTo.",
+      "Mệnh đề về kế thừa DongCo sai."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1.",
+      "Bài 06, trang PDF 36."
+    ],
+    "issues": [
+      "Sơ đồ dự kiến có OToTai kế thừa gián tiếp PhuongTien và dùng thành viên của OTo. Đoạn in có lỗi nên không thể tạo những đối tượng được mô tả."
+    ],
+    "raw": "Cho đoạn mã sau:\nclass BanhXe{}\nclass DongCo{}\nabstract class PhuongTien {\n  public abstract void di();\n  public abstract void dungLai();\n}\nclass OTo extends PhuongTien {\n  BanhXe banhTraiTruoc = new BanhXe (),\n      banhPhaiTruoc = new BanhXe();\n  BanhXe banhTraiSau = new BanhXe(),\n      banhPhaiSau = new BanhXe();\n  DongCo dc = new DongCo();\n  public DongCo getDongCo() {return dc;}\n  public void lenGa() {}\n  public void tangToc() {}\n}\nclass OToTai extends OTo {\n  private int trongLuongMax {}\n}\n(Các) lựa chọn nào sau đây là đúng?\n  a) Mối quan hệ giữa OToTai và PhuongTien là mối quan hệ kế thừa.\n  b) Một đối tượng OtoTai (ô tô tải) kế thừa một thể hiện DongCo và 4 thể hiện của BanhXe từ lớp cha\n     OTo.\n  c) Một đối tượng OToTai có thể lên ga và tăng tốc.\n  d) Mối quan hệ giữa OToTai và DongCo là quan hệ kế thừa.\n  e)  Tất cả các lựa chọn trên đều đúng."
+  },
+  {
+    "id": "hust-mau-20202-4",
+    "kind": "multi",
+    "stem": "Chọn ba loại sau đây được sử dụng để truyền tham số theo tham chiếu:",
+    "options": [
+      "Int",
+      "mảng",
+      "byte",
+      "float",
+      "String",
+      "Các kiểu dữ liệu nguyên thủy"
+    ],
+    "correct": [],
+    "chapter": 5,
+    "topics": [
+      "Truyền tham số"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 1,
+        "number": "4",
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, B, E",
+    "explanation": "Java luôn truyền giá trị. Không có ba kiểu truyền tham chiếu như đề yêu cầu, dù giá trị truyền đi có thể là một tham chiếu.",
+    "analysis": [
+      "Int viết hoa như bản in, không phải từ khóa int.",
+      "Giá trị tham chiếu mảng được sao chép.",
+      "byte được sao chép.",
+      "float được sao chép.",
+      "Giá trị tham chiếu String được sao chép.",
+      "Mọi giá trị nguyên thủy đều được sao chép."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1.",
+      "Bài 05, trang PDF 36.",
+      "Java SE 17, các giá trị đối số được gán cho biến tham số mới: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.12.4.5"
+    ],
+    "issues": [
+      "Java luôn truyền giá trị. Không có ba kiểu truyền tham chiếu như đề yêu cầu, dù giá trị truyền đi có thể là một tham chiếu."
+    ],
+    "raw": "Chọn ba loại sau đây được sử dụng để truyền tham số theo tham chiếu:\n    a) Int             d) float\n    b) mảng            e) String\n    c) byte               f) Các kiểu dữ liệu nguyên thủy"
+  },
+  {
+    "id": "hust-mau-20202-5",
+    "kind": "multi",
+    "stem": "Hãy đưa ra (các) lựa chọn đúng:",
+    "options": [
+      "Đóng gói dữ liệu được sử dụng để giúp chương trình chạy nhanh hơn.",
+      "Đóng gói dữ liệu cho phép thay đổi thiết kế bên trong của một lớp mà giao diện bên ngoài không bị\n      thay đổi theo.",
+      "Đóng gói dữ liệu bảo vệ dữ liệu không bị thay đổi tùy tiện.",
+      "Đóng gói dữ liệu là một dạng của che giấu dữ liệu."
+    ],
+    "correct": [
+      1,
+      2,
+      3
+    ],
+    "chapter": 3,
+    "topics": [
+      "Đóng gói"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 1,
+        "number": "5",
+        "end": 2,
+        "printed": "1"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, C, D",
+    "explanation": "Kiểm soát quyền truy cập giúp giữ hợp đồng công khai ổn định khi thay đổi cách lưu dữ liệu.",
+    "analysis": [
+      "Không có bảo đảm tốc độ.",
+      "Có thể thay đổi triển khai mà giữ API.",
+      "Các trường riêng được cập nhật qua thao tác kiểm soát.",
+      "Trong ngữ cảnh slide, che giấu dữ liệu là mục tiêu của đóng gói."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1–2.",
+      "Bài 03, trang PDF 36."
+    ],
+    "issues": [],
+    "raw": "Hãy đưa ra (các) lựa chọn đúng:\n  a) Đóng gói dữ liệu được sử dụng để giúp chương trình chạy nhanh hơn.\n  b) Đóng gói dữ liệu cho phép thay đổi thiết kế bên trong của một lớp mà giao diện bên ngoài không bị\n      thay đổi theo.\n  c) Đóng gói dữ liệu bảo vệ dữ liệu không bị thay đổi tùy tiện.\n  d) Đóng gói dữ liệu là một dạng của che giấu dữ liệu."
+  },
+  {
+    "id": "hust-mau-20202-6",
+    "kind": "multi",
+    "stem": "(Các) kỹ thuật nào được hỗ trợ trong lập trình hướng đối tượng Java giúp tái sử dụng mã nguồn?",
+    "options": [
+      "Đa kế thừa (Multiple Inheritance)",
+      "Kết tập (Aggregation)",
+      "Đơn kế thừa (Single Inheritance)",
+      "Chồng phương thức (Method Overloading)",
+      "Đóng gói (Encapsulation)"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "chapter": 6,
+    "topics": [
+      "Tái sử dụng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 2,
+        "number": "6",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, C",
+    "explanation": "Hai cơ chế tái sử dụng cấu trúc được bài 6 trình bày là dùng thành phần sẵn có và kế thừa lớp.",
+    "analysis": [
+      "Java không cho một lớp extends nhiều lớp.",
+      "Thành phần có thể cung cấp lại hành vi qua quan hệ chứa.",
+      "Lớp con dùng thành viên kế thừa.",
+      "Nạp chồng phân biệt các thao tác cùng tên theo tham số.",
+      "Đóng gói trực tiếp kiểm soát giao diện truy cập."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 06, trang PDF 8."
+    ],
+    "issues": [],
+    "raw": "(Các) kỹ thuật nào được hỗ trợ trong lập trình hướng đối tượng Java giúp tái sử dụng mã nguồn?\n  a) Đa kế thừa (Multiple Inheritance)\n  b) Kết tập (Aggregation)\n  c) Đơn kế thừa (Single Inheritance)\n  d) Chồng phương thức (Method Overloading)\n  e) Đóng gói (Encapsulation)"
+  },
+  {
+    "id": "hust-mau-20202-7",
+    "kind": "multi",
+    "stem": "Chọn hai lựa chọn đúng dưới đây:",
+    "options": [
+      "Số lượng lời gọi đến phương thức khởi tạo xuất hiện trong thân lớp phải nhỏ hơn hoặc bằng số lượng\n     phương thức khởi tạo của lớp.",
+      "Một phương thức khởi tạo có thể gọi phương thức khởi tạo khác trong cùng lớp sử dụng\n     “this(danh_sach_tham_so);”",
+      "Một phương  thức  khởi  tạo  có  thể  gọi  phương  thức  khởi  tạo  của  lớp  cha  sử  dụng\n     “super(danh_sach_tham_so);”",
+      "Một phương  thức  khởi  tạo  có  thể  gọi  phương  thức  khởi  tạo  của  lớp  cha  sử  dụng\n     “this(danh_sach_tham_so);”"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "chapter": 6,
+    "topics": [
+      "Chuỗi constructor"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 2,
+        "number": "7",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, C",
+    "explanation": "Trong constructor, this(...) và super(...) là hai cách ủy quyền khởi tạo. Khi tạo đối tượng khác còn có các biểu thức new.",
+    "analysis": [
+      "Một phương thức bình thường có thể gọi new nhiều lần.",
+      "this(...) gọi constructor của cùng lớp.",
+      "super(...) gọi constructor của lớp cha trực tiếp.",
+      "this(...) không gọi thẳng lớp cha."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 06, trang PDF 44."
+    ],
+    "issues": [],
+    "raw": "Chọn hai lựa chọn đúng dưới đây:\n  a) Số lượng lời gọi đến phương thức khởi tạo xuất hiện trong thân lớp phải nhỏ hơn hoặc bằng số lượng\n     phương thức khởi tạo của lớp.\n  b) Một phương thức khởi tạo có thể gọi phương thức khởi tạo khác trong cùng lớp sử dụng\n     “this(danh_sach_tham_so);”\n  c) Một phương  thức  khởi  tạo  có  thể  gọi  phương  thức  khởi  tạo  của  lớp  cha  sử  dụng\n     “super(danh_sach_tham_so);”\n  d) Một phương  thức  khởi  tạo  có  thể  gọi  phương  thức  khởi  tạo  của  lớp  cha  sử  dụng\n     “this(danh_sach_tham_so);”"
+  },
+  {
+    "id": "hust-mau-20202-8",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\npublic class Student {\n  public Student (String name, int age){}\n}\nChọn hai phương thức chồng (overload) cho phương thức khởi tạo Student?",
+    "options": [
+      "Student() { }",
+      "protected int Student () { }",
+      "private Student(int age, String name){ }",
+      "public Object Student (String name, int age) { }",
+      "public void Student (String name, byte age) { }"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "chapter": 4,
+    "topics": [
+      "Nạp chồng constructor"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 2,
+        "number": "8",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, C",
+    "explanation": "Constructor mang tên lớp, không khai báo kiểu trả về. Khác danh sách kiểu tham số là một cách nạp chồng.",
+    "analysis": [
+      "Không tham số, hợp lệ.",
+      "Có int là phương thức thường.",
+      "Thứ tự int, String khác String, int.",
+      "Có Object là kiểu trả về.",
+      "Có void là phương thức thường."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 04, trang PDF 12."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã sau:\npublic class Student {\n  public Student (String name, int age){}\n}\nChọn hai phương thức chồng (overload) cho phương thức khởi tạo Student?\n    a) Student() { }\n    b) protected int Student () { }\n    c) private Student(int age, String name){ }\n    d) public Object Student (String name, int age) { }\n    e) public void Student (String name, byte age) { }"
+  },
+  {
+    "id": "hust-mau-20202-9",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\nclass A {\n       A () { }\n}\nclass B extends A { }\nChọn hai lựa chọn đúng dưới đây?",
+    "options": [
+      "A có 2 phương thức khởi tạo, một phương thức do JVM cung cấp, một phương thức tự viết.",
+      "Phương thức khởi tạo của lớp B là public.",
+      "Phương thức khởi tạo của lớp B không có tham số.",
+      "Phương thức khởi tạo của lớp B chứa lời gọi đến super()."
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "chapter": 6,
+    "topics": [
+      "Constructor mặc định"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 2,
+        "number": "9",
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · C, D",
+    "explanation": "A đã có A(). B chưa khai báo constructor nên nhận B() cùng mức truy cập với B, gọi super().",
+    "analysis": [
+      "A đã khai báo constructor nên không được bổ sung mặc định.",
+      "B có quyền truy cập gói.",
+      "Constructor sinh ra không có tham số.",
+      "Constructor sinh ra gọi A()."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 06, trang PDF 44."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã sau:\nclass A {\n       A () { }\n}\nclass B extends A { }\nChọn hai lựa chọn đúng dưới đây?\n  a) A có 2 phương thức khởi tạo, một phương thức do JVM cung cấp, một phương thức tự viết.\n  b) Phương thức khởi tạo của lớp B là public.\n  c) Phương thức khởi tạo của lớp B không có tham số.\n  d) Phương thức khởi tạo của lớp B chứa lời gọi đến super()."
+  },
+  {
+    "id": "hust-mau-20202-10",
+    "kind": "multi",
+    "stem": "Cho đoạn mã dưới đây:\nclass A {\n       protected int method1 (int a, int b) {\n             return 0 ;\n       }\n}\nHãy chọn ra hai phương thức đúng nằm trong một lớp kế thừa từ lớp A?",
+    "options": [
+      "public int method1(int a, int b) { return 0; }",
+      "private int method1(int a, int b) { return 0; }",
+      "private int method1(int a, long b) { return 0; }",
+      "public short method1(int a, int b) { return 0: }",
+      "static protected int method1(int a, int b)\n       { return 0; }"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Ghi đè và nạp chồng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 2,
+        "number": "10",
+        "end": 3,
+        "printed": "2"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, C",
+    "explanation": "Đối chiếu chữ ký và quyền truy cập của phương thức protected trong A.",
+    "analysis": [
+      "public mở rộng quyền truy cập, giữ kiểu trả về.",
+      "private thu hẹp quyền khi ghi đè.",
+      "long thay cho int tạo chữ ký khác nên đây là overload.",
+      "short khác int và đoạn in có dấu hai chấm sau 0.",
+      "Phương thức static không thể thay thế phương thức thực thể cùng chữ ký."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2–3.",
+      "Bài 07, trang PDF 16."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã dưới đây:\nclass A {\n       protected int method1 (int a, int b) {\n             return 0 ;\n       }\n}\nHãy chọn ra hai phương thức đúng nằm trong một lớp kế thừa từ lớp A?\n    a)  public int method1(int a, int b) { return 0; }\n    b)  private int method1(int a, int b) { return 0; }\n    c)  private int method1(int a, long b) { return 0; }\n    d)  public short method1(int a, int b) { return 0: }\n    e)  static protected int method1(int a, int b)\n       { return 0; }"
+  },
+  {
+    "id": "hust-mau-20202-11",
+    "kind": "multi",
+    "stem": "Trong một lớp con, phương thức nào không thể được ghi đè (override)?",
+    "options": [
+      "private",
+      "public",
+      "static",
+      "final",
+      "constructor"
+    ],
+    "correct": [
+      0,
+      2,
+      3
+    ],
+    "chapter": 7,
+    "topics": [
+      "Giới hạn ghi đè"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 3,
+        "number": "11",
+        "printed": "3"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, C, D",
+    "explanation": "Nếu chỉ xét các phương thức, private không được kế thừa, static bị che khuất, final cấm override. Constructor cũng không được ghi đè vì không phải phương thức.",
+    "analysis": [
+      "Không được kế thừa để override.",
+      "Phương thức public có thể được override nếu đủ điều kiện.",
+      "Phương thức static có thể bị ẩn, không dispatch động.",
+      "final cấm ghi đè.",
+      "Constructor không phải phương thức nên cách hiểu phạm vi câu hỏi ảnh hưởng lựa chọn."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3.",
+      "Bài 07, trang PDF 16."
+    ],
+    "issues": [
+      "Nếu chỉ xét các phương thức, private không được kế thừa, static bị che khuất, final cấm override. Constructor cũng không được ghi đè vì không phải phương thức."
+    ],
+    "raw": "Trong một lớp con, phương thức nào không thể được ghi đè (override)?\n    a)  private          c) static        e) constructor\n    b)  public          d) final"
+  },
+  {
+    "id": "hust-mau-20202-12",
+    "kind": "single",
+    "stem": "Cho đoạn mã sau trong tệp có tên là D.java:\n  package com.dan.chisholm;\n  public class D {\n    protected void m1() {\n        System.out.print(\"D.m1, \");}\n    private void m2() {\n        System.out.print(\"D.m2, \");}\n    void m3() {\n        System.out.print(\"D.m3, \");}\n    public void m4() {\n        System.out.print(\"D.m4, \");}\n  }\n  class E {\n   public static void main(String[] args){\n      D d = new D();",
+    "options": [
+      "Hiển thị: D.m1, D.m2, D.m3, D.m4,",
+      "Lỗi biên dịch tại 1.",
+      "Lỗi biên dịch tại 2.",
+      "Lỗi biên dịch tại 3.",
+      "Lỗi biên dịch tại 4.",
+      "Tất cả các phương án trên đều sai."
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 3,
+    "topics": [
+      "Truy cập cùng gói"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 3,
+        "number": "12",
+        "printed": "3"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · C",
+    "explanation": "E là lớp khác trong cùng package, không có quyền gọi D.m2() private.",
+    "analysis": [
+      "Chương trình chưa thể chạy.",
+      "protected truy cập được trong gói.",
+      "m2 là private nên lời gọi bị từ chối.",
+      "m3 có quyền gói.",
+      "m4 public.",
+      "Có một lỗi tại số 2."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3.",
+      "Bài 03, trang PDF 28."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã sau trong tệp có tên là D.java:\n  package com.dan.chisholm;\n  public class D {\n    protected void m1() {\n        System.out.print(\"D.m1, \");}\n    private void m2() {\n        System.out.print(\"D.m2, \");}\n    void m3() {\n        System.out.print(\"D.m3, \");}\n    public void m4() {\n        System.out.print(\"D.m4, \");}\n  }\n  class E {\n   public static void main(String[] args){\n      D d = new D();\n      d.m1();  // 1\n      d.m2();  // 2\n      d.m3();  // 3\n      d.m4();  // 4\n   }\n  }\n  Hãy chọn kết quả khi dịch và chạy chương trình?\n  a) Hiển thị: D.m1, D.m2, D.m3, D.m4,\n  b) Lỗi biên dịch tại 1.\n  c)  Lỗi biên dịch tại 2.\n  d) Lỗi biên dịch tại 3.\n  e)  Lỗi biên dịch tại 4.\n   f)  Tất cả các phương án trên đều sai."
+  },
+  {
+    "id": "hust-mau-20202-13",
+    "kind": "single",
+    "stem": "Chồng phương thức giúp",
+    "options": [
+      "Chương trình chạy nhanh hơn",
+      "Chương trình nhỏ gọn hơn",
+      "Đơn giản hóa các đối tượng phức tạp để ta hiểu chúng hơn",
+      "Lý do khác: ........................................................\n       ..................................................................................\n       .................................................................................."
+    ],
+    "correct": [
+      3
+    ],
+    "chapter": 5,
+    "topics": [
+      "Mục đích nạp chồng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 3,
+        "number": "13",
+        "printed": "3"
+      },
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 6,
+        "printed": "6",
+        "number": "30"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · D",
+    "explanation": "Cùng tên cho các thao tác cùng ý nghĩa trên các danh sách tham số khác nhau giúp API dễ dùng.",
+    "analysis": [
+      "Không bảo đảm về tốc độ.",
+      "Kích thước mã không phải mục tiêu.",
+      "Mô tả này gần với trừu tượng hóa.",
+      "Lý do có thể ghi là thống nhất tên thao tác với các kiểu hoặc số đối số khác nhau."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3.",
+      "Bài 05, trang PDF 8."
+    ],
+    "issues": [],
+    "raw": "Chồng phương thức giúp\n    a) Chương trình chạy nhanh hơn\n    b) Chương trình nhỏ gọn hơn\n    c) Đơn giản hóa các đối tượng phức tạp để ta hiểu chúng hơn\n    d) Lý do khác: ........................................................\n       ..................................................................................\n       .................................................................................."
+  },
+  {
+    "id": "hust-mau-20202-14",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\npublic static void main (String [] args) {\n       Integer a = new Integer (10);\n       Integer b = new Integer (10);\n       Integer c = a;\n       int d = 10;  double e = 10.0;\n}\nChọn ba lựa chọn đưa ra kết quả đúng (true)?",
+    "options": [
+      "(a == c)",
+      "(b == d)",
+      "(b == c)",
+      "(d == e)",
+      "(a == b)",
+      "(d == 10.0)"
+    ],
+    "correct": [
+      0,
+      1,
+      3,
+      5
+    ],
+    "chapter": 4,
+    "topics": [
+      "Boxing và phép bằng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 3,
+        "number": "14",
+        "printed": "3"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, D, F",
+    "explanation": "Có bốn biểu thức true trên Java 17: a và c cùng đối tượng, b được unbox khi so với int, còn hai phép so sánh số 10 bằng nhau.",
+    "analysis": [
+      "a và c là hai tham chiếu đến một đối tượng.",
+      "b == d unbox b thành 10.",
+      "b và c là hai đối tượng khác nhau.",
+      "int 10 được nâng thành double 10.0.",
+      "Hai lần new tạo đối tượng khác nhau.",
+      "So sánh số cho true."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3.",
+      "Bài 04, trang PDF 36.",
+      "Java SE 17, phép so sánh số và tham chiếu: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.21"
+    ],
+    "issues": [
+      "Có bốn biểu thức true trên Java 17: a và c cùng đối tượng, b được unbox khi so với int, còn hai phép so sánh số 10 bằng nhau."
+    ],
+    "raw": "Cho đoạn mã sau:\npublic static void main (String [] args) {\n       Integer a = new Integer (10);\n       Integer b = new Integer (10);\n       Integer c = a;\n       int d = 10;  double e = 10.0;\n}\nChọn ba lựa chọn đưa ra kết quả đúng (true)?\n       a) (a == c)             d. (d == e)\n      b) (b == d)               e. (a == b)\n       c) (b == c)                 f. (d == 10.0)"
+  },
+  {
+    "id": "hust-mau-20202-15",
+    "kind": "multi",
+    "stem": "Câu nào dưới đây đúng về lớp trừu tượng và giao diện (abstract classes và interfaces)?",
+    "options": [
+      "Giao diện có thể chứa các phương thức không trừu tượng (non-abstract).",
+      "Một lớp có thể kế thừa từ nhiều lớp trừu tượng",
+      "Một lớp có thể thực thi từ nhiều giao diện",
+      "Tất cả các phương thức trong một giao diện phải là trừu tượng (abstract)."
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Interface theo phiên bản"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 3,
+        "number": "15",
+        "end": 4,
+        "printed": "3"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · C, D",
+    "explanation": "Java từ 8 có phương thức default và static trong interface, nên bộ chọn của tài liệu không phù hợp các phiên bản đó.",
+    "analysis": [
+      "Đúng từ Java 8 với default/static.",
+      "Một lớp chỉ extends trực tiếp một lớp.",
+      "Một lớp có thể implements nhiều interface.",
+      "Mệnh đề chỉ phù hợp mô hình interface cũ; không đúng từ Java 8."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3–4.",
+      "Bài 07, trang PDF 41."
+    ],
+    "issues": [
+      "Java từ 8 có phương thức default và static trong interface, nên bộ chọn của tài liệu không phù hợp các phiên bản đó."
+    ],
+    "raw": "Câu nào dưới đây đúng về lớp trừu tượng và giao diện (abstract classes và interfaces)?\n    a)  Giao diện có thể chứa các phương thức không trừu tượng (non-abstract).\n    b) Một lớp có thể kế thừa từ nhiều lớp trừu tượng\n    c) Một lớp có thể thực thi từ nhiều giao diện\n    d)  Tất cả các phương thức trong một giao diện phải là trừu tượng (abstract)."
+  },
+  {
+    "id": "hust-mau-20202-16",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\nswitch(x) {\n   default: System.out.println (\"Hello\");\n}\nChọn hai loại dữ liệu dưới đây có thể sử dụng để khai báo cho biến x?",
+    "options": [
+      "byte",
+      "float",
+      "Long",
+      "Short",
+      "byte",
+      "long"
+    ],
+    "correct": [
+      0,
+      3,
+      4
+    ],
+    "chapter": 2,
+    "topics": [
+      "Kiểu selector switch"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 4,
+        "number": "16",
+        "printed": "4"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · E, F",
+    "explanation": "Nếu dùng Java 17 và switch truyền thống thì byte ở hai lựa chọn giống nhau và Short qua unboxing đều dùng được. Đề yêu cầu hai, khoanh e/f.",
+    "analysis": [
+      "byte hợp lệ.",
+      "float không dùng với dạng này trong Java 17.",
+      "Long không dùng trong switch này trên Java 17.",
+      "Short được chuyển sang short.",
+      "Lặp byte như lựa chọn a.",
+      "long không dùng trong switch này trên Java 17."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4.",
+      "Bài 02, trang PDF 52."
+    ],
+    "issues": [
+      "Nếu dùng Java 17 và switch truyền thống thì byte ở hai lựa chọn giống nhau và Short qua unboxing đều dùng được. Đề yêu cầu hai, khoanh e/f."
+    ],
+    "raw": "Cho đoạn mã sau:\nswitch(x) {\n   default: System.out.println (\"Hello\");\n}\nChọn hai loại dữ liệu dưới đây có thể sử dụng để khai báo cho biến x?\n    a)  byte            c) Long        e) byte\n    b)  float           d) Short         f) long"
+  },
+  {
+    "id": "hust-mau-20202-17",
+    "kind": "multi",
+    "stem": "Hai lựa chọn nào dưới đây phát biểu đúng về đóng gói dữ liệu và che giấu thông tin?",
+    "options": [
+      "Các thành viên dữ liệu không có chỉ định truy cập",
+      "Dữ liệu thành viên có thể được thay đổi trực tiếp",
+      "Chỉ định truy cập cho phương thức là protected.",
+      "Chỉ định truy cập cho dữ liệu là private.",
+      "Các phương thức cung cấp việc truy cập và chỉnh sửa dữ liệu."
+    ],
+    "correct": [
+      3,
+      4
+    ],
+    "chapter": 3,
+    "topics": [
+      "Getter và setter"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 4,
+        "number": "17",
+        "printed": "4"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · D, E",
+    "explanation": "Dữ liệu riêng với phương thức kiểm soát việc đọc hay sửa là cách đóng gói được bài 3 trình bày.",
+    "analysis": [
+      "Không ghi modifier tạo quyền gói.",
+      "Thay đổi tùy ý từ bên ngoài phá vỡ che giấu.",
+      "Phương thức không bắt buộc protected.",
+      "private hạn chế truy cập trực tiếp.",
+      "API điều phối việc đọc và thay đổi."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4.",
+      "Bài 03, trang PDF 40."
+    ],
+    "issues": [],
+    "raw": "Hai lựa chọn nào dưới đây phát biểu đúng về đóng gói dữ liệu và che giấu thông tin?\n    a) Các thành viên dữ liệu không có chỉ định truy cập\n    b) Dữ liệu thành viên có thể được thay đổi trực tiếp\n    c)  Chỉ định truy cập cho phương thức là protected.\n    d)  Chỉ định truy cập cho dữ liệu là private.\n    e)  Các phương thức cung cấp việc truy cập và chỉnh sửa dữ liệu."
+  },
+  {
+    "id": "hust-mau-20202-18",
+    "kind": "single",
+    "stem": "Khi tạo ra một đối tượng là thành viên của một lớp con, cái gì sẽ được thực hiện trước tiên?",
+    "options": [
+      "Phương thức khởi tạo của lớp con",
+      "Phương thức khởi tạo của lớp cha",
+      "Phương thức khởi tạo của lớp cha và lớp con được thực hiện tại cùng một thời điểm",
+      "Đáp án khác: ......................................................"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 6,
+    "topics": [
+      "Khởi tạo trong kế thừa"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 4,
+        "number": "18",
+        "printed": "4"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B",
+    "explanation": "Trong mô hình khởi tạo được slide minh họa, phần lớp cha được khởi tạo trước thân constructor lớp con sau lời gọi cha.",
+    "analysis": [
+      "Phần thân còn lại của lớp con chạy sau super.",
+      "Phần khởi tạo lớp cha chạy trước phần tương ứng của lớp con.",
+      "Các bước khởi tạo có trật tự.",
+      "Trong các lựa chọn cụ thể đã có đáp án."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4.",
+      "Bài 06, trang PDF 44."
+    ],
+    "issues": [],
+    "raw": "Khi tạo ra một đối tượng là thành viên của một lớp con, cái gì sẽ được thực hiện trước tiên?\n    a)  Phương thức khởi tạo của lớp con\n    b) Phương thức khởi tạo của lớp cha\n    c)  Phương thức khởi tạo của lớp cha và lớp con được thực hiện tại cùng một thời điểm\n    d) Đáp án khác: ......................................................"
+  },
+  {
+    "id": "hust-mau-20202-19",
+    "kind": "single",
+    "stem": "ho đoạn mã sau trong tệp có tên là A.java:\n  package com.dan.chisholm;\n  public class A {\n    protected void m1() {\n        System.out.print(\"A.m1, \");}\n    void m2() {\n        System.out.print(\"A.m2, \");}\n    public void m3() {\n        System.out.print(\"A.m3, \");}\n    private void m4() {\n        System.out.print(\"A.m4, \");}\n  }\n  class Test {\n   public static void main(String[] args){\n      A a = new A();",
+    "options": [
+      "Hiển thị: A.m1, A.m2, A.m3, A.m4,",
+      "Lỗi biên dịch tại 1.",
+      "Lỗi biên dịch tại 3.",
+      "Lỗi biên dịch tại 2.",
+      "Lỗi biên dịch tại 4.",
+      "Tất cả các phương án trên đều sai."
+    ],
+    "correct": [
+      4
+    ],
+    "chapter": 3,
+    "topics": [
+      "Truy cập cùng gói"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 4,
+        "number": "19",
+        "printed": "4"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · E",
+    "explanation": "Test cùng gói với A, nhưng ở ngoài lớp khai báo phương thức private.",
+    "analysis": [
+      "Lỗi biên dịch ngăn chạy.",
+      "m1 protected truy cập được.",
+      "m3 public truy cập được.",
+      "m2 không ghi quyền nên truy cập được trong gói.",
+      "m4 private nên lỗi ở số 4.",
+      "Có một lựa chọn đúng."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4.",
+      "Bài 03, trang PDF 28."
+    ],
+    "issues": [],
+    "raw": "ho đoạn mã sau trong tệp có tên là A.java:\n  package com.dan.chisholm;\n  public class A {\n    protected void m1() {\n        System.out.print(\"A.m1, \");}\n    void m2() {\n        System.out.print(\"A.m2, \");}\n    public void m3() {\n        System.out.print(\"A.m3, \");}\n    private void m4() {\n        System.out.print(\"A.m4, \");}\n  }\n  class Test {\n   public static void main(String[] args){\n      A a = new A();\n      a.m1();  // 1\n      a.m2();  // 2\n      a.m3();  // 3\n      a.m4();  // 4\n   }\n  }\n  Hãy chọn kết quả khi dịch và chạy chương trình?\n  a) Hiển thị: A.m1, A.m2, A.m3, A.m4,\n  b) Lỗi biên dịch tại 1.       d) Lỗi biên dịch tại 2.\n  c)  Lỗi biên dịch tại 3.       e) Lỗi biên dịch tại 4.\n   f)  Tất cả các phương án trên đều sai."
+  },
+  {
+    "id": "hust-mau-20202-20",
+    "kind": "multi",
+    "stem": "(Các) kỹ thuật nào được hỗ trợ trong lập trình hướng đối tượng Java?",
+    "options": [
+      "Đa hình",
+      "Đơn kế thừa",
+      "Kết tập",
+      "Đa kế thừa",
+      "Đóng gói"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "chapter": 6,
+    "topics": [
+      "Kỹ thuật OOP"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 4,
+        "number": "20",
+        "printed": "4"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, B, C, E",
+    "explanation": "Trong ngữ cảnh phân loại kế thừa lớp của slide, Java hỗ trợ một lớp cha trực tiếp và có thể thực thi nhiều giao diện.",
+    "analysis": [
+      "Java hỗ trợ gọi đa hình.",
+      "Một lớp extends một lớp trực tiếp.",
+      "Một đối tượng chứa thành phần khác.",
+      "Không thể extends hai lớp đồng thời.",
+      "Java cho phép đặt dữ liệu và hành vi trong lớp, giới hạn truy cập."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4.",
+      "Bài 06, trang PDF 32."
+    ],
+    "issues": [],
+    "raw": "(Các) kỹ thuật nào được hỗ trợ trong lập trình hướng đối tượng Java?\n  a) Đa hình          c) Kết tập         e) Đóng gói\n  b) Đơn kế thừa     d) Đa kế thừa"
+  },
+  {
+    "id": "hust-mau-20202-21",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\nclass BanhXe{}\nclass DongCo{}\nabstract class PhuongTien {\n  public abstract void di();\n  public abstract void dungLai();\n}\nclass OTo extends PhuongTien {\n  BanhXe banhTraiTruoc = new BanhXe (),\n      banhPhaiTruoc = new BanhXe();\n  BanhXe banhTraiSau = new BanhXe(),\n      banhPhaiSau = new BanhXe();\n  DongCo dc = new DongCo();\n  public DongCo getDongCo() {return dc;}\n  public void lenGa() {}\n  public void tangToc() {}\n}\nclass OToKhach extends OTo {\n  private int soLuongMax {}\n}\n(Các) lựa chọn nào sau đây không đúng?",
+    "options": [
+      "Một đối tượng OtoKhach (ô tô khách) kế thừa một thể hiện DongCo và 4 thể hiện của BanhXe từ lớp\n      cha OTo.",
+      "Mối quan hệ giữa OtoKhach và PhuongTien là mối quan hệ kế thừa.",
+      "Một đối tượng OtoKhach có thể lên ga và tăng tốc.",
+      "Mối quan hệ giữa OtoKhach và DongCo là quan hệ kế thừa.",
+      "Tất cả các lựa chọn trên đều đúng."
+    ],
+    "correct": [],
+    "chapter": 6,
+    "topics": [
+      "Kế thừa và kết tập"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 5,
+        "number": "21",
+        "printed": "5"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, B, C",
+    "explanation": "Nguồn hỏi các lựa chọn KHÔNG đúng, mã chứa lỗi khai báo và thiếu triển khai abstract. Dấu bút ở mục b lệch lên dòng trên.",
+    "analysis": [
+      "Chứa động cơ và bánh xe là quan hệ thành phần, không kế thừa các lớp của chúng.",
+      "Chuỗi extends nối PhuongTien với OToKhach.",
+      "Các phương thức public được khai báo trong OTo.",
+      "Không có extends DongCo.",
+      "Mệnh đề tất cả đúng không phù hợp vì có phương án sai."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5.",
+      "Bài 06, trang PDF 36."
+    ],
+    "issues": [
+      "Nguồn hỏi các lựa chọn KHÔNG đúng, mã chứa lỗi khai báo và thiếu triển khai abstract. Dấu bút ở mục b lệch lên dòng trên."
+    ],
+    "raw": "Cho đoạn mã sau:\nclass BanhXe{}\nclass DongCo{}\nabstract class PhuongTien {\n  public abstract void di();\n  public abstract void dungLai();\n}\nclass OTo extends PhuongTien {\n  BanhXe banhTraiTruoc = new BanhXe (),\n      banhPhaiTruoc = new BanhXe();\n  BanhXe banhTraiSau = new BanhXe(),\n      banhPhaiSau = new BanhXe();\n  DongCo dc = new DongCo();\n  public DongCo getDongCo() {return dc;}\n  public void lenGa() {}\n  public void tangToc() {}\n}\nclass OToKhach extends OTo {\n  private int soLuongMax {}\n}\n(Các) lựa chọn nào sau đây không đúng?\n  a) Một đối tượng OtoKhach (ô tô khách) kế thừa một thể hiện DongCo và 4 thể hiện của BanhXe từ lớp\n      cha OTo.\n  b) Mối quan hệ giữa OtoKhach và PhuongTien là mối quan hệ kế thừa.\n  c) Một đối tượng OtoKhach có thể lên ga và tăng tốc.\n  d) Mối quan hệ giữa OtoKhach và DongCo là quan hệ kế thừa.\n  e)  Tất cả các lựa chọn trên đều đúng."
+  },
+  {
+    "id": "hust-mau-20202-22",
+    "kind": "multi",
+    "stem": "Hãy chọn ra ba câu đúng:",
+    "options": [
+      "Phương thức khởi tạo mặc định gọi phương thức khởi tạo không tham số của lớp cha.",
+      "Trình biên dịch chỉ tạo ra phương thức khởi tạo khi không có bất cứ một phương thức khởi tạo nào.",
+      "Phương thức khởi tạo mặc định khởi tạo các biến của phương thức.",
+      "Phương thức khởi tạo mặc định có chỉ định truy cập giống như lớp của nó.",
+      "Nếu một lớp không có phương thức khởi tạo không tham số thì trình biên dịch luôn tạo ra một phương\n      thức khởi tạo mặc định."
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
+    "chapter": 4,
+    "topics": [
+      "Constructor mặc định"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 5,
+        "number": "22",
+        "printed": "5"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, D, E",
+    "explanation": "Đối với lớp thông thường có lớp cha, default constructor có mức truy cập của lớp và gọi super(). Sự tồn tại của constructor có tham số cũng ngăn sinh default constructor.",
+    "analysis": [
+      "Đúng cho lớp có lớp cha với constructor không tham số truy cập được.",
+      "Chỉ sinh khi lớp không khai báo constructor.",
+      "Biến cục bộ của phương thức không được constructor gán mặc định.",
+      "Quyền truy cập theo lớp.",
+      "Sai khi lớp đã có constructor có tham số."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5.",
+      "Bài 04, trang PDF 12."
+    ],
+    "issues": [
+      "Đối với lớp thông thường có lớp cha, default constructor có mức truy cập của lớp và gọi super(). Sự tồn tại của constructor có tham số cũng ngăn sinh default constructor."
+    ],
+    "raw": "Hãy chọn ra ba câu đúng:\n  a) Phương thức khởi tạo mặc định gọi phương thức khởi tạo không tham số của lớp cha.\n  b) Trình biên dịch chỉ tạo ra phương thức khởi tạo khi không có bất cứ một phương thức khởi tạo nào.\n  c) Phương thức khởi tạo mặc định khởi tạo các biến của phương thức.\n  d) Phương thức khởi tạo mặc định có chỉ định truy cập giống như lớp của nó.\n  e) Nếu một lớp không có phương thức khởi tạo không tham số thì trình biên dịch luôn tạo ra một phương\n      thức khởi tạo mặc định."
+  },
+  {
+    "id": "hust-mau-20202-23",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\npublic static void main (String [] args) {\n       Double x = new Double (10.0);\n       Double y = new Double (10.0);\n       Double z = x;\n       int g = 10;  double h = 10.0;\n}\nChọn ba lựa chọn đưa ra kết quả đúng (true)?",
+    "options": [
+      "(y == g)",
+      "(g == h)",
+      "(x == y)",
+      "(y == z)",
+      "(x == z)",
+      "(g == 10.0)"
+    ],
+    "correct": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "chapter": 4,
+    "topics": [
+      "Boxing và phép bằng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 5,
+        "number": "23",
+        "printed": "5"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, E, F",
+    "explanation": "Bốn lựa chọn đúng. So sánh Double với int thực hiện unboxing, không phải so sánh hai tham chiếu.",
+    "analysis": [
+      "y được unbox và bằng 10.",
+      "Cả hai giá trị số bằng 10.",
+      "x và y là hai đối tượng riêng.",
+      "y khác tham chiếu z.",
+      "z tham chiếu cùng đối tượng với x.",
+      "10 bằng 10.0."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5.",
+      "Bài 04, trang PDF 36.",
+      "Java SE 17, phép so sánh số và tham chiếu: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.21"
+    ],
+    "issues": [
+      "Bốn lựa chọn đúng. So sánh Double với int thực hiện unboxing, không phải so sánh hai tham chiếu."
+    ],
+    "raw": "Cho đoạn mã sau:\npublic static void main (String [] args) {\n       Double x = new Double (10.0);\n       Double y = new Double (10.0);\n       Double z = x;\n       int g = 10;  double h = 10.0;\n}\nChọn ba lựa chọn đưa ra kết quả đúng (true)?\n  a) (y == g)     c) (x == y)       e)(x == z)\n  b) (g == h)     d) (y == z)        f) (g == 10.0)"
+  },
+  {
+    "id": "hust-mau-20202-24",
+    "kind": "single",
+    "stem": "Bạn sẽ sử dụng chỉ định truy cập nào sau đây cho các phương thức mà bạn không muốn bị ghi đè bởi\n    các lớp con?",
+    "options": [
+      "protected",
+      "subclass",
+      "final",
+      "public"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Phương thức final"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 5,
+        "number": "24",
+        "printed": "5"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · C",
+    "explanation": "final trên phương thức thực thể ngăn lớp con override.",
+    "analysis": [
+      "protected giới hạn truy cập.",
+      "subclass không phải modifier.",
+      "final ngăn ghi đè.",
+      "public chỉ mở quyền truy cập."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5.",
+      "Bài 07, trang PDF 16."
+    ],
+    "issues": [],
+    "raw": "Bạn sẽ sử dụng chỉ định truy cập nào sau đây cho các phương thức mà bạn không muốn bị ghi đè bởi\n    các lớp con?\n    a)  protected  b) subclass   c) final   d) public"
+  },
+  {
+    "id": "hust-mau-20202-25",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\n1. class BaseClass {\n2.  private float x = 1.0f;\n3.  float getVar() { return x; }\n4. }\n5. class SubClass extends BaseClass {\n6.  private float x = 2.0f;\n7.  // insert code here\n8. }\nChọn hai ví dụ về việc ghi đè (override) được chèn vào dòng 7?",
+    "options": [
+      "public double getVar() { return x; }",
+      "public float getVar(float f){ return f; }",
+      "float getVar() { return x; }",
+      "public float getVar() { return x; }",
+      "private float getVar() { return x; }"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "chapter": 7,
+    "topics": [
+      "Chữ ký ghi đè"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 5,
+        "number": "25",
+        "end": 6,
+        "printed": "5"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · C, D",
+    "explanation": "Phải giữ getVar() với kiểu trả về float và quyền truy cập bằng hoặc rộng hơn. Dòng cuối không có nhãn chữ cái trong nguồn.",
+    "analysis": [
+      "double khác kiểu nguyên thủy float.",
+      "Thêm đối số nên là overload.",
+      "Giữ nguyên chữ ký và quyền gói.",
+      "public rộng hơn quyền gói.",
+      "Dòng không nhãn dùng private, thu hẹp quyền so với cha."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5–6.",
+      "Bài 07, trang PDF 16."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã sau:\n1. class BaseClass {\n2.  private float x = 1.0f;\n3.  float getVar() { return x; }\n4. }\n5. class SubClass extends BaseClass {\n6.  private float x = 2.0f;\n7.  // insert code here\n8. }\nChọn hai ví dụ về việc ghi đè (override) được chèn vào dòng 7?\n    a) public double getVar() { return x; }\n    b) public float getVar(float f){ return f; }\n    c) float getVar() { return x; }\n    d) public float getVar() { return x; }\nprivate float getVar() { return x; }"
+  },
+  {
+    "id": "hust-mau-20202-26",
+    "kind": "multi",
+    "stem": "Hãy đưa ra (các) lựa chọn đúng:",
+    "options": [
+      "Đóng gói dữ liệu bảo vệ dữ liệu không bị thay đổi tùy tiện.",
+      "Đóng gói dữ liệu cho phép thay đổi thiết kế bên trong của một lớp mà giao diện bên ngoài không bị\n      thay đổi theo.",
+      "Đóng gói dữ liệu là một dạng của che giấu dữ liệu.",
+      "Đóng gói dữ liệu được sử dụng để giúp chương trình gọn nhẹ (ít mã nguồn) hơn.",
+      "Đóng gói dữ liệu giúp dữ liệu giúp chương trình chạy nhanh hơn."
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 3,
+    "topics": [
+      "Đóng gói"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 6,
+        "number": "26",
+        "printed": "6"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, B, C",
+    "explanation": "Đóng gói kiểm soát việc thay đổi trạng thái và cho phép thay cấu trúc bên trong khi API giữ ổn định.",
+    "analysis": [
+      "Bảo vệ được những trường được che giấu.",
+      "API bên ngoài có thể giữ nguyên.",
+      "Slide liên hệ đóng gói với che giấu.",
+      "Không bảo đảm ít dòng mã.",
+      "Không có bảo đảm tốc độ."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6.",
+      "Bài 03, trang PDF 36."
+    ],
+    "issues": [],
+    "raw": "Hãy đưa ra (các) lựa chọn đúng:\n  a) Đóng gói dữ liệu bảo vệ dữ liệu không bị thay đổi tùy tiện.\n  b) Đóng gói dữ liệu cho phép thay đổi thiết kế bên trong của một lớp mà giao diện bên ngoài không bị\n      thay đổi theo.\n  c) Đóng gói dữ liệu là một dạng của che giấu dữ liệu.\n  d) Đóng gói dữ liệu được sử dụng để giúp chương trình gọn nhẹ (ít mã nguồn) hơn.\n  e) Đóng gói dữ liệu giúp dữ liệu giúp chương trình chạy nhanh hơn."
+  },
+  {
+    "id": "hust-mau-20202-27",
+    "kind": "multi",
+    "stem": "Hãy khoanh tròn vào (các) chỉ định không thể sử dụng để khai báo một phương thức:",
+    "options": [
+      "abstract",
+      "protected",
+      "private",
+      "const",
+      "Không lựa chọn nào"
+    ],
+    "correct": [
+      3
+    ],
+    "chapter": 5,
+    "topics": [
+      "Modifier của phương thức"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 6,
+        "number": "27",
+        "printed": "6"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · D",
+    "explanation": "abstract, protected và private đều có thể xuất hiện trên những phương thức thích hợp; const không phải modifier hợp lệ.",
+    "analysis": [
+      "Dùng cho phương thức trừu tượng.",
+      "Là chỉ định truy cập.",
+      "Là chỉ định truy cập.",
+      "const là từ dành riêng không dùng để khai báo phương thức.",
+      "Có trường hợp không hợp lệ trong danh sách."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6.",
+      "Bài 05, trang PDF 8."
+    ],
+    "issues": [],
+    "raw": "Hãy khoanh tròn vào (các) chỉ định không thể sử dụng để khai báo một phương thức:\n  a)  abstract      c)  private     d) const\n  b)  protected    e)  Không lựa chọn nào"
+  },
+  {
+    "id": "hust-mau-20202-28",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\npublic class Animal {\n  public Animal (String color, double weight){}\n}\nChọn phương thức chồng (overload) cho phương thức khởi tạo Animal ?",
+    "options": [
+      "public Object Animal (String color, double weight) { }",
+      "private double Animal () { }",
+      "protected Animal () { }",
+      "Animal (double weight, String color) { }",
+      "public void Animal (String color) { }"
+    ],
+    "correct": [
+      2,
+      3
+    ],
+    "chapter": 4,
+    "topics": [
+      "Nạp chồng constructor"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 6,
+        "number": "28",
+        "printed": "6"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · C, D",
+    "explanation": "Constructor không khai báo kiểu trả về. Hai chữ ký khác constructor ban đầu là Animal() và Animal(double,String).",
+    "analysis": [
+      "Object là kiểu trả về.",
+      "double là kiểu trả về.",
+      "Constructor không tham số hợp lệ.",
+      "Đổi trật tự kiểu tham số tạo constructor khác.",
+      "void chỉ ra phương thức."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6.",
+      "Bài 04, trang PDF 12."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã sau:\npublic class Animal {\n  public Animal (String color, double weight){}\n}\nChọn phương thức chồng (overload) cho phương thức khởi tạo Animal ?\n    a) public Object Animal (String color, double weight) { }\n    b) private double Animal () { }\n    c) protected Animal () { }\n    d) Animal (double weight, String color) { }\n    e) public void Animal (String color) { }"
+  },
+  {
+    "id": "hust-mau-20202-29",
+    "kind": "multi",
+    "stem": "Hãy chọn ra hai trường hợp mà trình biên dịch cung cấp phương thức khởi tạo mặc định cho lớp A:",
+    "options": [
+      "class A { }",
+      "class A {   public A(int x) {}    }",
+      "class Z { }\n     class A extends Z {  void A() {}   }",
+      "class A {  public A() {} }"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "chapter": 4,
+    "topics": [
+      "Constructor mặc định"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 6,
+        "number": "29",
+        "printed": "6"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, C",
+    "explanation": "Constructor mặc định được sinh ra khi lớp không có khai báo constructor tường minh.",
+    "analysis": [
+      "Lớp rỗng thỏa điều kiện.",
+      "Đã khai báo A(int).",
+      "void A() là phương thức, không phải constructor.",
+      "A() đã được khai báo."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6.",
+      "Bài 04, trang PDF 12."
+    ],
+    "issues": [],
+    "raw": "Hãy chọn ra hai trường hợp mà trình biên dịch cung cấp phương thức khởi tạo mặc định cho lớp A:\n    a) class A { }\n    b) class A {   public A(int x) {}    }\n    c) class Z { }\n     class A extends Z {  void A() {}   }\n    d) class A {  public A() {} }"
+  },
+  {
+    "id": "hust-mau-20202-31",
+    "kind": "single",
+    "stem": "Cho đoạn mã dưới đây:\n1. class TestSuper {\n2.   TestSuper (int i) {}\n3. }\n4. class TestSub extends TestSuper {}\n5. class TestAll {\n6.   public static void main (String [] args) {\n7.      new TestSub ();\n8.}}\nHãy chọn lựa chọn đúng?",
+    "options": [
+      "Lỗi biên dịch",
+      "Đoạn mã chạy mà không có ngoại lệ xảy ra",
+      "Một ngoại lệ bị ném ra ở dòng 5.",
+      "Một ngoại lệ bị ném ra ở dòng 2."
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 6,
+    "topics": [
+      "Lời gọi super"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 6,
+        "number": "31",
+        "end": 7,
+        "printed": "6"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A",
+    "explanation": "Constructor mặc định trong TestSub cố gọi super() nhưng TestSuper chỉ có TestSuper(int).",
+    "analysis": [
+      "Biên dịch thất bại do thiếu constructor không tham số.",
+      "Không chạy được.",
+      "Không phải ngoại lệ khi chạy tới dòng 5.",
+      "Không phải ngoại lệ khi chạy tới dòng 2."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6–7.",
+      "Bài 06, trang PDF 44."
+    ],
+    "issues": [],
+    "raw": "Cho đoạn mã dưới đây:\n1. class TestSuper {\n2.   TestSuper (int i) {}\n3. }\n4. class TestSub extends TestSuper {}\n5. class TestAll {\n6.   public static void main (String [] args) {\n7.      new TestSub ();\n8.}}\nHãy chọn lựa chọn đúng?\n    a)  Lỗi biên dịch\n    b) Đoạn mã chạy mà không có ngoại lệ xảy ra\n    c) Một ngoại lệ bị ném ra ở dòng 5.\n    d) Một ngoại lệ bị ném ra ở dòng 2."
+  },
+  {
+    "id": "hust-mau-20202-32",
+    "kind": "single",
+    "stem": "Nếu lớp cha A chứa phương thức khởi tạo có tham số, hãy chọn lựa chọn đúng dưới đây?",
+    "options": [
+      "Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n        trong câu lệnh đầu tiên",
+      "Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n        trong câu lệnh cuối cùng.",
+      "Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n       nhiều lần nếu nó chứa nhiều tham số.",
+      "Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n      một vài lần."
+    ],
+    "correct": [],
+    "chapter": 6,
+    "topics": [
+      "Chuỗi constructor"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 7,
+        "number": "32",
+        "printed": "7"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A",
+    "explanation": "Lớp con có thể dùng this(...) để nối sang constructor khác. Phiên bản Java cũng ảnh hưởng quy tắc vị trí của super(...).",
+    "analysis": [
+      "Khẳng định mọi constructor phải trực tiếp gọi cha ở câu đầu quá mạnh.",
+      "Không có quy tắc gọi cha ở cuối.",
+      "Số tham số không quyết định số lần gọi.",
+      "Một đối tượng không khởi tạo lặp lại phần cha nhiều lần."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 06, trang PDF 48."
+    ],
+    "issues": [
+      "Lớp con có thể dùng this(...) để nối sang constructor khác. Phiên bản Java cũng ảnh hưởng quy tắc vị trí của super(...)."
+    ],
+    "raw": "Nếu lớp cha A chứa phương thức khởi tạo có tham số, hãy chọn lựa chọn đúng dưới đây?\n    a)  Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n        trong câu lệnh đầu tiên\n    b)  Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n        trong câu lệnh cuối cùng.\n    c)  Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n       nhiều lần nếu nó chứa nhiều tham số.\n    d)  Bất kỳ phương thức khởi tạo nào của lớp con của A đều phải gọi phương thức khởi tạo của lớp cha\n      một vài lần."
+  },
+  {
+    "id": "hust-mau-20202-33",
+    "kind": "multi",
+    "stem": "Cho đoạn mã sau:\nswitch(x) {\n   default: System.out.println (\"Hello\");\n}\nChọn ba loại dữ liệu dưới đây có thể sử dụng để khai báo cho biến x?",
+    "options": [
+      "Long",
+      "char",
+      "byte",
+      "String",
+      "int",
+      "double"
+    ],
+    "correct": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "chapter": 2,
+    "topics": [
+      "Kiểu selector switch"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 7,
+        "number": "33",
+        "printed": "7"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, C, E",
+    "explanation": "Java 17 cho phép String, char, byte và int với dạng switch này. Tài liệu chỉ khoanh ba kiểu.",
+    "analysis": [
+      "Long không hợp lệ với switch truyền thống này.",
+      "char được phép.",
+      "byte được phép.",
+      "String được phép từ Java 7.",
+      "int được phép.",
+      "double không hợp lệ trong Java 17."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 02, trang PDF 52."
+    ],
+    "issues": [
+      "Java 17 cho phép String, char, byte và int với dạng switch này. Tài liệu chỉ khoanh ba kiểu."
+    ],
+    "raw": "Cho đoạn mã sau:\nswitch(x) {\n   default: System.out.println (\"Hello\");\n}\nChọn ba loại dữ liệu dưới đây có thể sử dụng để khai báo cho biến x?\n    a) Long           c) byte             e) int\n    b)  char            d) String             f) double"
+  },
+  {
+    "id": "hust-mau-20202-34",
+    "kind": "multi",
+    "stem": "Hai lựa chọn nào dưới đây phát biểu đúng về đóng gói dữ liệu và che giấu thông tin?",
+    "options": [
+      "Các thành viên dữ liệu không có chỉ định truy cập",
+      "Chỉ định truy cập cho dữ liệu là private.",
+      "Dữ liệu thành viên có thể được thay đổi trực tiếp",
+      "Chỉ định truy cập cho phương thức là protected.",
+      "Các phương thức cung cấp việc truy cập và chỉnh sửa dữ liệu."
+    ],
+    "correct": [
+      1,
+      4
+    ],
+    "chapter": 3,
+    "topics": [
+      "Getter và setter"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 7,
+        "number": "34",
+        "printed": "7"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · B, E",
+    "explanation": "Quyền private và các phương thức truy cập có kiểm soát thực hiện mẫu đóng gói trong slide.",
+    "analysis": [
+      "Không ghi modifier cho quyền gói.",
+      "private bảo vệ trường.",
+      "Truy cập tùy ý đi ngược che giấu.",
+      "Không bắt buộc protected cho mọi phương thức.",
+      "Các phương thức có thể kiểm tra và hạn chế cập nhật."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 03, trang PDF 40."
+    ],
+    "issues": [],
+    "raw": "Hai lựa chọn nào dưới đây phát biểu đúng về đóng gói dữ liệu và che giấu thông tin?\n    a) Các thành viên dữ liệu không có chỉ định truy cập\n    b)  Chỉ định truy cập cho dữ liệu là private.\n    c) Dữ liệu thành viên có thể được thay đổi trực tiếp\n    d)  Chỉ định truy cập cho phương thức là protected.\n    e)  Các phương thức cung cấp việc truy cập và chỉnh sửa dữ liệu."
+  },
+  {
+    "id": "hust-mau-20202-35",
+    "kind": "multi",
+    "stem": "Chọn ba loại nào sau đây được sử dụng để truyền tham số theo tham trị:",
+    "options": [
+      "int",
+      "float",
+      "mảng",
+      "Các kiểu dữ liệu nguyên thủy",
+      "StringBuffer",
+      "Double"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "chapter": 5,
+    "topics": [
+      "Truyền tham số"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 7,
+        "number": "35",
+        "printed": "7"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · A, B, D",
+    "explanation": "Tất cả đối số Java được truyền theo giá trị. Đề yêu cầu ba nhưng mảng, StringBuffer và Double cũng truyền bản sao tham chiếu.",
+    "analysis": [
+      "int được sao chép.",
+      "float được sao chép.",
+      "Tham chiếu mảng được sao chép.",
+      "Mọi giá trị nguyên thủy đều được sao chép.",
+      "Tham chiếu StringBuffer được sao chép.",
+      "Tham chiếu Double được sao chép."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 05, trang PDF 36.",
+      "Java SE 17, các giá trị đối số được gán cho biến tham số mới: https://docs.oracle.com/javase/specs/jls/se17/html/jls-15.html#jls-15.12.4.5"
+    ],
+    "issues": [
+      "Tất cả đối số Java được truyền theo giá trị. Đề yêu cầu ba nhưng mảng, StringBuffer và Double cũng truyền bản sao tham chiếu."
+    ],
+    "raw": "Chọn ba loại nào sau đây được sử dụng để truyền tham số theo tham trị:\n    a) int             d) Các kiểu dữ liệu nguyên thủy\n    b) float            e) StringBuffer\n    c) mảng              f) Double"
+  },
+  {
+    "id": "hust-mau-20202-36",
+    "kind": "single",
+    "stem": "Tại sao Java lại có thể “viết một lần chạy ở mọi nơi”?",
+    "options": [
+      "Vì Java là ngôn ngữ lập trình có cộng đồng phát triển rất lớn, khắp nơi trên thế giới.",
+      "Vì Java hỗ trợ các kỹ thuật trong lập trình hướng đối tượng như: Đóng gói, Chồng phương thức, Kết\n       tập, Kế thừa, Đa hình,…",
+      "Java hỗ trợ cả biên dịch lẫn thông dịch. Cơ chế thông dịch do JVM thực hiện giúp tạo ra mã máy của\n      từng nền tảng khác nhau.",
+      "Sau khi biên dịch các lớp viết bằng ngôn ngữ Java, ta thu được byte code. Các byte code này được\n      hiểu trên mọi nền tảng."
+    ],
+    "correct": [
+      3
+    ],
+    "chapter": 1,
+    "topics": [
+      "Bytecode và JVM"
+    ],
+    "sources": [
+      {
+        "file": "OOP - đề mẫu kì 20202.pdf",
+        "n": 7,
+        "number": "36",
+        "printed": "7"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Khoanh đỏ trong bản cung cấp (chưa rõ người đánh dấu) · D",
+    "explanation": "Cùng bytecode có thể chạy trên các nền tảng có JVM tương thích cho phiên bản lớp và thư viện cần thiết.",
+    "analysis": [
+      "Quy mô cộng đồng không quyết định tính khả chuyển.",
+      "Nguyên lý OOP không tự bảo đảm khả chuyển.",
+      "Cách thực hiện JVM có thể là thông dịch hoặc JIT; việc tạo mã máy riêng không phải hợp đồng của bytecode.",
+      "Đúng với điều kiện có JVM tương thích trên nền tảng."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 01, trang PDF 36."
+    ],
+    "issues": [],
+    "raw": "Tại sao Java lại có thể “viết một lần chạy ở mọi nơi”?\n  a) Vì Java là ngôn ngữ lập trình có cộng đồng phát triển rất lớn, khắp nơi trên thế giới.\n  b) Vì Java hỗ trợ các kỹ thuật trong lập trình hướng đối tượng như: Đóng gói, Chồng phương thức, Kết\n       tập, Kế thừa, Đa hình,…\n  c)  Java hỗ trợ cả biên dịch lẫn thông dịch. Cơ chế thông dịch do JVM thực hiện giúp tạo ra mã máy của\n      từng nền tảng khác nhau.\n  d) Sau khi biên dịch các lớp viết bằng ngôn ngữ Java, ta thu được byte code. Các byte code này được\n      hiểu trên mọi nền tảng."
+  },
+  {
+    "id": "hust-20221-d7e70c",
+    "kind": "single",
+    "stem": "Kết quả in ra màn hình khi thực thi đoạn code sau là gì\nSystem.out.print(\"Begin \");\ntry {\n    int i = 5/0;\n    System.out.print(\"Try \");\n} catch (Exception ex) {\n    System.out.print(\"Catch \");\n} finally {\n    System.out.print(\"Finally \");\n}\nSystem.out.print(\"End \");",
+    "options": [
+      "Begin End",
+      "Begin Try Catch Finally End",
+      "Begin Catch Finally End",
+      "Begin Catch End",
+      "Begin Try Catch End"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 10,
+    "topics": [
+      "try/catch/finally"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 1,
+        "number": "#d7e70c"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · C",
+    "explanation": "Sau Begin, phép chia nguyên cho 0 tung ArithmeticException. catch xử lý xong, finally chạy rồi mới đến End.",
+    "analysis": [
+      "Thiếu cả Catch và Finally.",
+      "Try đứng sau phép chia nên không in.",
+      "Chuỗi này đúng thứ tự thực thi.",
+      "Thiếu Finally.",
+      "Có Try không thể in và thiếu Finally."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1.",
+      "Bài 10, trang PDF 36.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'Begin Catch Finally End'. Mã thử và kết quả ghi trong verification/hust-java.json, mục d7e70c."
+    ],
+    "issues": [],
+    "raw": "Kết quả in ra màn hình khi thực thi đoạn code sau là gì\nSystem.out.print(\"Begin \");\ntry {\n    int i = 5/0;\n    System.out.print(\"Try \");\n} catch (Exception ex) {\n    System.out.print(\"Catch \");\n} finally {\n    System.out.print(\"Finally \");\n}\nSystem.out.print(\"End \");\nBegin End\nBegin Try Catch Finally End\nBegin Catch Finally End\nBegin Catch End\nBegin Try Catch End\n"
+  },
+  {
+    "id": "hust-20221-8bab79",
+    "kind": "single",
+    "stem": "Đoạn mã sau nằm trong hàm main . Nó in ra gì ?\nint x = 7;\nint mssv = 10;\nfinal int z = x + mssv;\nz =- 1;\nSystem.out.println(\"Value of z : \" + z );",
+    "options": [
+      "Báo lỗi",
+      "Value of z : 16",
+      "Value of z : 17"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 5,
+    "topics": [
+      "Biến final"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 1,
+        "number": "#8bab79"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A",
+    "explanation": "z đã được gán khi khai báo. z =- 1 là phép gán giá trị âm, bị javac từ chối vì z là final.",
+    "analysis": [
+      "Có lỗi gán lại biến final.",
+      "Không chạy đến println.",
+      "Tổng ban đầu là 17 nhưng chương trình không biên dịch."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 1.",
+      "Bài 05, trang PDF 28.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. javac báo: Test.java:5: error: cannot assign a value to final variable z. Mã thử và kết quả ghi trong verification/hust-java.json, mục 8bab79."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau nằm trong hàm main . Nó in ra gì ?\nint x = 7;\nint mssv = 10;\nfinal int z = x + mssv;\nz =- 1;\nSystem.out.println(\"Value of z : \" + z );\nBáo lỗi\nValue of z : 16\nValue of z : 17\n"
+  },
+  {
+    "id": "hust-20221-500658",
+    "kind": "multi",
+    "stem": "Những ngôn ngữ lập trình nào hỗ trợ đa thừa kế",
+    "options": [
+      "Java",
+      "C#",
+      "C++",
+      "Không phải ngôn ngữ nào trong 3 ngôn ngữ Java, C#, C++ hỗ trợ đa thừa kế"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Đa kế thừa lớp"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 2,
+        "number": "#500658"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · C",
+    "explanation": "Khi xét đa kế thừa các lớp cụ thể, C++ cho một lớp dẫn xuất từ nhiều lớp cơ sở. Java và C# hỗ trợ nhiều interface.",
+    "analysis": [
+      "Một lớp Java chỉ có một superclass trực tiếp.",
+      "C# không cho một lớp có nhiều lớp cơ sở.",
+      "C++ cho phép nhiều lớp cơ sở.",
+      "C++ là phản ví dụ."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 07, trang PDF 36."
+    ],
+    "issues": [],
+    "raw": "Những ngôn ngữ lập trình nào hỗ trợ đa thừa kế\nJava\nC#\nC++\nKhông phải ngôn ngữ nào trong 3 ngôn ngữ Java, C#, C++ hỗ trợ đa thừa kế\n"
+  },
+  {
+    "id": "hust-20221-6a0513",
+    "kind": "multi",
+    "stem": "Chọn những phát biểu đúng về xử lý ngoại lệ trong Java",
+    "options": [
+      "Xử lý ngoại lệ giúp chương trình đáng tin cậy hơn, tránh kết thúc bất thường",
+      "Mô hình xử lý ngoại lệ với try catch giúp tách biệt khối lệnh có thể xảy ra ngoại lệ và khối lệnh xử lý ngoại lệ",
+      "Khi xảy ra ngoại lệ, đối tượng ngoại lệ được tạo ra và truyền đến khối catch",
+      "Khi xảy ra ngoại lệ, ngoại lệ bắt buộc phải được xử lý ngay ở phương thức xảy ra ngoại lệ"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 10,
+    "topics": [
+      "Xử lý ngoại lệ"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 2,
+        "number": "#6a0513"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Ghi chú trên ảnh · A, B có dấu chọn; C có dấu hỏi; D bị gạch.",
+    "explanation": "Xử lý ngoại lệ đúng cách giúp tránh một số kết thúc bất thường; catch tiếp nhận đối tượng ngoại lệ khi kiểu phù hợp. Phát biểu C không nêu điều kiện tìm được catch tương thích.",
+    "analysis": [
+      "Có thể xử lý để chương trình tiếp tục.",
+      "try và catch tách phần xử lý lỗi.",
+      "Chỉ đúng khi có catch phù hợp và điều khiển tới đó.",
+      "Có thể ủy nhiệm checked exception qua throws."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 10, trang PDF 12."
+    ],
+    "issues": [
+      "Xử lý ngoại lệ đúng cách giúp tránh một số kết thúc bất thường; catch tiếp nhận đối tượng ngoại lệ khi kiểu phù hợp. Phát biểu C không nêu điều kiện tìm được catch tương thích."
+    ],
+    "raw": "Chọn những phát biểu đúng về xử lý ngoại lệ trong Java\nXử lý ngoại lệ giúp chương trình đáng tin cậy hơn, tránh kết thúc bất thường\nMô hình xử lý ngoại lệ với try catch giúp tách biệt khối lệnh có thể xảy ra ngoại lệ và khối lệnh xử lý ngoại lệ\nKhi xảy ra ngoại lệ, đối tượng ngoại lệ được tạo ra và truyền đến khối catch\nKhi xảy ra ngoại lệ, ngoại lệ bắt buộc phải được xử lý ngay ở phương thức xảy ra ngoại lệ\n"
+  },
+  {
+    "id": "hust-20221-9168ba",
+    "kind": "multi",
+    "stem": "Phát biểu nào đúng về khởi tạo và hủy bỏ đối tượng trong Java",
+    "options": [
+      "Trong Java không có phương thức hủy",
+      "Java có phương thức có thể dùng thay thế phương thức hủy là phương thức finalize",
+      "Một lớp luôn luôn có ít nhất 1 phương thức khởi tạo",
+      "Mỗi đối tượng khi tồn tại và hoạt động được hệ điều hành cấp phát một vùng nhớ để lưu lại các giá trị của dữ liệu thành phần",
+      "Các thuộc tính kiểu DL nguyên thủy (int, char, boolean, …) của đối tượng phải được Lập trình viên khởi tạo trước khi sử dụng"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "chapter": 4,
+    "topics": [
+      "Khởi tạo và thu gom rác"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 2,
+        "number": "#9168ba"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B, C, D",
+    "explanation": "Java không cung cấp destructor kiểu C++. finalize không bảo đảm thời điểm hoặc việc thực thi. Cơ chế tạo đối tượng do JVM quản lý; mô tả nguồn về việc HĐH cấp riêng cho từng đối tượng không chính xác.",
+    "analysis": [
+      "Đúng trong nghĩa destructor xác định.",
+      "finalize không thay thế destructor đáng tin cậy.",
+      "Lớp Java thông thường có constructor tường minh hoặc được sinh.",
+      "JVM quản lý việc cấp phát trong heap.",
+      "Trường nguyên thủy của đối tượng có giá trị mặc định."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2.",
+      "Bài 04, trang PDF 44."
+    ],
+    "issues": [
+      "Java không cung cấp destructor kiểu C++. finalize không bảo đảm thời điểm hoặc việc thực thi. Cơ chế tạo đối tượng do JVM quản lý; mô tả nguồn về việc HĐH cấp riêng cho từng đối tượng không chính xác."
+    ],
+    "raw": "Phát biểu nào đúng về khởi tạo và hủy bỏ đối tượng trong Java\nTrong Java không có phương thức hủy\nJava có phương thức có thể dùng thay thế phương thức hủy là phương thức finalize\nMột lớp luôn luôn có ít nhất 1 phương thức khởi tạo\nMỗi đối tượng khi tồn tại và hoạt động được hệ điều hành cấp phát một vùng nhớ để lưu lại các giá trị của dữ liệu thành phần\nCác thuộc tính kiểu DL nguyên thủy (int, char, boolean, …) của đối tượng phải được Lập trình viên khởi tạo trước khi sử dụng\n"
+  },
+  {
+    "id": "hust-20221-fc23e9",
+    "kind": "multi",
+    "stem": "Cho lớp Person như sau\npackage p1;\npublic class Person {\n    private int a1;\n    int a2;\n    protected int a3;\n    public int a4;\n}\nLớp Employee sau đây có lỗi ở những dòng nào\n1. package p2;\n2. import p1.Person;\n3. public class Employee extends Person{\n4.     public void print() {\n5.         System.out.println(a1);\n6.         System.out.println(a2);\n7.         System.out.println(a3);\n8.         System.out.println(a4);\n9.     }\n10. }",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "Không bị lỗi ở dòng nào"
+    ],
+    "correct": [
+      0,
+      1
+    ],
+    "chapter": 3,
+    "topics": [
+      "Truy cập khác package"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 2,
+        "number": "#fc23e9",
+        "end": 3
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B",
+    "explanation": "Employee khác package, truy cập các trường kế thừa trực tiếp trong phương thức của lớp con. private và quyền gói bị chặn.",
+    "analysis": [
+      "a1 private trong Person.",
+      "a2 có quyền gói trong p1.",
+      "a3 protected cho lớp con qua this.",
+      "a4 public.",
+      "Dòng 5 và 6 lỗi."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 2–3.",
+      "Bài 03, trang PDF 28."
+    ],
+    "issues": [],
+    "raw": "Cho lớp Person như sau\npackage p1;\npublic class Person {\n    private int a1;\n    int a2;\n    protected int a3;\n    public int a4;\n}\nLớp Employee sau đây có lỗi ở những dòng nào\n1.\npackage p2;\n2.\nimport p1.Person;\n3.\npublic class Employee extends Person{\n4.\n    public void print() {\n5.\n        System.out.println(a1);\n6.\n        System.out.println(a2);\n7.\n        System.out.println(a3);\n8.\n        System.out.println(a4);\n9.\n    }\n10.\n}\n5\n6\n7\n8\nKhông bị lỗi ở dòng nào\n"
+  },
+  {
+    "id": "hust-20221-76e584",
+    "kind": "multi",
+    "stem": "Các chỉ định truy cập nào có thể được dùng cho thành viên lớp trong Java",
+    "options": [
+      "public",
+      "default",
+      "protected",
+      "private",
+      "internal",
+      "protected internal"
+    ],
+    "correct": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "chapter": 3,
+    "topics": [
+      "Các mức truy cập"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 3,
+        "number": "#76e584"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B, C, D",
+    "explanation": "Nguồn dùng default để gọi tên mức truy cập package-private. Khi khai báo phải bỏ modifier, không thể dùng default làm modifier truy cập của trường.",
+    "analysis": [
+      "public hợp lệ.",
+      "Tên thông dụng cho mức truy cập gói, không phải từ khóa để khai báo quyền đó.",
+      "protected hợp lệ.",
+      "private hợp lệ.",
+      "internal không phải modifier truy cập Java.",
+      "Cụm protected internal không hợp lệ."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3.",
+      "Bài 03, trang PDF 28."
+    ],
+    "issues": [
+      "Nguồn dùng default để gọi tên mức truy cập package-private. Khi khai báo phải bỏ modifier, không thể dùng default làm modifier truy cập của trường."
+    ],
+    "raw": "Các chỉ định truy cập nào có thể được dùng cho thành viên lớp trong Java\npublic\ndefault\nprotected\nprivate\ninternal\nprotected internal\n"
+  },
+  {
+    "id": "hust-20221-b2a7b5",
+    "kind": "multi",
+    "stem": "Cho 4 phương thức sau\npublic void check1 (int n) throws Exception {\n    if (n <= 0)\n        throw new Exception(\"Number should be greater than 0\");\n}\npublic void check2 (int n) throws RuntimeException {\n    if (n == 5)\n        throw new RuntimeException(\"Number should not be 5\");\n}\npublic void check3 (int n) throws Exception, RuntimeException {\n    check1(n);\n    check2(n);\n}\npublic void test() {\n    int n = 4;\n    check1(n);\n    check2(n);\n    check3(n);\n}\nPhương thức test bị lỗi ở những đâu",
+    "options": [
+      "Lời gọi phương thức check1",
+      "Lời gọi phương thức check2",
+      "Lời gọi phương thức check3",
+      "Không bị lỗi gì"
+    ],
+    "correct": [
+      0,
+      2
+    ],
+    "chapter": 10,
+    "topics": [
+      "Checked exception"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 3,
+        "number": "#b2a7b5",
+        "end": 4
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, C",
+    "explanation": "Compiler xét chữ ký throws tại nơi gọi. test không bắt hoặc khai báo Exception từ check1 và check3, dù số 4 không kích hoạt nhánh throw ở check1.",
+    "analysis": [
+      "Khai báo throws Exception nên phải xử lý hoặc khai báo.",
+      "RuntimeException là unchecked.",
+      "Có throws Exception nên phải xử lý hoặc khai báo.",
+      "Hai lời gọi bị từ chối khi biên dịch."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 3–4.",
+      "Bài 10, trang PDF 44.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. javac báo: Test.java:16: error: unreported exception Exception; must be caught or declared to be thrown. Mã thử và kết quả ghi trong verification/hust-java.json, mục b2a7b5."
+    ],
+    "issues": [],
+    "raw": "Cho 4 phương thức sau\npublic void check1 (int n) throws Exception {\n    if (n <= 0)\n        throw new Exception(\"Number should be greater than 0\");\n}\npublic void check2 (int n) throws RuntimeException {\n    if (n == 5)\n        throw new RuntimeException(\"Number should not be 5\");\n}\npublic void check3 (int n) throws Exception, RuntimeException {\n    check1(n);\n    check2(n);\n}\npublic void test() {\n    int n = 4;\n    check1(n);\n    check2(n);\n    check3(n);\n}\nPhương thức test bị lỗi ở những đâu\nLời gọi phương thức check1\nLời gọi phương thức check2\nLời gọi phương thức check3\nKhông bị lỗi gì\n"
+  },
+  {
+    "id": "hust-20221-3bd76f",
+    "kind": "multi",
+    "stem": "Đoạn mã sau khi chạy in ra gì ?\nclass A {\n    int i = 200;\n}\nclass B extends A {\n    int i = 100;\n}\npublic class Test {\n    public static void main(String[] ss) {\n        B a = new B();\n        System.out.println(a.i);\n    }\n}",
+    "options": [
+      "Báo lỗi biên dịch",
+      "100",
+      "200"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 6,
+    "topics": [
+      "Che khuất trường"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 4,
+        "number": "#3bd76f"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "a được khai báo kiểu B. Truy cập trường a.i chọn trường i của B, mang giá trị 100.",
+    "analysis": [
+      "Khai báo trường trùng tên ở lớp con là hợp lệ.",
+      "Đây là giá trị trường i của B.",
+      "200 là trường i ở phần A, không được chọn qua a.i."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4.",
+      "Bài 06, trang PDF 32.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: '100'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 3bd76f."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau khi chạy in ra gì ?\nclass A {\n    int i = 200;\n}\nclass B extends A {\n    int i = 100;\n}\npublic class Test {\n    public static void main(String[] ss) {\n        B a = new B();\n        System.out.println(a.i);\n    }\n}\nBáo lỗi biên dịch\n100\n200\n"
+  },
+  {
+    "id": "hust-20221-11a90c",
+    "kind": "multi",
+    "stem": "Đâu là các ấn bản Java phát hành bởi Oracle",
+    "options": [
+      "Java EE",
+      "Java SE",
+      "Java ME",
+      "Java FX",
+      "Java Virtual Machine"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 1,
+    "topics": [
+      "Ấn bản Java"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 4,
+        "number": "#11a90c",
+        "end": 5
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B, C",
+    "explanation": "Trong phạm vi phân loại lịch sử trên slide, ba ấn bản là SE, EE và ME.",
+    "analysis": [
+      "EE là ấn bản doanh nghiệp trong phân loại lịch sử.",
+      "SE là ấn bản tiêu chuẩn.",
+      "ME là ấn bản cho thiết bị hạn chế.",
+      "JavaFX là nền tảng GUI.",
+      "JVM là máy ảo, không phải một ấn bản."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 4–5.",
+      "Bài 01, trang PDF 32."
+    ],
+    "issues": [],
+    "raw": "Đâu là các ấn bản Java phát hành bởi Oracle\nJava EE\nJava SE\nJava ME\nJava FX\nJava Virtual Machine\n"
+  },
+  {
+    "id": "hust-20221-74135d",
+    "kind": "single",
+    "stem": "Kết quả in ra màn hình khi thực thi đoạn code sau là gì\nSystem.out.print(\"Begin \");\ntry {\n    int i = 5/0;\n    System.out.print(\"Try \");\n} finally {\n    System.out.print(\"Finally \");\n}\nSystem.out.print(\"End \");",
+    "options": [
+      "Begin End",
+      "Begin Finally End",
+      "Begin Try Finally End",
+      "Begin Try End",
+      "Begin Finally + thông báo kết thúc chương trình"
+    ],
+    "correct": [
+      4
+    ],
+    "chapter": 10,
+    "topics": [
+      "finally khi lỗi lan truyền"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 5,
+        "number": "#74135d"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · E",
+    "explanation": "Phép chia nguyên cho 0 xảy ra trước khi in Try. finally vẫn in Finally, rồi ngoại lệ thoát ra ngoài main nên End không chạy.",
+    "analysis": [
+      "Bỏ qua finally và cho rằng End chạy.",
+      "Không chạy đến End.",
+      "Không in Try hay End.",
+      "Sai ở cả Try và End.",
+      "Khớp stdout và ArithmeticException chưa bắt trên stderr."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5.",
+      "Bài 10, trang PDF 36.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'Begin Finally' / Exception in thread \"main\" java.lang.ArithmeticException: / by zero. Mã thử và kết quả ghi trong verification/hust-java.json, mục 74135d."
+    ],
+    "issues": [],
+    "raw": "Kết quả in ra màn hình khi thực thi đoạn code sau là gì\nSystem.out.print(\"Begin \");\ntry {\n    int i = 5/0;\n    System.out.print(\"Try \");\n} finally {\n    System.out.print(\"Finally \");\n}\nSystem.out.print(\"End \");\nBegin End\nBegin Finally End\nBegin Try Finally End\nBegin Try End\nBegin Finally + thông báo kết thúc chương trình\n"
+  },
+  {
+    "id": "hust-20221-005e56",
+    "kind": "multi",
+    "stem": "Đoạn mã sau bị lỗi biên dịch ở những dòng nào ?\n1. class A {\n2.       public int check(double a) {\n3.           return (int) a;\n4.       }\n5.       public double check (double a) {\n6.           return a;\n7.      }\n8. }\n9. class B {\n10.       private int check (double a, int b) {\n11.           return (int) a + b;\n12.       }\n13.       private double check (double a, int b) {\n14.           return a + b;\n15.       }\n16. }",
+    "options": [
+      "Dòng 2",
+      "Dòng 3",
+      "Dòng 5",
+      "Dòng 6",
+      "Dòng 10",
+      "Dòng 11",
+      "Dòng 13",
+      "Dòng 14"
+    ],
+    "correct": [
+      2,
+      6
+    ],
+    "chapter": 5,
+    "topics": [
+      "Chữ ký phương thức"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 5,
+        "number": "#005e56",
+        "end": 6
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · C, G",
+    "explanation": "Mỗi lớp khai báo trùng chữ ký check với chính nó. Đổi kiểu trả về không tạo overload mới. javac chỉ vào khai báo thứ hai ở mỗi lớp.",
+    "analysis": [
+      "Đây là khai báo đầu tiên trong A.",
+      "Ép double sang int là hợp lệ.",
+      "Chữ ký check(double) lặp lại.",
+      "Giá trị a có kiểu double như kiểu trả về.",
+      "Khai báo đầu tiên trong B.",
+      "Biểu thức có kết quả int.",
+      "Chữ ký check(double,int) lặp lại.",
+      "a+b có kiểu double."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 5–6.",
+      "Bài 05, trang PDF 8.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. javac báo: Test.java:5: error: method check(double) is already defined in class A. Mã thử và kết quả ghi trong verification/hust-java.json, mục 005e56."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau bị lỗi biên dịch ở những dòng nào ?\n1.\nclass A {\n2.\n      public int check(double a) {\n3.\n          return (int) a;\n4.\n      }\n5.\n      public double check (double a) {\n6.\n          return a;\n7.\n     }\n8.\n}\n9.\nclass B {\n10.\n      private int check (double a, int b) {\n11.\n          return (int) a + b;\n12.\n      }\n13.\n      private double check (double a, int b) {\n14.\n          return a + b;\n15.\n      }\n16.\n}\nDòng 2\nDòng 3\nDòng 5\nDòng 6\nDòng 10\nDòng 11\nDòng 13\nDòng 14\n"
+  },
+  {
+    "id": "hust-20221-8f9b5f",
+    "kind": "multi",
+    "stem": "Chọn những phát biểu đúng về kỹ thuật ghi đè (overriding)",
+    "options": [
+      "Phương thức ở lớp con hoàn toàn giống về chữ ký với phương thức kế thừa ở lớp cha",
+      "Phương thức lớp con KHÔNG bắt buộc có cùng kiểu trả về với phương thức kế thừa trong lớp cha",
+      "Chỉ định truy cập ở lớp con KHÔNG giới hạn chặt hơn chỉ định truy cập phương thức kế thừa trong lớp cha",
+      "Phương thức lớp con KHÔNG tung ra kiểu ngoại lệ mới so với phương thức kế thừa trong lớp cha"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Điều kiện ghi đè"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 6,
+        "number": "#8f9b5f"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, C, D",
+    "explanation": "Theo Java 17 có thể trả về kiểu tham chiếu con. Quy tắc hạn chế mở rộng checked exceptions, không cấm mọi unchecked exception mới. Ngoài trường hợp generic, chữ ký phải khớp theo nghĩa subsignature.",
+    "analysis": [
+      "Đúng với các ví dụ phương thức thông thường trong slide; JLS dùng subsignature.",
+      "Kiểu trả về tham chiếu có thể hiệp biến.",
+      "Không được thu hẹp mức truy cập.",
+      "Có thể khai báo RuntimeException mới, nên phát biểu tuyệt đối không đúng."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6.",
+      "Bài 07, trang PDF 16."
+    ],
+    "issues": [
+      "Theo Java 17 có thể trả về kiểu tham chiếu con. Quy tắc hạn chế mở rộng checked exceptions, không cấm mọi unchecked exception mới. Ngoài trường hợp generic, chữ ký phải khớp theo nghĩa subsignature."
+    ],
+    "raw": "Chọn những phát biểu đúng về kỹ thuật ghi đè (overriding)\nPhương thức ở lớp con hoàn toàn giống về chữ ký với phương thức kế thừa ở lớp cha\nPhương thức lớp con KHÔNG bắt buộc có cùng kiểu trả về với phương thức kế thừa trong lớp cha\nChỉ định truy cập ở lớp con KHÔNG giới hạn chặt hơn chỉ định truy cập phương thức kế thừa trong lớp cha\nPhương thức lớp con KHÔNG tung ra kiểu ngoại lệ mới so với phương thức kế thừa trong lớp cha\n"
+  },
+  {
+    "id": "hust-20221-06e281",
+    "kind": "single",
+    "stem": "Kết quả thực thi chương trình sau là gì\npublic class Test {\n    public static void p(String s) {\n        System.out.print(s + \" \");\n    }\n    public static void f(int i) { p(\"int\"); }\n    public static void f(short h) { p(\"short\"); }\n    public static void f(char c) { p(\"char\"); }\n    public static void f(long l) { p(\"long\"); }\n    public static void f(double l) { p(\"double\"); }\n    public static void f(float f) { p(\"float\"); }\n    public static void main(String[] args) {\n        f(5);\n        f('c');\n        f(5.5);\n        f(7L);\n    }\n}",
+    "options": [
+      "int char double long",
+      "int int float long",
+      "short char float long",
+      "Lỗi biên dịch ở 1 trong các lời gọi hàm f (trong hàm main)"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 5,
+    "topics": [
+      "Nạp chồng và literal"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 6,
+        "number": "#06e281"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A",
+    "explanation": "Các literal 5, 'c', 5.5 và 7L lần lượt có kiểu int, char, double, long. Mỗi lời gọi có overload trùng kiểu.",
+    "analysis": [
+      "Khớp bốn overload được chọn.",
+      "'c' có overload char và 5.5 là double.",
+      "5 là int, 5.5 là double.",
+      "Mọi lời gọi đều có đích hợp lệ."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 6.",
+      "Bài 05, trang PDF 8.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'int char double long'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 06e281."
+    ],
+    "issues": [],
+    "raw": "Kết quả thực thi chương trình sau là gì\npublic class Test {\n    public static void p(String s) {\n        System.out.print(s + \" \");\n    }\n    public static void f(int i) { p(\"int\"); }\n    public static void f(short h) { p(\"short\"); }\n    public static void f(char c) { p(\"char\"); }\n    public static void f(long l) { p(\"long\"); }\n    public static void f(double l) { p(\"double\"); }\n    public static void f(float f) { p(\"float\"); }\n    public static void main(String[] args) {\n        f(5);\n        f('c');\n        f(5.5);\n        f(7L);\n    }\n}\nint char double long\nint int float long\nshort char float long\nLỗi biên dịch ở 1 trong các lời gọi hàm f (trong hàm main)\n"
+  },
+  {
+    "id": "hust-20221-9acad7",
+    "kind": "single",
+    "stem": "Kết quả khi thực thi chương trình sau là gì\nclass Test {\n    public static void increase1(int[] arr) {\n        for (int a: arr)\n            a += 1;\n    }\n    public static void increase2(int[] arr) {\n        for (int i=0; i<arr.length; ++i)\n            arr[i] ++;\n    }\n    public static void main(String[] args) {\n        int arr[] = {5, 6, 7};\n        increase1(arr);\n        increase2(arr);\n        for (int a: arr)\n            System.out.print(a + \" \");\n    }\n}",
+    "options": [
+      "5 6 7",
+      "6 7 8",
+      "7 8 9",
+      "4 5 6"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 2,
+    "topics": [
+      "Duyệt mảng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 7,
+        "number": "#9acad7"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "Biến a của for-each nhận bản sao từng int, còn arr[i]++ ghi trực tiếp lên mảng. Mỗi phần tử chỉ tăng một lần.",
+    "analysis": [
+      "Bỏ qua vòng lặp sửa arr[i].",
+      "Mỗi phần tử tăng một.",
+      "Vòng for-each đầu không sửa phần tử.",
+      "Không có phép giảm trong các vòng lặp."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 02, trang PDF 68.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: '6 7 8'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 9acad7."
+    ],
+    "issues": [],
+    "raw": "Kết quả khi thực thi chương trình sau là gì\nclass Test {\n    public static void increase1(int[] arr) {\n        for (int a: arr)\n            a += 1;\n    }\n    public static void increase2(int[] arr) {\n        for (int i=0; i<arr.length; ++i)\n            arr[i] ++;\n    }\n    public static void main(String[] args) {\n        int arr[] = {5, 6, 7};\n        increase1(arr);\n        increase2(arr);\n        for (int a: arr)\n            System.out.print(a + \" \");\n    }\n}\n5 6 7\n6 7 8\n7 8 9\n4 5 6\n"
+  },
+  {
+    "id": "hust-20221-60f96f",
+    "kind": "multi",
+    "stem": "Chọn phát biểu đúng về lập trình tổng quát trong Java",
+    "options": [
+      "Có thể lập trình tổng quát cho lớp",
+      "Có thể lập trình tổng quát cho phương thức",
+      "Một lớp có thể khai báo số lượng kiểu dữ liệu tổng quát tùy ý",
+      "Một phương thức chỉ có thể khai báo tối đa 1 kiểu dữ liệu tổng quát",
+      "Không thể khai báo ràng buộc kiểu dữ liệu tổng quát cho lớp (VD lớp sẽ làm việc với kiểu dữ liệu T bất kỳ, sao cho T là Person hoặc lớp con của lớp Person)"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 9,
+    "topics": [
+      "Tham số kiểu"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 7,
+        "number": "#60f96f"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B, C",
+    "explanation": "Lớp và phương thức có thể có danh sách tham số kiểu. Có thể khai báo nhiều tham số kiểu và giới hạn trên bằng extends; chữ tùy ý trong đề được hiểu là nhiều hơn một trong giới hạn trình biên dịch.",
+    "analysis": [
+      "Lớp có thể khai báo T.",
+      "Phương thức có thể khai báo tham số kiểu riêng.",
+      "Có thể khai báo nhiều tham số kiểu.",
+      "Không có quy tắc tối đa một.",
+      "Có thể viết T extends Person."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7.",
+      "Bài 09, trang PDF 16."
+    ],
+    "issues": [],
+    "raw": "Chọn phát biểu đúng về lập trình tổng quát trong Java\nCó thể lập trình tổng quát cho lớp\nCó thể lập trình tổng quát cho phương thức\nMột lớp có thể khai báo số lượng kiểu dữ liệu tổng quát tùy ý\nMột phương thức chỉ có thể khai báo tối đa 1 kiểu dữ liệu tổng quát\nKhông thể khai báo ràng buộc kiểu dữ liệu tổng quát cho lớp (VD lớp sẽ làm việc với kiểu dữ liệu T bất kỳ, sao cho T là Person hoặc lớp con\ncủa lớp Person)\n"
+  },
+  {
+    "id": "hust-20221-d9cb95",
+    "kind": "multi",
+    "stem": "Cho 3 lớp: lớp Person, lớp Employee kế thừa lớp Person, và lớp Manager kế thừa lớp Employee. Chọn TẤT CẢ những phát biểu đúng về đoạn code\nsau\n1. Person p1 = new Manager();\n2. Employee e = (Employee) p1;\n3. Person p2 = new Employee();\n4. Manager m = (Manager) p2;",
+    "options": [
+      "Dòng 1 là upcasting",
+      "Dòng 2 là upcasting",
+      "Dòng 2 là downcasting",
+      "Dòng 3 là upcasting",
+      "Dòng 3 là downcasting",
+      "Dòng 4 là upcasting",
+      "Dòng 4 là downcasting",
+      "Không dòng nào bị lỗi biên dịch",
+      "Không dòng nào bị lỗi thực thi"
+    ],
+    "correct": [
+      0,
+      2,
+      3,
+      6,
+      7
+    ],
+    "chapter": 8,
+    "topics": [
+      "Ép kiểu tham chiếu"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 7,
+        "number": "#d9cb95",
+        "end": 8
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, C, D, G",
+    "explanation": "Không có lỗi biên dịch. Dòng 4 thất bại khi chạy do đối tượng thực là Employee, không phải Manager. Bút trong nguồn không chọn mục không có lỗi biên dịch.",
+    "analysis": [
+      "Manager sang Person là upcast.",
+      "Person sang Employee là downcast.",
+      "Dòng 2 downcast hợp lệ vì đối tượng là Manager.",
+      "Employee sang Person là upcast.",
+      "Chiều biến đổi ở dòng 3 là mở rộng.",
+      "Person sang Manager không phải upcast.",
+      "Ép xuống tại dòng 4, thất bại lúc chạy.",
+      "Cả bốn dòng đều biên dịch.",
+      "Dòng 4 tung ClassCastException."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 7–8.",
+      "Bài 08, trang PDF 12.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: '' / Exception in thread \"main\" java.lang.ClassCastException: class Employee cannot be cast to class Manager (Employee and Manager are in unnamed module of loader 'app'). Mã thử và kết quả ghi trong verification/hust-java.json, mục d9cb95."
+    ],
+    "issues": [
+      "Không có lỗi biên dịch. Dòng 4 thất bại khi chạy do đối tượng thực là Employee, không phải Manager. Bút trong nguồn không chọn mục không có lỗi biên dịch."
+    ],
+    "raw": "Cho 3 lớp: lớp Person, lớp Employee kế thừa lớp Person, và lớp Manager kế thừa lớp Employee. Chọn TẤT CẢ những phát biểu đúng về đoạn code\nsau\n1.\nPerson p1 = new Manager();\n2.\nEmployee e = (Employee) p1;\n3.\nPerson p2 = new Employee();\n4.\nManager m = (Manager) p2;\nDòng 1 là upcasting\nDòng 2 là upcasting\nDòng 2 là downcasting\nDòng 3 là upcasting\nDòng 3 là downcasting\nDòng 4 là upcasting\nDòng 4 là downcasting\nKhông dòng nào bị lỗi biên dịch\nKhông dòng nào bị lỗi thực thi\n"
+  },
+  {
+    "id": "hust-20221-009f5e",
+    "kind": "single",
+    "stem": "Đoạn mã sau in ra gì ?\npublic class A {\n    String s;\n    A a;\n    public A(String s) {\n        this.s = s;\n    }\n    public static void main(String[] args) {\n        A a1 = new A(\"first\");\n        A a2 = new A(\"second\");\n        a1.a = a2;\n        a2.a = a1;\n        System.out.print(a1.a.s);\n        System.out.print(a2.a.s);\n    }\n}",
+    "options": [
+      "Báo lỗi",
+      "secondfirst",
+      "nullnull",
+      "firstsecond"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 4,
+    "topics": [
+      "Tham chiếu đối tượng"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 8,
+        "number": "#009f5e"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "a1.a trỏ vào đối tượng mang second và a2.a trỏ vào đối tượng mang first. Hai lần print không thêm dấu cách.",
+    "analysis": [
+      "Cả hai đối tượng và trường liên kết đều đã được gán.",
+      "Hai chuỗi ghép liền theo đúng thứ tự.",
+      "Hai tham chiếu không còn null.",
+      "Thứ tự trường được truy cập ngược lại."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 8.",
+      "Bài 04, trang PDF 36.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'secondfirst'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 009f5e."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau in ra gì ?\npublic class A {\n    String s;\n    A a;\n    public A(String s) {\n        this.s = s;\n    }\n    public static void main(String[] args) {\n        A a1 = new A(\"first\");\n        A a2 = new A(\"second\");\n        a1.a = a2;\n        a2.a = a1;\n        System.out.print(a1.a.s);\n        System.out.print(a2.a.s);\n    }\n}\nBáo lỗi\nsecondfirst\nnullnull\nfirstsecond\n"
+  },
+  {
+    "id": "hust-20221-6f613c",
+    "kind": "single",
+    "stem": "Sắp xếp các kiểu dữ liệu char, int, byte, short, long, float, double theo chiều nới rộng dần dữ liệu",
+    "options": [
+      "byte short char long float double",
+      "byte char short long float double",
+      "byte char short float long double",
+      "byte short char float long double",
+      "Không phải là đáp án nào trong các đáp án còn lại"
+    ],
+    "correct": [
+      4
+    ],
+    "chapter": 2,
+    "topics": [
+      "Nới rộng kiểu"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 8,
+        "number": "#6f613c"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Ghi chú trên ảnh · Nút radio C được chọn; bút xanh chỉ sang E.",
+    "explanation": "Các chuỗi đều thiếu int. Ngoài ra char và short không chuyển đổi mở rộng lẫn nhau. Sơ đồ các đường nới rộng không phải một dãy bao gồm mọi kiểu nêu trong câu.",
+    "analysis": [
+      "short sang char không phải nới rộng và thiếu int.",
+      "byte sang char không phải nới rộng.",
+      "char sang short và float sang long không phải nới rộng.",
+      "short sang char và float sang long không phải nới rộng.",
+      "Không có dãy nào đưa ra đúng các chuyển đổi."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 8.",
+      "Bài 02, trang PDF 32."
+    ],
+    "issues": [
+      "Các chuỗi đều thiếu int. Ngoài ra char và short không chuyển đổi mở rộng lẫn nhau. Sơ đồ các đường nới rộng không phải một dãy bao gồm mọi kiểu nêu trong câu."
+    ],
+    "raw": "Sắp xếp các kiểu dữ liệu char, int, byte, short, long, float, double theo chiều nới rộng dần dữ liệu\nbyte short char long float double\nbyte char short long float double\nbyte char short float long double\nbyte short char float long double\nKhông phải là đáp án nào trong các đáp án còn lại\n"
+  },
+  {
+    "id": "hust-20221-1b5c7f",
+    "kind": "single",
+    "stem": "Đoạn mã sau khi chạy in ra gì ?\ninterface P\n{\n    String p = \"PPPP\";\n    String methodP();\n}\ninterface Q extends P\n{\n    String q = \"QQQQ\";\n    String methodQ();\n}\nclass R implements P, Q\n{\n    public String methodP()\n    {\n        return q+p;\n    }\n    public String methodQ()\n    {\n        return p+q;\n    }\n}\npublic class Demo {\n    public static void main(String[] ss) {\n        R r = new R();\n        System.out.print(r.methodP());\n        System.out.print(r.methodQ());\n    }\n}",
+    "options": [
+      "QQQQPPPPPPPPQQQQ",
+      "PPPPQQQQPPPPQQQQ",
+      "Báo lỗi biên dịch",
+      "QQQQPPPPQQQQPPPP"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 7,
+    "topics": [
+      "Interface kế thừa"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 9,
+        "number": "#1b5c7f"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A",
+    "explanation": "Q kế thừa P, R thực thi hai phương thức. methodP trả q+p và methodQ trả p+q. Hai lần print nối tiếp.",
+    "analysis": [
+      "Ghép QQQQ, PPPP, PPPP, QQQQ.",
+      "Phần đầu bắt đầu bằng q.",
+      "Class R đã cài đặt đủ phương thức.",
+      "Phần sau phải là p+q."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 9.",
+      "Bài 07, trang PDF 41.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'QQQQPPPPPPPPQQQQ'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 1b5c7f."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau khi chạy in ra gì ?\ninterface P\n{\n    String p = \"PPPP\";\n    String methodP();\n}\ninterface Q extends P\n{\n    String q = \"QQQQ\";\n    String methodQ();\n}\nclass R implements P, Q\n{\n    public String methodP()\n    {\n        return q+p;\n    }\n    public String methodQ()\n    {\n        return p+q;\n    }\n}\npublic class Demo {\n    public static void main(String[] ss) {\n        R r = new R();\n        System.out.print(r.methodP());\n        System.out.print(r.methodQ());\n    }\n}\nQQQQPPPPPPPPQQQQ\nPPPPQQQQPPPPQQQQ\nBáo lỗi biên dịch\nQQQQPPPPQQQQPPPP\n"
+  },
+  {
+    "id": "hust-20221-f208c1",
+    "kind": "single",
+    "stem": "Đoạn mã sau khi chạy in ra gì ?\npublic class Test {\n    public static void main(String[] ss) {\n        String[] s = {\"abc\", \"123\", null};\n        for (int i = 0; i < s.length; i++){\n            try {\n                int a = s[i].length();\n                try {\n                    a = Integer.parseInt(s[i]);\n                } catch (NumberFormatException ex) {\n                    System.out.print(\"NumberFormatException \");\n                }\n            } catch(NullPointerException ex) {\n                System.out.print(\"NullPointerException \");\n            }\n        }\n    }\n}",
+    "options": [
+      "NullPointerException NumberFormatException",
+      "abc 123 null",
+      "NumberFormatException NullPointerException",
+      "abc 123"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 10,
+    "topics": [
+      "try/catch lồng nhau"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 9,
+        "number": "#f208c1",
+        "end": 10
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · C",
+    "explanation": "Phần tử abc gây NumberFormatException khi parse, 123 thành công, null gây NullPointerException khi gọi length trước inner try.",
+    "analysis": [
+      "Đảo thứ tự hai ngoại lệ.",
+      "Không có lệnh in các chuỗi phần tử.",
+      "Đúng loại và đúng thứ tự.",
+      "Đoạn mã chỉ in tên các ngoại lệ bị bắt."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 9–10.",
+      "Bài 10, trang PDF 36.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'NumberFormatException NullPointerException'. Mã thử và kết quả ghi trong verification/hust-java.json, mục f208c1."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau khi chạy in ra gì ?\npublic class Test {\n    public static void main(String[] ss) {\n        String[] s = {\"abc\", \"123\", null};\n        for (int i = 0; i < s.length; i++){\n            try {\n                int a = s[i].length();\n                try {\n                    a = Integer.parseInt(s[i]);\n                } catch (NumberFormatException ex) {\n                    System.out.print(\"NumberFormatException \");\n                }\n            } catch(NullPointerException ex) {\n                System.out.print(\"NullPointerException \");\n            }\n        }\n    }\n}\nNullPointerException NumberFormatException\nabc 123 null\nNumberFormatException NullPointerException\nabc 123\n"
+  },
+  {
+    "id": "hust-20221-2ed507",
+    "kind": "single",
+    "stem": "Kết quả thực thi đoạn chương trình sau là gì\npublic class Test {\n    static int index = 0;\n    void increase() {\n        index++;\n    }\n    public static void main(String[] args) {\n        increase();\n        System.out.println(index);\n    }\n}",
+    "options": [
+      "In ra 1",
+      "In ra 0",
+      "Lỗi biên dịch ở lời gọi hàm increase trong hàm main",
+      "Lỗi biên dịch ở lệnh in ra giá trị index trong hàm main"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 5,
+    "topics": [
+      "Phương thức thực thể và static"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 10,
+        "number": "#2ed507"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · C",
+    "explanation": "increase là phương thức thực thể. main static không có đối tượng ngầm định để gọi increase().",
+    "analysis": [
+      "Chương trình không biên dịch.",
+      "Không chạy tới println.",
+      "Lời gọi không có receiver ở ngữ cảnh static.",
+      "index là trường static, có thể dùng trong main."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 10.",
+      "Bài 05, trang PDF 20.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. javac báo: Test.java:7: error: non-static method increase() cannot be referenced from a static context. Mã thử và kết quả ghi trong verification/hust-java.json, mục 2ed507."
+    ],
+    "issues": [],
+    "raw": "Kết quả thực thi đoạn chương trình sau là gì\npublic class Test {\n    static int index = 0;\n    void increase() {\n        index++;\n    }\n    public static void main(String[] args) {\n        increase();\n        System.out.println(index);\n    }\n}\nIn ra 1\nIn ra 0\nLỗi biên dịch ở lời gọi hàm increase trong hàm main\nLỗi biên dịch ở lệnh in ra giá trị index trong hàm main\n"
+  },
+  {
+    "id": "hust-20221-970e32",
+    "kind": "single",
+    "stem": "Đoạn mã sau khi chạy in ra gì?\npublic class Test{\n    public static void tryPrimitives(int i, double f, char c, boolean test)\n    {\n        i += 10;\n        c = 'z';\n        if(test)\n            test = false;\n        else\n            test = true;\n    }\n    public static void main(String[] args)\n    {\n        int ii = 1;\n        double ff = 1.0;\n        char cc = 'a';\n        boolean bb = false;\n        tryPrimitives(ii, ff, cc, bb);\n        System.out.println(\"ii = \" + ii + \", ff = \" + ff +\n                \", cc = \" + cc + \", bb = \" + bb);\n    }\n}",
+    "options": [
+      "ii = 11, ff = 0.0, cc = z, bb =true",
+      "ii = 1, ff = 1.0, cc = a, bb = false",
+      "ii = 1, ff = 0, cc = z, bb =true",
+      "ii = 11, ff = 1.0, cc = a, bb = false"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 5,
+    "topics": [
+      "Truyền kiểu nguyên thủy"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 10,
+        "number": "#970e32",
+        "end": 11
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "Java truyền bản sao các giá trị int, double, char, boolean. Các phép gán trong tryPrimitives chỉ tác động lên tham số cục bộ.",
+    "analysis": [
+      "Thay đổi i và c không lan về biến gốc.",
+      "Giữ nguyên bốn giá trị ban đầu.",
+      "ff lẫn cc đều không thay đổi.",
+      "ii không nhận giá trị i sau khi tăng."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 10–11.",
+      "Bài 05, trang PDF 32.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'ii = 1, ff = 1.0, cc = a, bb = false'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 970e32."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau khi chạy in ra gì?\npublic class Test{\n    public static void tryPrimitives(int i, double f, char c, boolean test)\n    {\n        i += 10;\n        c = 'z';\n        if(test)\n            test = false;\n        else\n            test = true;\n    }\n    public static void main(String[] args)\n    {\n        int ii = 1;\n        double ff = 1.0;\n        char cc = 'a';\n        boolean bb = false;\n        tryPrimitives(ii, ff, cc, bb);\n        System.out.println(\"ii = \" + ii + \", ff = \" + ff +\n                \", cc = \" + cc + \", bb = \" + bb);\n    }\n}\nii = 11, ff = 0.0, cc = z, bb =true\nii = 1, ff = 1.0, cc = a, bb = false\nii = 1, ff = 0, cc = z, bb =true\nii = 11, ff = 1.0, cc = a, bb = false\n"
+  },
+  {
+    "id": "hust-20221-062b84",
+    "kind": "multi",
+    "stem": "Cho lớp Person như sau\nclass Person {\n    protected String name;\n    private String print1() {\n        return name;\n    }\n    protected String print2() {\n        return name.toUpperCase();\n    }\n    protected String print3() {\n        return name.toLowerCase();\n    }\n}\nChọn những phát biểu đúng về lớp Employee sau đây:\nclass Employee extends Person {\n    private void print1() {\n        System.out.println(name);\n    }\n    protected void print2() {\n        System.out.println(\"Name: \" + name.toUpperCase());\n    }\n    String print3() {\n        return \"Name: \" + name.toLowerCase();\n    }\n}",
+    "options": [
+      "Lỗi biên dịch ở phương thức print1",
+      "Lỗi biên dịch ở phương thức print2",
+      "Lỗi biên dịch ở phương thức print3",
+      "Không bị lỗi gì cả"
+    ],
+    "correct": [
+      1,
+      2
+    ],
+    "chapter": 7,
+    "topics": [
+      "Ghi đè và private"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 11,
+        "number": "#062b84",
+        "end": 12
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B, C",
+    "explanation": "print1 ở Person là private nên Employee có thể khai báo phương thức riêng cùng tên. print2 đổi String thành void và print3 thu hẹp protected thành quyền gói.",
+    "analysis": [
+      "print1 ở cha không được override.",
+      "Kiểu trả về void không thay được String.",
+      "Quyền gói hẹp hơn protected.",
+      "Có hai lỗi biên dịch."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 11–12.",
+      "Bài 07, trang PDF 16.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. javac báo: Test.java:17: error: print2() in Employee cannot override print2() in Person. Mã thử và kết quả ghi trong verification/hust-java.json, mục 062b84."
+    ],
+    "issues": [],
+    "raw": "Cho lớp Person như sau\nclass Person {\n    protected String name;\n    private String print1() {\n        return name;\n    }\n    protected String print2() {\n        return name.toUpperCase();\n    }\n    protected String print3() {\n        return name.toLowerCase();\n    }\n}\nChọn những phát biểu đúng về lớp Employee sau đây:\nclass Employee extends Person {\n    private void print1() {\n        System.out.println(name);\n    }\n    protected void print2() {\n        System.out.println(\"Name: \" + name.toUpperCase());\n    }\n    String print3() {\n        return \"Name: \" + name.toLowerCase();\n    }\n}\nLỗi biên dịch ở phương thức print1\nLỗi biên dịch ở phương thức print2\nLỗi biên dịch ở phương thức print3\nKhông bị lỗi gì cả\n"
+  },
+  {
+    "id": "hust-20221-8dcf75",
+    "kind": "multi",
+    "stem": "Chọn phát biểu đúng về xử lý sự kiện trong JavaFX",
+    "options": [
+      "JavaFX hỗ trợ xử lý sự kiện chuột, bàn phím với 2 lớp MouseEvent và KeyEvent",
+      "Để xử lý sự kiện rê chuột (drag), sử dụng lớp DragEvent",
+      "JavaFX cung cấp các handlers và các filters để xử lý sự kiện",
+      "Khi xử lý sự kiện, các handler được gọi trước, các filter được gọi sau",
+      "Tất cả các handlers đều thực thi giao diện javafx.event.EventHandler. Trong khi đó, các filters cần thực thi một giao diện khác.",
+      "Một node có thể đăng ký nhiều handler/filter"
+    ],
+    "correct": [
+      0,
+      2,
+      5
+    ],
+    "chapter": 11,
+    "topics": [
+      "Sự kiện JavaFX"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 12,
+        "number": "#8dcf75"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "review",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B, C, F",
+    "explanation": "MouseEvent.MOUSE_DRAGGED xử lý rê chuột thông thường; DragEvent dùng cho thao tác kéo-thả dữ liệu. Việc tick lựa chọn B tùy cách hiểu từ drag.",
+    "analysis": [
+      "MouseEvent và KeyEvent là lớp sự kiện tương ứng.",
+      "Không thể dùng DragEvent để chỉ mọi chuyển động rê chuột.",
+      "Có cơ chế filter lẫn handler.",
+      "Filter ở pha capture trước, handler ở pha bubble sau.",
+      "Đều đăng ký đối tượng EventHandler thích hợp.",
+      "Một node có thể đăng ký nhiều handler/filter."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 12.",
+      "Bài 11, trang PDF 76."
+    ],
+    "issues": [
+      "MouseEvent.MOUSE_DRAGGED xử lý rê chuột thông thường; DragEvent dùng cho thao tác kéo-thả dữ liệu. Việc tick lựa chọn B tùy cách hiểu từ drag."
+    ],
+    "raw": "Chọn phát biểu đúng về xử lý sự kiện trong JavaFX\nJavaFX hỗ trợ xử lý sự kiện chuột, bàn phím với 2 lớp MouseEvent và KeyEvent\nĐể xử lý sự kiện rê chuột (drag), sử dụng lớp DragEvent\nJavaFX cung cấp các handlers và các filters để xử lý sự kiện\nKhi xử lý sự kiện, các handler được gọi trước, các filter được gọi sau\nTất cả các handlers đều thực thi giao diện javafx.event.EventHandler. Trong khi đó, các filters cần thực thi một giao diện khác.\nMột node có thể đăng ký nhiều handler/filter\n"
+  },
+  {
+    "id": "hust-20221-1b053a",
+    "kind": "multi",
+    "stem": "Chọn những phát biểu đúng về 2 phương thức sau\npublic void print1(ArrayList<Employee> list) {\n}\npublic void print2(ArrayList<? extends Employee> list) {\n}",
+    "options": [
+      "2 phương thức là hoàn toàn tương đương nhau",
+      "Trong phương thức print1 không thể thêm mới phần tử vào list. Và trong phương thức print2 có thể thêm mới phần tử vào list",
+      "Trong phương thức print2 không thể thêm mới phần tử vào list. Và trong phương thức print1 có thể thêm mới phần tử vào list",
+      "Để gọi phương thức print2, danh sách truyền vào chỉ được chứa các đối tượng là lớp con của Employee (không tính Employee)"
+    ],
+    "correct": [
+      2
+    ],
+    "chapter": 9,
+    "topics": [
+      "Wildcard extends"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 12,
+        "number": "#1b053a"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · D",
+    "explanation": "List<? extends Employee> có thể là list của Employee hoặc bất kỳ lớp con nào. Không thể thêm tùy ý một Employee khác null qua tham chiếu đó. null vẫn thêm được, nên C phải đọc theo nghĩa phần tử khác null.",
+    "analysis": [
+      "Kiểu tham số được nhận và thao tác thêm khác nhau.",
+      "Đảo ngược chiều hạn chế thêm.",
+      "Đúng cho đối tượng Employee khác null.",
+      "ArrayList<Employee> cũng được chấp nhận."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 12.",
+      "Bài 09, trang PDF 60."
+    ],
+    "issues": [
+      "List<? extends Employee> có thể là list của Employee hoặc bất kỳ lớp con nào. Không thể thêm tùy ý một Employee khác null qua tham chiếu đó. null vẫn thêm được, nên C phải đọc theo nghĩa phần tử khác null."
+    ],
+    "raw": "Chọn những phát biểu đúng về 2 phương thức sau\npublic void print1(ArrayList<Employee> list) {\n}\npublic void print2(ArrayList<? extends Employee> list) {\n}\n2 phương thức là hoàn toàn tương đương nhau\nTrong phương thức print1 không thể thêm mới phần tử vào list. Và trong phương thức print2 có thể thêm mới phần tử vào list\nTrong phương thức print2 không thể thêm mới phần tử vào list. Và trong phương thức print1 có thể thêm mới phần tử vào list\nĐể gọi phương thức print2, danh sách truyền vào chỉ được chứa các đối tượng là lớp con của Employee (không tính Employee)\n"
+  },
+  {
+    "id": "hust-20221-ef13ed",
+    "kind": "single",
+    "stem": "Kết quả khi thực thi lớp Test là gì\nclass Person {\n    private int age;\n    public Person(int age) {\n        this.age = age;\n    }\n    public int getAge() {\n        return age;\n    }\n    public void setAge(int age) {\n        this.age = age;\n    }\n}\nclass Test {\n    public static void increaseAge(Person p) {\n        p.setAge(p.getAge() + 1);\n    }\n    public static void swap(Person p1, Person p2) {\n        Person tmp = p1;\n        p1 = p2;\n        p2 = tmp;\n    }\n    public static void main(String[] args) {\n        Person p1 = new Person(15);\n        Person p2 = new Person(20);\n        increaseAge(p1);\n        swap(p1, p2);\n        System.out.print(p1.getAge() + \" \");\n        System.out.print(p2.getAge() + \" \");\n    }\n}",
+    "options": [
+      "15 20",
+      "16 20",
+      "20 15",
+      "20 16"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 5,
+    "topics": [
+      "Truyền tham chiếu theo giá trị"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 13,
+        "number": "#ef13ed"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "increaseAge sửa trạng thái đối tượng đầu. swap chỉ đổi các biến tham số cục bộ, không đổi p1 và p2 ở main.",
+    "analysis": [
+      "Bỏ qua lần tăng tuổi.",
+      "15 tăng thành 16, người thứ hai vẫn 20.",
+      "Thao tác swap không tráo biến ở main.",
+      "Tham chiếu ở main không bị tráo."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 13.",
+      "Bài 05, trang PDF 36.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: '16 20'. Mã thử và kết quả ghi trong verification/hust-java.json, mục ef13ed."
+    ],
+    "issues": [],
+    "raw": "Kết quả khi thực thi lớp Test là gì\nclass Person {\n    private int age;\n    public Person(int age) {\n        this.age = age;\n    }\n    public int getAge() {\n        return age;\n    }\n    public void setAge(int age) {\n        this.age = age;\n    }\n}\nclass Test {\n    public static void increaseAge(Person p) {\n        p.setAge(p.getAge() + 1);\n    }\n    public static void swap(Person p1, Person p2) {\n        Person tmp = p1;\n        p1 = p2;\n        p2 = tmp;\n    }\n    public static void main(String[] args) {\n        Person p1 = new Person(15);\n        Person p2 = new Person(20);\n        increaseAge(p1);\n        swap(p1, p2);\n        System.out.print(p1.getAge() + \" \");\n        System.out.print(p2.getAge() + \" \");\n    }\n}\n15 20\n16 20\n20 15\n20 16\n"
+  },
+  {
+    "id": "hust-20221-bce44e",
+    "kind": "single",
+    "stem": "Kết quả in ra màn hình khi thực thi lớp Employee là gì\nclass Person {\n    protected int age;\n    protected String name;\n    public Person() {\n        System.out.print(age + \" \" + name + \" \");\n    }\n    public Person(int age, String name) {\n        this.age = age;\n        this.name = name;\n    }\n}\nclass Employee extends Person{\n    public Employee() {\n    }\n    public Employee(int age, String name) {\n        super(age, name);\n    }\n    public static void main(String[] args) {\n        Employee e1 = new Employee();\n        Employee e2 = new Employee(16, \"Huy\");\n        System.out.print(e2.age + \" \" + e2.name);\n    }\n}",
+    "options": [
+      "16 Huy",
+      "0 null 16 Huy",
+      "Lỗi biên dịch ở hàm main",
+      "16 Huy 16 Huy"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 6,
+    "topics": [
+      "Khởi tạo lớp cha"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 13,
+        "number": "#bce44e",
+        "end": 14
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "new Employee() gọi Person(), in giá trị mặc định 0 và null. Constructor có đối số gọi Person(int,String) không in, rồi main in 16 Huy.",
+    "analysis": [
+      "Bỏ sót lần in ở constructor không tham số.",
+      "Đúng thứ tự hai lần in.",
+      "Hai chuỗi constructor hợp lệ.",
+      "Đối tượng đầu nhận giá trị mặc định."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 13–14.",
+      "Bài 06, trang PDF 44.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: '0 null 16 Huy'. Mã thử và kết quả ghi trong verification/hust-java.json, mục bce44e."
+    ],
+    "issues": [],
+    "raw": "Kết quả in ra màn hình khi thực thi lớp Employee là gì\nclass Person {\n    protected int age;\n    protected String name;\n    public Person() {\n        System.out.print(age + \" \" + name + \" \");\n    }\n    public Person(int age, String name) {\n        this.age = age;\n        this.name = name;\n    }\n}\nclass Employee extends Person{\n    public Employee() {\n    }\n    public Employee(int age, String name) {\n        super(age, name);\n    }\n    public static void main(String[] args) {\n        Employee e1 = new Employee();\n        Employee e2 = new Employee(16, \"Huy\");\n        System.out.print(e2.age + \" \" + e2.name);\n    }\n}\n16 Huy\n0 null 16 Huy\nLỗi biên dịch ở hàm main\n16 Huy 16 Huy\n"
+  },
+  {
+    "id": "hust-20221-300730",
+    "kind": "multi",
+    "stem": "Cho lớp Person như sau\npackage p1;\npublic class Person {\n    private int a1;\n    int a2;\n    protected int a3;\n    public int a4;\n}\nLớp Employee sau đây có lỗi ở những dòng nào\n1. package p2;\n2. import p1.Person;\n3. public class Employee extends Person{\n4.     public void print(Person p) {\n5.         System.out.println(p.a1);\n6.         System.out.println(p.a2);\n7.         System.out.println(p.a3);\n8.         System.out.println(p.a4);\n9.     }\n10. }",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "Không bị lỗi ở dòng nào"
+    ],
+    "correct": [
+      0,
+      1,
+      2
+    ],
+    "chapter": 3,
+    "topics": [
+      "protected qua tham chiếu lớp cha"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 14,
+        "number": "#300730",
+        "end": 15
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "conflict",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A, B",
+    "explanation": "Employee khác package và biến p có kiểu Person. Luật protected không cho lớp con đọc p.a3 qua receiver kiểu Person trong trường hợp này, nên cả dòng 5, 6, 7 lỗi.",
+    "analysis": [
+      "a1 private.",
+      "a2 có quyền gói.",
+      "Receiver p có kiểu Person, không phải Employee hoặc lớp con của Employee.",
+      "a4 public nên hợp lệ.",
+      "Có ba lỗi truy cập."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 14–15.",
+      "Bài 03, trang PDF 28."
+    ],
+    "issues": [
+      "Employee khác package và biến p có kiểu Person. Luật protected không cho lớp con đọc p.a3 qua receiver kiểu Person trong trường hợp này, nên cả dòng 5, 6, 7 lỗi."
+    ],
+    "raw": "Cho lớp Person như sau\npackage p1;\npublic class Person {\n    private int a1;\n    int a2;\n    protected int a3;\n    public int a4;\n}\nLớp Employee sau đây có lỗi ở những dòng nào\n1.\npackage p2;\n2.\nimport p1.Person;\n3.\npublic class Employee extends Person{\n4.\n    public void print(Person p) {\n5.\n        System.out.println(p.a1);\n6.\n        System.out.println(p.a2);\n7.\n        System.out.println(p.a3);\n8.\n        System.out.println(p.a4);\n9.\n    }\n10.\n}\n5\n6\n7\n8\nKhông bị lỗi ở dòng nào\n"
+  },
+  {
+    "id": "hust-20221-b89bfb",
+    "kind": "single",
+    "stem": "Đoạn mã sau khi chạy in ra gì ?\nclass A {\n    String myMethod(String s) {\n        return s+s;\n    }\n}\nclass B extends A {\n    String myMethod(String s, double d) {\n        return myMethod(s+d);\n    }\n}\nclass C extends B {\n    String myMethod(String s, double d, int i) {\n        return myMethod(s, d+i);\n    }\n}\npublic class Test {\n    public static void main(String[] ss) {\n        C x = new C();\n        System.out.println(x.myMethod(\"CHECK\", 12.34, 56));\n    }\n}",
+    "options": [
+      "CHECK68.34CHECK68.34",
+      "CHECK12.34+56CHECK12.34+56",
+      "CHECK12.34+56",
+      "CHECK68.34"
+    ],
+    "correct": [
+      0
+    ],
+    "chapter": 5,
+    "topics": [
+      "Chuỗi gọi overload"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 15,
+        "number": "#b89bfb"
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · A",
+    "explanation": "C cộng số 12.34+56 ra 68.34 trước, B ghép với CHECK, A nối kết quả với chính nó.",
+    "analysis": [
+      "Khớp phép cộng số rồi nối và nhân đôi chuỗi.",
+      "Không ghép dấu cộng dạng văn bản.",
+      "Bỏ qua phép nhân đôi chuỗi.",
+      "Bỏ lần lặp thứ hai của chuỗi."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 15.",
+      "Bài 05, trang PDF 8.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'CHECK68.34CHECK68.34'. Mã thử và kết quả ghi trong verification/hust-java.json, mục b89bfb."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau khi chạy in ra gì ?\nclass A {\n    String myMethod(String s) {\n        return s+s;\n    }\n}\nclass B extends A {\n    String myMethod(String s, double d) {\n        return myMethod(s+d);\n    }\n}\nclass C extends B {\n    String myMethod(String s, double d, int i) {\n        return myMethod(s, d+i);\n    }\n}\npublic class Test {\n    public static void main(String[] ss) {\n        C x = new C();\n        System.out.println(x.myMethod(\"CHECK\", 12.34, 56));\n    }\n}\nCHECK68.34CHECK68.34\nCHECK12.34+56CHECK12.34+56\nCHECK12.34+56\nCHECK68.34\n"
+  },
+  {
+    "id": "hust-20221-0370d2",
+    "kind": "single",
+    "stem": "Đoạn mã sau khi chạy in ra gì ?\nclass A {\n}\nclass B extends A {\n}\nclass C extends B {\n}\npublic class Test {\n    static void method(A a) {\n        System.out.println(\"Method A\");\n    }\n    static void method(B b) {\n        System.out.println(\"Method B\");\n    }\n    static void method(Object obj) {\n        System.out.println(\"Method C\");\n    }\n    public static void main(String[] ss) {\n        C c = new C();\n        method(c);\n    }\n}",
+    "options": [
+      "Method C",
+      "Method B",
+      "Method A"
+    ],
+    "correct": [
+      1
+    ],
+    "chapter": 5,
+    "topics": [
+      "Overload đặc hiệu nhất"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 15,
+        "number": "#0370d2",
+        "end": 16
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · B",
+    "explanation": "method(C) không được khai báo. C chuyển lên B, A hoặc Object. Trong các ứng viên, B cụ thể nhất.",
+    "analysis": [
+      "Object là lựa chọn rộng nhất.",
+      "Chọn overload nhận B.",
+      "A kém đặc hiệu hơn B."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 15–16.",
+      "Bài 05, trang PDF 8.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. stdout: 'Method B'. Mã thử và kết quả ghi trong verification/hust-java.json, mục 0370d2."
+    ],
+    "issues": [],
+    "raw": "Đoạn mã sau khi chạy in ra gì ?\nclass A {\n}\nclass B extends A {\n}\nclass C extends B {\n}\npublic class Test {\n    static void method(A a) {\n        System.out.println(\"Method A\");\n    }\n    static void method(B b) {\n        System.out.println(\"Method B\");\n    }\n    static void method(Object obj) {\n        System.out.println(\"Method C\");\n    }\n    public static void main(String[] ss) {\n        C c = new C();\n        method(c);\n    }\n}\nMethod C\nMethod B\nMethod A\n"
+  },
+  {
+    "id": "hust-20221-90e310",
+    "kind": "multi",
+    "stem": "Cho 2 interface như sau\ninterface Printable {\n    public void print();\n}\ninterface Stringable {\n    String stringify();\n}\nLớp Person sau bị lỗi ở những dòng nào\n1. class Person implements Printable, Stringable {\n2.     protected String name;\n3.     public String stringify() {\n4.         return name;\n5.     }\n6.     public void print() {\n7.         System.out.println(name);\n8.     }\n9.     public static void main(String[] args) {\n10.         Printable p1 = new Printable();\n11.         Printable p2 = new Person();\n12.         String name = p2.stringify();\n13.     }\n14. }",
+    "options": [
+      "Dòng 1",
+      "Dòng 6",
+      "Dòng 10",
+      "Dòng 11",
+      "Dòng 12"
+    ],
+    "correct": [
+      2,
+      4
+    ],
+    "chapter": 7,
+    "topics": [
+      "Kiểu interface của tham chiếu"
+    ],
+    "sources": [
+      {
+        "file": "OOP - cuối kì 20221.pdf",
+        "n": 16,
+        "number": "#90e310",
+        "end": 17
+      }
+    ],
+    "transcript": "checked",
+    "answerStatus": "supported",
+    "sourceAnswer": "Dấu bút trong bản chụp (chưa có xác nhận của người ra đề) · C, E",
+    "explanation": "Không thể tạo đối tượng bằng new Printable(). Biến p2 có kiểu tĩnh Printable, không có stringify() dù đối tượng được tạo là Person.",
+    "analysis": [
+      "Person cài được hai interface.",
+      "print có chữ ký và phạm vi phù hợp.",
+      "Không khởi tạo trực tiếp interface.",
+      "Gán Person vào biến Printable là upcast hợp lệ.",
+      "Kiểu Printable không khai báo stringify."
+    ],
+    "evidence": [
+      "Đối chiếu nội dung và lựa chọn với tài liệu nguồn, trang 16–17.",
+      "Bài 07, trang PDF 41.",
+      "Thử đoạn mã trên Oracle JDK 17.0.11, giới hạn 4 giây cho từng bước. javac báo: Test.java:16: error: Printable is abstract; cannot be instantiated. Mã thử và kết quả ghi trong verification/hust-java.json, mục 90e310."
+    ],
+    "issues": [],
+    "raw": "Cho 2 interface như sau\ninterface Printable {\n    public void print();\n}\ninterface Stringable {\n    String stringify();\n}\nLớp Person sau bị lỗi ở những dòng nào\n1.\nclass Person implements Printable, Stringable {\n2.\n    protected String name;\n3.\n    public String stringify() {\n4.\n        return name;\n5.\n    }\n6.\n    public void print() {\n7.\n        System.out.println(name);\n8.\n    }\n9.\n    public static void main(String[] args) {\n10.\n        Printable p1 = new Printable();\n11.\n        Printable p2 = new Person();\n12.\n        String name = p2.stringify();\n13.\n    }\n14.\n}\nDòng 1\nDòng 6\nDòng 10\nDòng 11\nDòng 12\n"
+  }
+]

@@ -1,0 +1,15 @@
+.DS_Store
+/.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+/tmp/
+/.playwright-cli/
+/output/playwright/
+/output/pdf/environment-check/
+/.cache/
+/dist/
+/release/
+/.stage/
