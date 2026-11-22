@@ -32,7 +32,7 @@ with tempfile.TemporaryDirectory(dir=release) as tmp:
             z.write(p,'web/'+d['asset'])
             names.append(f"{d['pages']} trang/ảnh | {d['asset']} | SHA-256 {d['hash']}")
         z.writestr('DANH-MUC.txt',f'Ứng dụng {version} | Ngân hàng {bank["version"]}\n'+'\n'.join(names)+'\n')
-        for name,path in [('Be-Vietnam-Pro','@fontsource/be-vietnam-pro'),('IBM-Plex-Mono','@fontsource/ibm-plex-mono'),('React','react'),('ReactDOM','react-dom'),('Lucide','lucide-react'),('Zod','zod')]:
+        for name,path in [('Be-Vietnam-Pro','@fontsource/be-vietnam-pro'),('JetBrains-Mono','@fontsource/jetbrains-mono'),('React','react'),('ReactDOM','react-dom'),('Lucide','lucide-react'),('Zod','zod')]:
             for p in (ROOT/'node_modules'/path).glob('LICENSE*'):
                 if p.is_file():z.write(p,'licenses/'+name+'.txt')
     with zipfile.ZipFile(ou) as z:assert not z.testzip()
